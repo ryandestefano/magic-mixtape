@@ -3,36 +3,25 @@ import React from 'react';
 class Ingredient extends React.Component {
   constructor(props) {
     super(props);
-    this.handleAddIngredient = this.handleAddIngredient.bind(this);
-    this.handleRemoveIngredient = this.handleRemoveIngredient.bind(this);
+    this.renderIngredientAction = this.renderIngredientAction.bind(this);
   }
 
   renderIngredientAction() {
     if (this.props.addIngredient) {
-      return (
-        <li className="Ingredient" onClick={this.handleAddIngredient}>
-          {this.props.name}
-        </li>
-      );
+      this.props.addIngredient(this.props.ingredient);
     } else {
-      return (
-        <li className="Ingredient" onClick={this.handleRemoveIngredient}>
-          {this.props.name}
-        </li>
-      );
+      this.props.removeIngredient(this.props.ingredient);
     }
   } 
 
-  handleAddIngredient() {
-    this.props.addIngredient(this.props.ingredient);
-  }
-
-  handleRemoveIngredient() {
-    this.props.removeIngredient(this.props.ingredient);
-  }
-
   render() {
-    return this.renderIngredientAction();
+    return (
+      <li className={`Ingredient ${this.props.ingredient.tag}`} onClick={this.renderIngredientAction}>
+        <img src={`/../images/${this.props.ingredient.tag}.png`} title={this.props.name} alt={this.props.name} />
+        <p>{this.props.ingredient.name}</p>
+        <p className="description">{this.props.ingredient.description}</p>
+      </li>
+    );
   }
 }
 

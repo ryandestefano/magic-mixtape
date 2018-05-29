@@ -21,6 +21,7 @@ class App extends Component {
       displayedGenres: [],
       searchResults: [],
       availableIngredients: AvailableIngredients,
+      displayedIngredients: [],
       ingredientSeeds: [],
       genreSeeds: [],
       songSeeds: [],
@@ -31,6 +32,7 @@ class App extends Component {
     this.updateDisplayedGenres = this.updateDisplayedGenres.bind(this);
     this.addGenreToSeeds = this.addGenreToSeeds.bind(this);
     this.removeGenreFromSeeds = this.removeGenreFromSeeds.bind(this);
+    this.updateDisplayedIngredients = this.updateDisplayedIngredients.bind(this);
     this.addIngredientToSeeds = this.addIngredientToSeeds.bind(this);
     this.removeIngredientFromSeeds = this.removeIngredientFromSeeds.bind(this);
     this.search = this.search.bind(this);
@@ -87,10 +89,16 @@ class App extends Component {
     this.setState({genreSeeds: selectedGenres});
   }
 
+  updateDisplayedIngredients(ingredientStrings) {
+    this.setState({displayedIngredients: ingredientStrings});
+  }
+
   addIngredientToSeeds(ingredient) {
     const selectedIngredients = this.state.ingredientSeeds;
-    selectedIngredients.push(ingredient);
-    this.setState({ingredientSeeds: selectedIngredients});
+    if (!selectedIngredients.find(selectedIngredient => ingredient === selectedIngredient)) {
+      selectedIngredients.push(ingredient);
+      this.setState({ingredientSeeds: selectedIngredients});
+    }
   }
 
   removeIngredientFromSeeds(ingredient) {
@@ -125,15 +133,19 @@ class App extends Component {
       <div>
         <h1>Ja<span className="highlight">mmm</span>ing</h1>
         <div className="App">
-          <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} addGenre={this.addGenreToSeeds} />
-          <SelectedGenres genreSeeds={this.state.genreSeeds} removeGenre={this.removeGenreFromSeeds} /> 
-          <Ingredients availableIngredients={this.state.availableIngredients} addIngredient={this.addIngredientToSeeds} />
-          <SelectedIngredients ingredientSeeds={this.state.ingredientSeeds} removeIngredient={this.removeIngredientFromSeeds} />
-          <SearchBar onSearch={this.search} />
-           <div className="App-playlist">
-            <SearchResults trackList={this.state.searchResults} addTrack={this.addTrackToSeeds} />
+          <div className="app-options">
+            <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} addGenre={this.addGenreToSeeds} />
+            <Ingredients availableIngredients={this.state.availableIngredients} displayedIngredients={this.state.displayedIngredients} updateDisplayedIngredients={this.updateDisplayedIngredients} addIngredient={this.addIngredientToSeeds} />
+            <SearchBar onSearch={this.search} />
+             <div className="App-playlist">
+              <SearchResults trackList={this.state.searchResults} addTrack={this.addTrackToSeeds} />
+              <Playlist trackList={this.state.playlist} removeTrack={this.removeTrackFromSeeds} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
+            </div>
+          </div>
+          <div className="app-selections">
+            <SelectedGenres genreSeeds={this.state.genreSeeds} removeGenre={this.removeGenreFromSeeds} /> 
+            <SelectedIngredients ingredientSeeds={this.state.ingredientSeeds} removeIngredient={this.removeIngredientFromSeeds} />
             <RecommendationSeeds trackList={this.state.songSeeds} removeTrack={this.removeTrackFromSeeds} getRecommendations={this.getRecommendations} />
-            <Playlist trackList={this.state.playlist} removeTrack={this.removeTrackFromSeeds} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
           </div>
         </div>
       </div>

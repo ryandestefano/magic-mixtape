@@ -1,0 +1,139 @@
+.Ingredients,
+.SelectedIngredients {
+  background-color: rgba(0, 0, 0, .25);
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+  padding: 10px;
+}
+
+.Ingredients h2, 
+.SelectedIngredients h2 {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.Ingredients ul, 
+.SelectedIngredients ul {
+  list-style: none;
+} 
+
+.Ingredient {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .75);
+  border-radius: 4px;
+  margin: 0 5px 5px 0;
+  padding: 15px;
+}
+
+.Ingredients button {
+  appearance: none;
+  color: #fff;
+  background-color: rgba(0, 255, 0, .85);
+  font-size: 16px;
+  border: none;
+  border-radius: 2px;
+  padding: 7.5px 20px;
+}
+
+.Ingredient img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 0 7.5px 0;
+}
+
+.Ingredient:hover img {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    top: 0px;
+  }
+  50% {
+    top: -10px;
+  }
+}
+
+.Ingredient .description {
+  transition: .25s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .7);
+  font-size: 12px;
+}
+
+.Ingredient:hover .description {
+  transition: .25s ease-in;
+  opacity: 1;
+  top: -10px;
+}
+
+li.Ingredient.mask {
+  background-color: #1eff9e;
+}
+li.Ingredient.kitty {
+  background-color: #ff363f;
+}
+li.Ingredient.feathers {
+  background-color: #b70a41;
+}
+li.Ingredient.statue {
+  background-color: #90f4ff;
+}
+li.Ingredient.harp{
+  background-color: #caff52;
+}
+li.Ingredient.pyramid {
+  background-color: #ff4833;
+}
+li.Ingredient.palm-frond {
+  background-color: #a9ff18;
+}
+li.Ingredient.potion-1 {
+  background-color: #ff378b;
+}
+li.Ingredient.egg {
+  background-color: #3f88ff;
+}
+li.Ingredient.diamond {
+  background-color: #cca6ff;
+}
+li.Ingredient.mirror {
+  background-color: #28f0ff;
+}
+li.Ingredient.crystals {
+  background-color: #eb0fff;
+}
+li.Ingredient.hour-glass {
+  background-color: #ffa3f9;
+}
+li.Ingredient.pineapple {
+  background-color: #fde400;
+}
+li.Ingredient.wheel {
+  background-color: #fde400;
+}
+li.Ingredient.potion-2 {
+  background-color: #ff9703;
+}
+li.Ingredient.glasses {
+  background-color: #71e439;
+}
+li.Ingredient.bacon {
+  background-color: #00eca1;
+}
+li.Ingredient.potion-3 {
+  background-color: #ffd736;
+}
+li.Ingredient.dinosaur-skull {
+  background-color: #8316ff;
+}
