@@ -9,6 +9,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import RecommendationSeeds from '../RecommendationSeeds/RecommendationSeeds';
 import Playlist from '../Playlist/Playlist';
+import PreviewPlayer from '../PreviewPlayer/PreviewPlayer';
 import Spotify from '../../util/Spotify';
 import AvailableItems from '../../util/AvailableItems';
 
@@ -26,7 +27,8 @@ class App extends Component {
       genreSeeds: [],
       songSeeds: [],
       playlist: [],
-      playlistName: 'New Playlist'
+      playlistName: 'New Playlist',
+      currentPreview: ''
     };
     this.getGenres = this.getGenres.bind(this);
     this.updateDisplayedGenres = this.updateDisplayedGenres.bind(this);
@@ -40,6 +42,8 @@ class App extends Component {
     this.removeTrackFromSeeds = this.removeTrackFromSeeds.bind(this);
     this.getRecommendations = this.getRecommendations.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
+    this.playPreview = this.playPreview.bind(this);
+    this.stopPreview = this.stopPreview.bind(this);
     this.savePlaylist = this.savePlaylist.bind(this);
   }
 
@@ -65,8 +69,6 @@ class App extends Component {
     if (this.state.availableGenres.length === 0) {
       console.log('getting genres');
       Spotify.getGenres().then(genres => this.setState({availableGenres: genres}));
-    } else {
-      console.log('already have genres, thanks');
     }
   }
 
@@ -118,6 +120,14 @@ class App extends Component {
     this.setState({playlistName: playlistName});
   }
 
+  playPreview(preview) {
+    this.setState({currentPreview: preview});
+  }
+
+  stopPreview() {
+    this.setState({currentPreview: ''});
+  }
+
   savePlaylist() {
     const trackUris = this.state.playlist.map(track => { return track.uri });
     Spotify.savePlaylist(this.state.playlistName, trackUris);
@@ -131,21 +141,22 @@ class App extends Component {
     this.getGenres();
     return (
       <div>
+        <PreviewPlayer preview={this.state.currentPreview} />
         <h1>Ja<span className="highlight">mmm</span>ing</h1>
         <div className="App">
           <div className="app-options">
             <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} addGenre={this.addGenreToSeeds} />
             <Items availableItems={this.state.availableItems} displayedItems={this.state.displayedItems} updateDisplayedItems={this.updateDisplayedItems} addItem={this.addItemToSeeds} />
             <SearchBar onSearch={this.search} />
-             <div className="App-playlist">
-              <SearchResults trackList={this.state.searchResults} addTrack={this.addTrackToSeeds} />
-              <Playlist trackList={this.state.playlist} removeTrack={this.removeTrackFromSeeds} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
+            <div className="App-playlist">
+              <SearchResults trackList={this.state.searchResults} addTrack={this.addTrackToSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} />
+              <Playlist trackList={this.state.playlist} removeTrack={this.removeTrackFromSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
             </div>
           </div>
           <div className="app-selections">
             <SelectedGenres genreSeeds={this.state.genreSeeds} removeGenre={this.removeGenreFromSeeds} /> 
             <SelectedItems itemSeeds={this.state.itemSeeds} removeItem={this.removeItemFromSeeds} />
-            <RecommendationSeeds trackList={this.state.songSeeds} removeTrack={this.removeTrackFromSeeds} getRecommendations={this.getRecommendations} />
+            <RecommendationSeeds trackList={this.state.songSeeds} removeTrack={this.removeTrackFromSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} getRecommendations={this.getRecommendations} />
           </div>
         </div>
       </div>

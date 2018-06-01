@@ -6,6 +6,8 @@ class Track extends React.Component {
     super(props);
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
+    this.handlePlayPreview = this.handlePlayPreview.bind(this);
+    this.handleStopPreview = this.handleStopPreview.bind(this);
   }
 
   renderTrackAction() {
@@ -13,6 +15,14 @@ class Track extends React.Component {
       return <a className='Track-action' onClick={this.addTrack}>+</a>;
     } else {
       return <a className='Track-action' onClick={this.removeTrack}>-</a>;
+    }
+  }
+
+  renderPreviewAction() {
+    if (this.props.preview !== this.props.currentPreview) {
+      return <a className="Track-preview-action" onClick={this.handlePlayPreview}>&#9658;</a>;
+    } else {
+      return <a className="Track-preview-action" onClick={this.handleStopPreview}>&#9724;</a>;
     }
   }
 
@@ -24,6 +34,14 @@ class Track extends React.Component {
     this.props.removeTrack(this.props.track);
   }
 
+  handlePlayPreview() {
+    this.props.playPreview(this.props.preview);
+  }
+
+  handleStopPreview() {
+    this.props.stopPreview();
+  }
+
   render() {
     return (
       <div className="Track">
@@ -31,6 +49,7 @@ class Track extends React.Component {
           <h3>{this.props.name}</h3>
           <p>{this.props.artist} | {this.props.album}</p>
         </div>
+        {this.renderPreviewAction()}
         {this.renderTrackAction()}
       </div>
     );
