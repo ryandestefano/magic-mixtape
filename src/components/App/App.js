@@ -95,7 +95,7 @@ class App extends Component {
 
   addIngredientToSeeds(ingredient) {
     const selectedIngredients = this.state.ingredientSeeds;
-    if (!selectedIngredients.find(selectedIngredient => ingredient === selectedIngredient)) {
+    if (!selectedIngredients.find(selectedIngredient => ingredient === selectedIngredient) && selectedIngredients.length < 2) {
       selectedIngredients.push(ingredient);
       this.setState({ingredientSeeds: selectedIngredients});
     }

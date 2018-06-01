@@ -17,9 +17,13 @@ class Ingredient extends React.Component {
   render() {
     return (
       <li className={`Ingredient ${this.props.ingredient.tag}`} onClick={this.renderIngredientAction}>
-        <img src={`/../images/${this.props.ingredient.tag}.png`} title={this.props.name} alt={this.props.name} />
-        <p>{this.props.ingredient.name}</p>
-        <p className="description">{this.props.ingredient.description}</p>
+        <div>
+          <span>
+            <img src={`/../images/${this.props.ingredient.tag}.png`} title={this.props.name} alt={this.props.name} />
+            <p>{this.props.ingredient.name}</p>
+            <p className="description">{this.props.ingredient.description}</p>
+          </span>
+        </div>
       </li>
     );
   }
