@@ -3,14 +3,14 @@ import './App.css';
 
 import Genres from '../Genres/Genres';
 import SelectedGenres from '../SelectedGenres/SelectedGenres';
-import Ingredients from '../Ingredients/Ingredients';
-import SelectedIngredients from '../SelectedIngredients/SelectedIngredients';
+import Items from '../Items/Items';
+import SelectedItems from '../SelectedItems/SelectedItems';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import RecommendationSeeds from '../RecommendationSeeds/RecommendationSeeds';
 import Playlist from '../Playlist/Playlist';
 import Spotify from '../../util/Spotify';
-import AvailableIngredients from '../../util/AvailableIngredients';
+import AvailableItems from '../../util/AvailableItems';
 
 class App extends Component {
   constructor(props) {
@@ -20,9 +20,9 @@ class App extends Component {
       availableGenres: [],
       displayedGenres: [],
       searchResults: [],
-      availableIngredients: AvailableIngredients,
-      displayedIngredients: [],
-      ingredientSeeds: [],
+      availableItems: AvailableItems,
+      displayedItems: [],
+      itemSeeds: [],
       genreSeeds: [],
       songSeeds: [],
       playlist: [],
@@ -32,9 +32,9 @@ class App extends Component {
     this.updateDisplayedGenres = this.updateDisplayedGenres.bind(this);
     this.addGenreToSeeds = this.addGenreToSeeds.bind(this);
     this.removeGenreFromSeeds = this.removeGenreFromSeeds.bind(this);
-    this.updateDisplayedIngredients = this.updateDisplayedIngredients.bind(this);
-    this.addIngredientToSeeds = this.addIngredientToSeeds.bind(this);
-    this.removeIngredientFromSeeds = this.removeIngredientFromSeeds.bind(this);
+    this.updateDisplayedItems = this.updateDisplayedItems.bind(this);
+    this.addItemToSeeds = this.addItemToSeeds.bind(this);
+    this.removeItemFromSeeds = this.removeItemFromSeeds.bind(this);
     this.search = this.search.bind(this);
     this.addTrackToSeeds = this.addTrackToSeeds.bind(this);
     this.removeTrackFromSeeds = this.removeTrackFromSeeds.bind(this);
@@ -89,23 +89,23 @@ class App extends Component {
     this.setState({genreSeeds: selectedGenres});
   }
 
-  updateDisplayedIngredients(ingredientStrings) {
-    this.setState({displayedIngredients: ingredientStrings});
+  updateDisplayedItems(itemStrings) {
+    this.setState({displayedItems: itemStrings});
   }
 
-  addIngredientToSeeds(ingredient) {
-    const selectedIngredients = this.state.ingredientSeeds;
-    if (!selectedIngredients.find(selectedIngredient => ingredient === selectedIngredient) && selectedIngredients.length < 2) {
-      selectedIngredients.push(ingredient);
-      this.setState({ingredientSeeds: selectedIngredients});
+  addItemToSeeds(item) {
+    const selectedItems = this.state.itemSeeds;
+    if (!selectedItems.find(selectedItem => item === selectedItem) && selectedItems.length < 2) {
+      selectedItems.push(item);
+      this.setState({itemSeeds: selectedItems});
     }
   }
 
-  removeIngredientFromSeeds(ingredient) {
-    const selectedIngredients = this.state.ingredientSeeds;
-    const ingredientToRemove = selectedIngredients.indexOf(ingredient);
-    selectedIngredients.splice(ingredientToRemove, 1);
-    this.setState({ingredientSeeds: selectedIngredients});
+  removeItemFromSeeds(item) {
+    const selectedItems = this.state.itemSeeds;
+    const itemToRemove = selectedItems.indexOf(item);
+    selectedItems.splice(itemToRemove, 1);
+    this.setState({itemSeeds: selectedItems});
   }
 
   getRecommendations() {
@@ -135,7 +135,7 @@ class App extends Component {
         <div className="App">
           <div className="app-options">
             <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} addGenre={this.addGenreToSeeds} />
-            <Ingredients availableIngredients={this.state.availableIngredients} displayedIngredients={this.state.displayedIngredients} updateDisplayedIngredients={this.updateDisplayedIngredients} addIngredient={this.addIngredientToSeeds} />
+            <Items availableItems={this.state.availableItems} displayedItems={this.state.displayedItems} updateDisplayedItems={this.updateDisplayedItems} addItem={this.addItemToSeeds} />
             <SearchBar onSearch={this.search} />
              <div className="App-playlist">
               <SearchResults trackList={this.state.searchResults} addTrack={this.addTrackToSeeds} />
@@ -144,7 +144,7 @@ class App extends Component {
           </div>
           <div className="app-selections">
             <SelectedGenres genreSeeds={this.state.genreSeeds} removeGenre={this.removeGenreFromSeeds} /> 
-            <SelectedIngredients ingredientSeeds={this.state.ingredientSeeds} removeIngredient={this.removeIngredientFromSeeds} />
+            <SelectedItems itemSeeds={this.state.itemSeeds} removeItem={this.removeItemFromSeeds} />
             <RecommendationSeeds trackList={this.state.songSeeds} removeTrack={this.removeTrackFromSeeds} getRecommendations={this.getRecommendations} />
           </div>
         </div>

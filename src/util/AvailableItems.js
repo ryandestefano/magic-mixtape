@@ -1,4 +1,4 @@
-const AvailableIngredients = [
+const AvailableItems = [
   {
     name: 'Palm Frond',
     description: 'Yup, it\'s a palm frond.',
@@ -109,4 +109,4 @@ const AvailableIngredients = [
   }
 ]
 
-export default AvailableIngredients;
+export default AvailableItems;

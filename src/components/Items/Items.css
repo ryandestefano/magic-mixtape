@@ -1,0 +1,157 @@
+.Items {
+  background: #f00; }
+  .Items ul li.Item {
+    width: 20%;
+    padding: 20% 0 0 0; }
+
+.SelectedItems ul li.Item {
+  width: 50%;
+  padding: 50% 0 0 0; }
+
+.Items,
+.SelectedItems {
+  background-color: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+  padding: 10px; }
+  .Items h2,
+  .SelectedItems h2 {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 0 10px 0; }
+  .Items ul,
+  .SelectedItems ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none; }
+    .Items ul li.Item,
+    .SelectedItems ul li.Item {
+      position: relative;
+      color: #fff;
+      cursor: pointer; }
+      .Items ul li.Item div,
+      .SelectedItems ul li.Item div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 5px; }
+        .Items ul li.Item div span,
+        .SelectedItems ul li.Item div span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          border-radius: 4px;
+          padding: 10px 0; }
+          .Items ul li.Item div span img,
+          .SelectedItems ul li.Item div span img {
+            position: relative;
+            width: 75%;
+            height: auto;
+            margin: 0 0 5px 0; }
+          .Items ul li.Item div span p,
+          .SelectedItems ul li.Item div span p {
+            font-size: 14px; }
+            .Items ul li.Item div span p.description,
+            .SelectedItems ul li.Item div span p.description {
+              transition: .25s;
+              opacity: 0;
+              position: absolute;
+              top: 0;
+              left: 0;
+              max-width: 100px;
+              color: #fff;
+              background-color: rgba(0, 0, 0, 0.7);
+              font-size: 12px; }
+      .Items ul li.Item:hover div span img,
+      .SelectedItems ul li.Item:hover div span img {
+        animation: bounce 1s ease-in-out infinite; }
+      .Items ul li.Item:hover div span p.description,
+      .SelectedItems ul li.Item:hover div span p.description {
+        transition: .25s ease-in;
+        opacity: 1;
+        top: -10px; }
+      .Items ul li.Item.mask div span,
+      .SelectedItems ul li.Item.mask div span {
+        background-color: #1eff9e; }
+      .Items ul li.Item.kitty div span,
+      .SelectedItems ul li.Item.kitty div span {
+        background-color: #ff363f; }
+      .Items ul li.Item.feathers div span,
+      .SelectedItems ul li.Item.feathers div span {
+        background-color: #b70a41; }
+      .Items ul li.Item.statue div span,
+      .SelectedItems ul li.Item.statue div span {
+        background-color: #90f4ff; }
+      .Items ul li.Item.harp div span,
+      .SelectedItems ul li.Item.harp div span {
+        background-color: #caff52; }
+      .Items ul li.Item.pyramid div span,
+      .SelectedItems ul li.Item.pyramid div span {
+        background-color: #ff4833; }
+      .Items ul li.Item.palm-frond div span,
+      .SelectedItems ul li.Item.palm-frond div span {
+        background-color: #a9ff18; }
+      .Items ul li.Item.potion-1 div span,
+      .SelectedItems ul li.Item.potion-1 div span {
+        background-color: #ff378b; }
+      .Items ul li.Item.egg div span,
+      .SelectedItems ul li.Item.egg div span {
+        background-color: #3f88ff; }
+      .Items ul li.Item.diamond div span,
+      .SelectedItems ul li.Item.diamond div span {
+        background-color: #cca6ff; }
+      .Items ul li.Item.mirror div span,
+      .SelectedItems ul li.Item.mirror div span {
+        background-color: #28f0ff; }
+      .Items ul li.Item.crystals div span,
+      .SelectedItems ul li.Item.crystals div span {
+        background-color: #eb0fff; }
+      .Items ul li.Item.hour-glass div span,
+      .SelectedItems ul li.Item.hour-glass div span {
+        background-color: #ffa3f9; }
+      .Items ul li.Item.pineapple div span,
+      .SelectedItems ul li.Item.pineapple div span {
+        background-color: #fde400; }
+      .Items ul li.Item.wheel div span,
+      .SelectedItems ul li.Item.wheel div span {
+        background-color: #fde400; }
+      .Items ul li.Item.potion-2 div span,
+      .SelectedItems ul li.Item.potion-2 div span {
+        background-color: #ff9703; }
+      .Items ul li.Item.glasses div span,
+      .SelectedItems ul li.Item.glasses div span {
+        background-color: #71e439; }
+      .Items ul li.Item.bacon div span,
+      .SelectedItems ul li.Item.bacon div span {
+        background-color: #00eca1; }
+      .Items ul li.Item.potion-3 div span,
+      .SelectedItems ul li.Item.potion-3 div span {
+        background-color: #ffd736; }
+      .Items ul li.Item.dinosaur-skull div span,
+      .SelectedItems ul li.Item.dinosaur-skull div span {
+        background-color: #8316ff; }
+  .Items button,
+  .SelectedItems button {
+    appearance: none;
+    color: #fff;
+    background-color: rgba(0, 255, 0, 0.85);
+    font-size: 16px;
+    border: none;
+    border-radius: 2px;
+    padding: 7.5px 20px; }
+
+@keyframes bounce {
+  0%, 100% {
+    top: 0px; }
+  50% {
+    top: -10px; } }
+
+/*# sourceMappingURL=Items.css.map */
