@@ -27,6 +27,7 @@ class App extends Component {
       genreSeeds: [],
       songSeeds: [],
       playlist: [],
+      displayPlaylist: false,
       playlistName: 'New Playlist',
       currentPreview: ''
     };
@@ -40,6 +41,7 @@ class App extends Component {
     this.search = this.search.bind(this);
     this.addTrackToSeeds = this.addTrackToSeeds.bind(this);
     this.removeTrackFromSeeds = this.removeTrackFromSeeds.bind(this);
+    this.togglePlaylistDisplay = this.togglePlaylistDisplay.bind(this);
     this.getRecommendations = this.getRecommendations.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
     this.playPreview = this.playPreview.bind(this);
@@ -114,6 +116,15 @@ class App extends Component {
     const songSeeds = this.state.songSeeds.map(track => { return track.id });
     const genreSeeds = this.state.genreSeeds;
     Spotify.getRecommendations(songSeeds, genreSeeds).then(recommendations => this.setState({playlist: recommendations}));
+    this.togglePlaylistDisplay();
+  }
+
+  togglePlaylistDisplay() {
+    if (this.state.displayPlaylist) {
+      this.setState({displayPlaylist: false});
+    } else {
+      this.setState({displayPlaylist: true});
+    }
   }
 
   updatePlaylistName(playlistName) {
@@ -148,15 +159,17 @@ class App extends Component {
             <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} addGenre={this.addGenreToSeeds} />
             <Items availableItems={this.state.availableItems} displayedItems={this.state.displayedItems} updateDisplayedItems={this.updateDisplayedItems} addItem={this.addItemToSeeds} />
             <SearchBar onSearch={this.search} />
-            <div className="App-playlist">
+            <div className="search-results">
               <SearchResults trackList={this.state.searchResults} addTrack={this.addTrackToSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} />
-              <Playlist trackList={this.state.playlist} removeTrack={this.removeTrackFromSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
             </div>
           </div>
           <div className="app-selections">
             <SelectedGenres genreSeeds={this.state.genreSeeds} removeGenre={this.removeGenreFromSeeds} /> 
             <SelectedItems itemSeeds={this.state.itemSeeds} removeItem={this.removeItemFromSeeds} />
             <RecommendationSeeds trackList={this.state.songSeeds} removeTrack={this.removeTrackFromSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} getRecommendations={this.getRecommendations} />
+          </div>
+          <div className={"App-playlist " + (this.state.displayPlaylist ? 'active' : '')}>
+            <Playlist togglePlaylistDisplay={this.togglePlaylistDisplay} trackList={this.state.playlist} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
           </div>
         </div>
       </div>
