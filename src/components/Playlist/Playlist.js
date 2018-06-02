@@ -18,6 +18,7 @@ class Playlist extends React.Component {
   }
 
   render() {
+    console.log(this.props.trackList);
     return (
       <div className="Playlist">
         <p onClick={this.handleTogglePlaylistDisplay}>Close playlist</p>

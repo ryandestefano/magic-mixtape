@@ -30,10 +30,6 @@ h2 {
 .App {
   height: 100%;
   padding: 0 17% 10% 17%;
-  background-image: url("/../background_photo_desktop.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   color: #fff; }
@@ -44,7 +40,7 @@ h2 {
   left: 0;
   width: 70%;
   height: 100%;
-  background-color: #cff;
+  background-color: #ff378b;
   padding: 110px 30px 30px 30px; }
 
 .app-selections {

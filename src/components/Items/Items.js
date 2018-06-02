@@ -35,7 +35,6 @@ class Items extends React.Component {
   render() {
     return (
       <div className="Items">
-        <h2>Select Some Items</h2>
         <ul>
           { 
             this.props.displayedItems.map(item => { 
@@ -43,7 +42,9 @@ class Items extends React.Component {
             }) 
           } 
         </ul>
-        <button onClick={this.updateItems}>Update Items</button>
+        <button onClick={this.updateItems}>
+          <i class="fas fa-sync-alt"></i>
+        </button>
       </div>
     );
   }

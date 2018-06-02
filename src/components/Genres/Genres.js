@@ -35,7 +35,6 @@ class Genres extends React.Component {
   render() {
     return (
       <div className="Genres">
-        <h2>Select Some Genres</h2>
         <ul>
           {
             this.props.displayedGenres.map(genre => {
@@ -43,7 +42,9 @@ class Genres extends React.Component {
             })
           }
         </ul>
-        <button onClick={this.updateGenres}>Update Genres</button>
+        <button onClick={this.updateGenres}>
+          <i class="fas fa-sync-alt"></i>
+        </button>
       </div>
     );
   }
