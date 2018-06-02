@@ -75,6 +75,7 @@ class App extends Component {
   }
 
   updateDisplayedGenres(genreStrings) {
+    console.log(genreStrings);
     this.setState({displayedGenres: genreStrings});
   }
 
@@ -156,7 +157,7 @@ class App extends Component {
         <h1>Ja<span className="highlight">mmm</span>ing</h1>
         <div className="App">
           <div className="app-options">
-            <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} addGenre={this.addGenreToSeeds} />
+            <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} addGenre={this.addGenreToSeeds} numberOfColors={this.state.availableItems.length} />
             <Items availableItems={this.state.availableItems} displayedItems={this.state.displayedItems} updateDisplayedItems={this.updateDisplayedItems} addItem={this.addItemToSeeds} />
             <SearchBar onSearch={this.search} />
             <div className="search-results">

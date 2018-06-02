@@ -26,7 +26,7 @@ class Genres extends React.Component {
     }
 
     genreStrings = displayedGenres.map(genreIndex => {
-      return this.props.availableGenres[genreIndex];
+      return [this.props.availableGenres[genreIndex], genreIndex];
     })
 
     this.props.updateDisplayedGenres(genreStrings);
@@ -38,7 +38,7 @@ class Genres extends React.Component {
         <ul>
           {
             this.props.displayedGenres.map(genre => {
-              return <Genre genre={genre} addGenre={this.props.addGenre} />;
+              return <Genre genre={genre} addGenre={this.props.addGenre} numberOfColors={this.props.numberOfColors} />;
             })
           }
         </ul>

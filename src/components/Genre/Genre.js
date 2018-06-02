@@ -3,36 +3,24 @@ import React from 'react';
 class Genre extends React.Component {
   constructor(props) {
     super(props);
-    this.addGenre = this.addGenre.bind(this);
-    this.removeGenre = this.removeGenre.bind(this);
+    this.renderGenreAction = this.renderGenreAction.bind(this);
   }
 
   renderGenreAction() {
     if (this.props.addGenre) {
-      return (
-        <li onClick={this.addGenre}>
-          {this.props.genre}
-        </li>
-      );
+      this.props.addGenre(this.props.genre);
     } else {
-      return (
-        <li onClick={this.removeGenre}>
-          {this.props.genre}
-        </li>
-      );
+      this.props.removeGenre(this.props.genre);
     }
-  }
-
-  addGenre() {
-    this.props.addGenre(this.props.genre);
-  }
-
-  removeGenre() {
-    this.props.removeGenre(this.props.genre);
-  }
+  } 
 
   render() {
-    return this.renderGenreAction();
+    let genreColorIndex = this.props.genre[1] % 20 + 1;
+    return (
+      <li className={`genre-color-${genreColorIndex}`} onClick={this.renderGenreAction}>
+        {this.props.genre[0]}
+      </li>
+    );
   }
 }
 

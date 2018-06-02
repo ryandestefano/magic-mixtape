@@ -1,3 +1,38 @@
+$colors: (
+  mask: #1eff9e,
+  kitty: #ff363f,
+  feathers : #b70a41,
+  statue : #90f4ff,
+  harp: #caff52,
+  pyramid: #ff4833,
+  palm-frond: #a9ff18,
+  potion-1: #ff378b,
+  egg: #3f88ff,
+  diamond: #cca6ff,
+  mirror: #28f0ff,
+  crystals: #eb0fff,
+  hour-glass: #ffa3f9,
+  pineapple: #fde400,
+  wheel: #fde400,
+  potion-2: #ff9703,
+  glasses: #71e439,
+  bacon: #00eca1,
+  potion-3: #ffd736,
+  dinosaur-skull: #8316ff
+);
+
+@each $item, $color in $colors {
+  .#{$item} div span,
+  .genre-color-#{index($colors, ($item $color))} {
+    transition: .75s;
+    background-color: $color;
+    &:hover {
+      transition: .75s;
+      background-color: adjust-hue($color, 10%);
+    }
+  }
+}
+
 .Items {
   display: flex;
   flex-direction: row;
@@ -37,8 +72,8 @@
       background-color: rgba(0, 0, 0, .55);
     }
     svg.svg-inline--fa {
-      width: 40%;
-      height: 40%;
+      width: 30%;
+      height: 100%;
     }
   }
 }
@@ -123,66 +158,6 @@
             }
           }
         }
-      }
-      &.mask div span {
-        background-color: #1eff9e;
-      }
-      &.kitty div span {
-        background-color: #ff363f;
-      }
-      &.feathers div span {
-        background-color: #b70a41;
-      }
-      &.statue div span {
-        background-color: #90f4ff;
-      }
-      &.harp div span {
-        background-color: #caff52;
-      }
-      &.pyramid div span {
-        background-color: #ff4833;
-      }
-      &.palm-frond div span {
-        background-color: #a9ff18;
-      }
-      &.potion-1 div span {
-        background-color: #ff378b;
-      }
-      &.egg div span {
-        background-color: #3f88ff;
-      }
-      &.diamond div span {
-        background-color: #cca6ff;
-      }
-      &.mirror div span {
-        background-color: #28f0ff;
-      }
-      &.crystals div span {
-        background-color: #eb0fff;
-      }
-      &.hour-glass div span {
-        background-color: #ffa3f9;
-      }
-      &.pineapple div span {
-        background-color: #fde400;
-      }
-      &.wheel div span {
-        background-color: #fde400;
-      }
-      &.potion-2 div span {
-        background-color: #ff9703;
-      }
-      &.glasses div span {
-        background-color: #71e439;
-      }
-      &.bacon div span {
-        background-color: #00eca1;
-      }
-      &.potion-3 div span {
-        background-color: #ffd736;
-      }
-      &.dinosaur-skull div span {
-        background-color: #8316ff;
       }
     }
   }

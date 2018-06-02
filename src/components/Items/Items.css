@@ -1,3 +1,183 @@
+.mask div span,
+.genre-color-1 {
+  transition: .75s;
+  background-color: #1eff9e; }
+  .mask div span:hover,
+  .genre-color-1:hover {
+    transition: .75s;
+    background-color: #1effc4; }
+
+.kitty div span,
+.genre-color-2 {
+  transition: .75s;
+  background-color: #ff363f; }
+  .kitty div span:hover,
+  .genre-color-2:hover {
+    transition: .75s;
+    background-color: #ff4f36; }
+
+.feathers div span,
+.genre-color-3 {
+  transition: .75s;
+  background-color: #b70a41; }
+  .feathers div span:hover,
+  .genre-color-3:hover {
+    transition: .75s;
+    background-color: #b70a24; }
+
+.statue div span,
+.genre-color-4 {
+  transition: .75s;
+  background-color: #90f4ff; }
+  .statue div span:hover,
+  .genre-color-4:hover {
+    transition: .75s;
+    background-color: #90e2ff; }
+
+.harp div span,
+.genre-color-5 {
+  transition: .75s;
+  background-color: #caff52; }
+  .harp div span:hover,
+  .genre-color-5:hover {
+    transition: .75s;
+    background-color: #adff52; }
+
+.pyramid div span,
+.genre-color-6 {
+  transition: .75s;
+  background-color: #ff4833; }
+  .pyramid div span:hover,
+  .genre-color-6:hover {
+    transition: .75s;
+    background-color: #ff6a33; }
+
+.palm-frond div span,
+.genre-color-7 {
+  transition: .75s;
+  background-color: #a9ff18; }
+  .palm-frond div span:hover,
+  .genre-color-7:hover {
+    transition: .75s;
+    background-color: #83ff18; }
+
+.potion-1 div span,
+.genre-color-8 {
+  transition: .75s;
+  background-color: #ff378b; }
+  .potion-1 div span:hover,
+  .genre-color-8:hover {
+    transition: .75s;
+    background-color: #ff376a; }
+
+.egg div span,
+.genre-color-9 {
+  transition: .75s;
+  background-color: #3f88ff; }
+  .egg div span:hover,
+  .genre-color-9:hover {
+    transition: .75s;
+    background-color: #3f68ff; }
+
+.diamond div span,
+.genre-color-10 {
+  transition: .75s;
+  background-color: #cca6ff; }
+  .diamond div span:hover,
+  .genre-color-10:hover {
+    transition: .75s;
+    background-color: #dba6ff; }
+
+.mirror div span,
+.genre-color-11 {
+  transition: .75s;
+  background-color: #28f0ff; }
+  .mirror div span:hover,
+  .genre-color-11:hover {
+    transition: .75s;
+    background-color: #28ccff; }
+
+.crystals div span,
+.genre-color-12 {
+  transition: .75s;
+  background-color: #eb0fff; }
+  .crystals div span:hover,
+  .genre-color-12:hover {
+    transition: .75s;
+    background-color: #ff0feb; }
+
+.hour-glass div span,
+.genre-color-13 {
+  transition: .75s;
+  background-color: #ffa3f9; }
+  .hour-glass div span:hover,
+  .genre-color-13:hover {
+    transition: .75s;
+    background-color: #ffa3ea; }
+
+.pineapple div span,
+.genre-color-14 {
+  transition: .75s;
+  background-color: #fde400; }
+  .pineapple div span:hover,
+  .genre-color-14:hover {
+    transition: .75s;
+    background-color: #ecfd00; }
+
+.wheel div span,
+.genre-color-15 {
+  transition: .75s;
+  background-color: #fde400; }
+  .wheel div span:hover,
+  .genre-color-15:hover {
+    transition: .75s;
+    background-color: #ecfd00; }
+
+.potion-2 div span,
+.genre-color-16 {
+  transition: .75s;
+  background-color: #ff9703; }
+  .potion-2 div span:hover,
+  .genre-color-16:hover {
+    transition: .75s;
+    background-color: #ffc103; }
+
+.glasses div span,
+.genre-color-17 {
+  transition: .75s;
+  background-color: #71e439; }
+  .glasses div span:hover,
+  .genre-color-17:hover {
+    transition: .75s;
+    background-color: #55e439; }
+
+.bacon div span,
+.genre-color-18 {
+  transition: .75s;
+  background-color: #00eca1; }
+  .bacon div span:hover,
+  .genre-color-18:hover {
+    transition: .75s;
+    background-color: #00ecc8; }
+
+.potion-3 div span,
+.genre-color-19 {
+  transition: .75s;
+  background-color: #ffd736; }
+  .potion-3 div span:hover,
+  .genre-color-19:hover {
+    transition: .75s;
+    background-color: #fff936; }
+
+.dinosaur-skull div span,
+.genre-color-20 {
+  transition: .75s;
+  background-color: #8316ff; }
+  .dinosaur-skull div span:hover,
+  .genre-color-20:hover {
+    transition: .75s;
+    background-color: #aa16ff; }
+
 .Items {
   display: flex;
   flex-direction: row;
@@ -34,8 +214,8 @@
       transition: .25s;
       background-color: rgba(0, 0, 0, 0.55); }
     .Items button svg.svg-inline--fa {
-      width: 40%;
-      height: 40%; }
+      width: 30%;
+      height: 100%; }
 
 .SelectedItems {
   padding: 10px; }
@@ -110,66 +290,6 @@
         transition: .25s ease-in;
         opacity: 1;
         top: -10px; }
-      .Items ul li.Item.mask div span,
-      .SelectedItems ul li.Item.mask div span {
-        background-color: #1eff9e; }
-      .Items ul li.Item.kitty div span,
-      .SelectedItems ul li.Item.kitty div span {
-        background-color: #ff363f; }
-      .Items ul li.Item.feathers div span,
-      .SelectedItems ul li.Item.feathers div span {
-        background-color: #b70a41; }
-      .Items ul li.Item.statue div span,
-      .SelectedItems ul li.Item.statue div span {
-        background-color: #90f4ff; }
-      .Items ul li.Item.harp div span,
-      .SelectedItems ul li.Item.harp div span {
-        background-color: #caff52; }
-      .Items ul li.Item.pyramid div span,
-      .SelectedItems ul li.Item.pyramid div span {
-        background-color: #ff4833; }
-      .Items ul li.Item.palm-frond div span,
-      .SelectedItems ul li.Item.palm-frond div span {
-        background-color: #a9ff18; }
-      .Items ul li.Item.potion-1 div span,
-      .SelectedItems ul li.Item.potion-1 div span {
-        background-color: #ff378b; }
-      .Items ul li.Item.egg div span,
-      .SelectedItems ul li.Item.egg div span {
-        background-color: #3f88ff; }
-      .Items ul li.Item.diamond div span,
-      .SelectedItems ul li.Item.diamond div span {
-        background-color: #cca6ff; }
-      .Items ul li.Item.mirror div span,
-      .SelectedItems ul li.Item.mirror div span {
-        background-color: #28f0ff; }
-      .Items ul li.Item.crystals div span,
-      .SelectedItems ul li.Item.crystals div span {
-        background-color: #eb0fff; }
-      .Items ul li.Item.hour-glass div span,
-      .SelectedItems ul li.Item.hour-glass div span {
-        background-color: #ffa3f9; }
-      .Items ul li.Item.pineapple div span,
-      .SelectedItems ul li.Item.pineapple div span {
-        background-color: #fde400; }
-      .Items ul li.Item.wheel div span,
-      .SelectedItems ul li.Item.wheel div span {
-        background-color: #fde400; }
-      .Items ul li.Item.potion-2 div span,
-      .SelectedItems ul li.Item.potion-2 div span {
-        background-color: #ff9703; }
-      .Items ul li.Item.glasses div span,
-      .SelectedItems ul li.Item.glasses div span {
-        background-color: #71e439; }
-      .Items ul li.Item.bacon div span,
-      .SelectedItems ul li.Item.bacon div span {
-        background-color: #00eca1; }
-      .Items ul li.Item.potion-3 div span,
-      .SelectedItems ul li.Item.potion-3 div span {
-        background-color: #ffd736; }
-      .Items ul li.Item.dinosaur-skull div span,
-      .SelectedItems ul li.Item.dinosaur-skull div span {
-        background-color: #8316ff; }
 
 @keyframes bounce {
   0%, 100% {
