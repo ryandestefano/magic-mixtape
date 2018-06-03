@@ -46,6 +46,7 @@ class App extends Component {
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
     this.playPreview = this.playPreview.bind(this);
     this.stopPreview = this.stopPreview.bind(this);
+    this.renderManifest = this.renderManifest.bind(this);
     this.savePlaylist = this.savePlaylist.bind(this);
   }
 
@@ -140,6 +141,24 @@ class App extends Component {
     this.setState({currentPreview: ''});
   }
 
+  renderManifest() {
+    if (this.state.genreSeeds.length < 1 && this.state.itemSeeds.length < 1 && this.state.songSeeds.length < 1) {
+      return (
+        <div className="app-selections">
+          <p>There is nothing in your manifest!</p>
+        </div>
+      );
+    } else {
+      return (
+        <div className="app-selections">
+          <SelectedGenres genreSeeds={this.state.genreSeeds} removeGenre={this.removeGenreFromSeeds} /> 
+          <SelectedItems itemSeeds={this.state.itemSeeds} removeItem={this.removeItemFromSeeds} />
+          <RecommendationSeeds trackList={this.state.songSeeds} removeTrack={this.removeTrackFromSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} getRecommendations={this.getRecommendations} />
+        </div>
+      );
+    }
+  }
+
   savePlaylist() {
     const trackUris = this.state.playlist.map(track => { return track.uri });
     Spotify.savePlaylist(this.state.playlistName, trackUris);
@@ -164,11 +183,7 @@ class App extends Component {
               <SearchResults trackList={this.state.searchResults} addTrack={this.addTrackToSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} />
             </div>
           </div>
-          <div className="app-selections">
-            <SelectedGenres genreSeeds={this.state.genreSeeds} removeGenre={this.removeGenreFromSeeds} /> 
-            <SelectedItems itemSeeds={this.state.itemSeeds} removeItem={this.removeItemFromSeeds} />
-            <RecommendationSeeds trackList={this.state.songSeeds} removeTrack={this.removeTrackFromSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} getRecommendations={this.getRecommendations} />
-          </div>
+          {this.renderManifest()}
           <div className={"App-playlist " + (this.state.displayPlaylist ? 'active' : '')}>
             <Playlist togglePlaylistDisplay={this.togglePlaylistDisplay} trackList={this.state.playlist} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
           </div>

@@ -4,6 +4,7 @@ class Genre extends React.Component {
   constructor(props) {
     super(props);
     this.renderGenreAction = this.renderGenreAction.bind(this);
+    this.renderGenreActionIcon = this.renderGenreActionIcon.bind(this);
   }
 
   renderGenreAction() {
@@ -14,11 +15,22 @@ class Genre extends React.Component {
     }
   } 
 
+  renderGenreActionIcon() {
+    if (this.props.addGenre) {
+      return <i class="fas fa-plus"></i>;
+    } else {
+      return <i class="fas fa-minus"></i>;
+    }
+  }
+
   render() {
     let genreColorIndex = this.props.genre[1] % 20 + 1;
     return (
       <li className={`genre-color-${genreColorIndex}`} onClick={this.renderGenreAction}>
-        {this.props.genre[0]}
+        <p>{this.props.genre[0]}</p>
+        <span>
+          {this.renderGenreActionIcon()}
+        </span>
       </li>
     );
   }
