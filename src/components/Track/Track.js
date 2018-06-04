@@ -10,19 +10,39 @@ class Track extends React.Component {
     this.handleStopPreview = this.handleStopPreview.bind(this);
   }
 
-  renderTrackAction() {
+  renderTrackAction(randomColor) {
     if (this.props.addTrack) {
-      return <a className='Track-action' onClick={this.addTrack}>+</a>;
+      return (
+        <a className={`add track-inclusion-action track-action-color-${randomColor}`} onClick={this.addTrack}>
+          <i className="add fas fa-plus"></i>
+          <i className="remove fas fa-minus"></i>
+        </a>
+      );
     } else if (this.props.removeTrack) {
-      return <a className='Track-action' onClick={this.removeTrack}>-</a>;
+      return (
+        <a className={`remove track-inclusion-action track-action-color-${randomColor}`}  onClick={this.removeTrack}>
+          <i className="add fas fa-plus"></i>
+          <i className="remove fas fa-minus"></i>
+        </a>
+      );
     }
   }
 
-  renderPreviewAction() {
+  renderPreviewAction(randomColor) {
     if (this.props.preview !== this.props.currentPreview) {
-      return <a className="Track-preview-action" onClick={this.handlePlayPreview}>&#9658;</a>;
+      return (
+        <a className={`play track-preview-action track-action-color-${randomColor}`} onClick={this.handlePlayPreview}>
+          <i className="play fas fa-play"></i>
+          <i className="stop fas fa-stop"></i>
+        </a>
+      );
     } else {
-      return <a className="Track-preview-action" onClick={this.handleStopPreview}>&#9724;</a>;
+      return (
+        <a className={`stop track-preview-action track-action-color-${randomColor}`} onClick={this.handleStopPreview}>
+          <i className="play fas fa-play"></i>
+          <i className="stop fas fa-stop"></i>
+        </a>
+      );
     }
   }
 
@@ -43,14 +63,15 @@ class Track extends React.Component {
   }
 
   render() {
+    const randomColor = this.props.id.match(/\d/g).join("")  % 20 + 1;
     return (
       <div className="Track">
-        <div className="Track-information">
-          <h3>{this.props.name}</h3>
-          <p>{this.props.artist} | {this.props.album}</p>
+        <div className="track-information">
+          <h3 className={`color-${randomColor}`}>{this.props.name}</h3>
+          <p className={`color-${randomColor}`}>{this.props.artist} | {this.props.album}</p>
         </div>
-        {this.renderPreviewAction()}
-        {this.renderTrackAction()}
+        {this.renderPreviewAction(randomColor)}
+        {this.renderTrackAction(randomColor)}
       </div>
     );
   }

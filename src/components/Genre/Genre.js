@@ -17,9 +17,9 @@ class Genre extends React.Component {
 
   renderGenreActionIcon() {
     if (this.props.addGenre) {
-      return <i class="fas fa-plus"></i>;
+      return <i className="fas fa-plus"></i>;
     } else {
-      return <i class="fas fa-minus"></i>;
+      return <i className="fas fa-minus"></i>;
     }
   }
 

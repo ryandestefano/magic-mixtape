@@ -1,0 +1,61 @@
+.Track {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  border-bottom: 2px solid #ff378b;
+  .track-information {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 120px);
+    padding: 10px 20px;
+    h3,
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    h3 {
+      margin: 0 0 5px 0;
+    }
+    p {
+      font-size: .83rem;
+      font-weight: 300;
+    }
+  }
+  .track-preview-action,
+  .track-inclusion-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+    line-height: 0;
+    border-radius: 25px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    &.play {
+      svg.stop {
+        display: none;
+      }
+    }
+    &.stop {
+      svg.play {
+        display: none;
+      }
+    }
+    &.add {
+      svg.remove {
+        display: none;
+      }
+    }
+    &.remove {
+      svg.add {
+        display: none;
+      }
+    }
+  }
+}
+
