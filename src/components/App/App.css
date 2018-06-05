@@ -1,3 +1,825 @@
+/* VARIABLES + COLORS */
+.mask div span,
+.genre-color-1 {
+  transition: .75s;
+  background-color: #1eff9e; }
+  .mask div span:hover,
+  .genre-color-1:hover {
+    transition: .75s;
+    background-color: #1effc4; }
+
+.SearchResults .Track.color-1 h3 {
+  color: #9effd5; }
+.SearchResults .Track.color-1 p {
+  color: rgba(107, 255, 141, 0.75); }
+.SearchResults .Track.color-1 .track-inclusion-action,
+.SearchResults .Track.color-1 .track-preview-action {
+  transition: .25s;
+  color: #1eff9e;
+  background-color: rgba(30, 255, 158, 0); }
+  .SearchResults .Track.color-1 .track-inclusion-action:hover,
+  .SearchResults .Track.color-1 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #1eff9e; }
+
+.app-selections .Track.color-1 {
+  background-color: #00b768; }
+  .app-selections .Track.color-1 h3 {
+    color: #d1ffeb; }
+  .app-selections .Track.color-1 p {
+    color: rgba(132, 255, 161, 0.75); }
+  .app-selections .Track.color-1 .track-inclusion-action,
+  .app-selections .Track.color-1 .track-preview-action {
+    transition: .25s;
+    color: #b7ffe0;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-1 .track-inclusion-action:hover,
+    .app-selections .Track.color-1 .track-preview-action:hover {
+      transition: .25s;
+      color: #1eff9e;
+      background-color: #b7ffe0; }
+
+.kitty div span,
+.genre-color-2 {
+  transition: .75s;
+  background-color: #ff363f; }
+  .kitty div span:hover,
+  .genre-color-2:hover {
+    transition: .75s;
+    background-color: #ff4f36; }
+
+.SearchResults .Track.color-2 h3 {
+  color: #ffb6b9; }
+.SearchResults .Track.color-2 p {
+  color: rgba(255, 131, 178, 0.75); }
+.SearchResults .Track.color-2 .track-inclusion-action,
+.SearchResults .Track.color-2 .track-preview-action {
+  transition: .25s;
+  color: #ff363f;
+  background-color: rgba(255, 54, 63, 0); }
+  .SearchResults .Track.color-2 .track-inclusion-action:hover,
+  .SearchResults .Track.color-2 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #ff363f; }
+
+.app-selections .Track.color-2 {
+  background-color: #cf0009; }
+  .app-selections .Track.color-2 h3 {
+    color: #ffe9ea; }
+  .app-selections .Track.color-2 p {
+    color: rgba(255, 156, 193, 0.75); }
+  .app-selections .Track.color-2 .track-inclusion-action,
+  .app-selections .Track.color-2 .track-preview-action {
+    transition: .25s;
+    color: #ffcfd1;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-2 .track-inclusion-action:hover,
+    .app-selections .Track.color-2 .track-preview-action:hover {
+      transition: .25s;
+      color: #ff363f;
+      background-color: #ffcfd1; }
+
+.feathers div span,
+.genre-color-3 {
+  transition: .75s;
+  background-color: #b70a41; }
+  .feathers div span:hover,
+  .genre-color-3:hover {
+    transition: .75s;
+    background-color: #b70a24; }
+
+.SearchResults .Track.color-3 h3 {
+  color: #f54b81; }
+.SearchResults .Track.color-3 p {
+  color: rgba(243, 27, 167, 0.75); }
+.SearchResults .Track.color-3 .track-inclusion-action,
+.SearchResults .Track.color-3 .track-preview-action {
+  transition: .25s;
+  color: #b70a41;
+  background-color: rgba(183, 10, 65, 0); }
+  .SearchResults .Track.color-3 .track-inclusion-action:hover,
+  .SearchResults .Track.color-3 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #b70a41; }
+
+.app-selections .Track.color-3 {
+  background-color: #56051f; }
+  .app-selections .Track.color-3 h3 {
+    color: #f87ca3; }
+  .app-selections .Track.color-3 p {
+    color: rgba(244, 51, 177, 0.75); }
+  .app-selections .Track.color-3 .track-inclusion-action,
+  .app-selections .Track.color-3 .track-preview-action {
+    transition: .25s;
+    color: #f76392;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-3 .track-inclusion-action:hover,
+    .app-selections .Track.color-3 .track-preview-action:hover {
+      transition: .25s;
+      color: #b70a41;
+      background-color: #f76392; }
+
+.statue div span,
+.genre-color-4 {
+  transition: .75s;
+  background-color: #90f4ff; }
+  .statue div span:hover,
+  .genre-color-4:hover {
+    transition: .75s;
+    background-color: #90e2ff; }
+
+.SearchResults .Track.color-4 h3 {
+  color: white; }
+.SearchResults .Track.color-4 p {
+  color: rgba(221, 255, 247, 0.75); }
+.SearchResults .Track.color-4 .track-inclusion-action,
+.SearchResults .Track.color-4 .track-preview-action {
+  transition: .25s;
+  color: #90f4ff;
+  background-color: rgba(144, 244, 255, 0); }
+  .SearchResults .Track.color-4 .track-inclusion-action:hover,
+  .SearchResults .Track.color-4 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #90f4ff; }
+
+.app-selections .Track.color-4 {
+  background-color: #2aeaff; }
+  .app-selections .Track.color-4 h3 {
+    color: white; }
+  .app-selections .Track.color-4 p {
+    color: rgba(246, 255, 253, 0.75); }
+  .app-selections .Track.color-4 .track-inclusion-action,
+  .app-selections .Track.color-4 .track-preview-action {
+    transition: .25s;
+    color: white;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-4 .track-inclusion-action:hover,
+    .app-selections .Track.color-4 .track-preview-action:hover {
+      transition: .25s;
+      color: #90f4ff;
+      background-color: white; }
+
+.harp div span,
+.genre-color-5 {
+  transition: .75s;
+  background-color: #caff52; }
+  .harp div span:hover,
+  .genre-color-5:hover {
+    transition: .75s;
+    background-color: #adff52; }
+
+.SearchResults .Track.color-5 h3 {
+  color: #f1ffd2; }
+.SearchResults .Track.color-5 p {
+  color: rgba(255, 252, 159, 0.75); }
+.SearchResults .Track.color-5 .track-inclusion-action,
+.SearchResults .Track.color-5 .track-preview-action {
+  transition: .25s;
+  color: #caff52;
+  background-color: rgba(202, 255, 82, 0); }
+  .SearchResults .Track.color-5 .track-inclusion-action:hover,
+  .SearchResults .Track.color-5 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #caff52; }
+
+.app-selections .Track.color-5 {
+  background-color: #a3eb00; }
+  .app-selections .Track.color-5 h3 {
+    color: white; }
+  .app-selections .Track.color-5 p {
+    color: rgba(255, 253, 184, 0.75); }
+  .app-selections .Track.color-5 .track-inclusion-action,
+  .app-selections .Track.color-5 .track-preview-action {
+    transition: .25s;
+    color: #f9ffeb;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-5 .track-inclusion-action:hover,
+    .app-selections .Track.color-5 .track-preview-action:hover {
+      transition: .25s;
+      color: #caff52;
+      background-color: #f9ffeb; }
+
+.pyramid div span,
+.genre-color-6 {
+  transition: .75s;
+  background-color: #ff4833; }
+  .pyramid div span:hover,
+  .genre-color-6:hover {
+    transition: .75s;
+    background-color: #ff6a33; }
+
+.SearchResults .Track.color-6 h3 {
+  color: #ffbab3; }
+.SearchResults .Track.color-6 p {
+  color: rgba(255, 128, 157, 0.75); }
+.SearchResults .Track.color-6 .track-inclusion-action,
+.SearchResults .Track.color-6 .track-preview-action {
+  transition: .25s;
+  color: #ff4833;
+  background-color: rgba(255, 72, 51, 0); }
+  .SearchResults .Track.color-6 .track-inclusion-action:hover,
+  .SearchResults .Track.color-6 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #ff4833; }
+
+.app-selections .Track.color-6 {
+  background-color: #cc1500; }
+  .app-selections .Track.color-6 h3 {
+    color: #ffe8e6; }
+  .app-selections .Track.color-6 p {
+    color: rgba(255, 153, 177, 0.75); }
+  .app-selections .Track.color-6 .track-inclusion-action,
+  .app-selections .Track.color-6 .track-preview-action {
+    transition: .25s;
+    color: #ffd1cc;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-6 .track-inclusion-action:hover,
+    .app-selections .Track.color-6 .track-preview-action:hover {
+      transition: .25s;
+      color: #ff4833;
+      background-color: #ffd1cc; }
+
+.palm-frond div span,
+.genre-color-7 {
+  transition: .75s;
+  background-color: #a9ff18; }
+  .palm-frond div span:hover,
+  .genre-color-7:hover {
+    transition: .75s;
+    background-color: #83ff18; }
+
+.SearchResults .Track.color-7 h3 {
+  color: #d8ff98; }
+.SearchResults .Track.color-7 p {
+  color: rgba(249, 255, 101, 0.75); }
+.SearchResults .Track.color-7 .track-inclusion-action,
+.SearchResults .Track.color-7 .track-preview-action {
+  transition: .25s;
+  color: #a9ff18;
+  background-color: rgba(169, 255, 24, 0); }
+  .SearchResults .Track.color-7 .track-inclusion-action:hover,
+  .SearchResults .Track.color-7 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #a9ff18; }
+
+.app-selections .Track.color-7 {
+  background-color: #6fb100; }
+  .app-selections .Track.color-7 h3 {
+    color: #ebffcb; }
+  .app-selections .Track.color-7 p {
+    color: rgba(250, 255, 126, 0.75); }
+  .app-selections .Track.color-7 .track-inclusion-action,
+  .app-selections .Track.color-7 .track-preview-action {
+    transition: .25s;
+    color: #e2ffb1;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-7 .track-inclusion-action:hover,
+    .app-selections .Track.color-7 .track-preview-action:hover {
+      transition: .25s;
+      color: #a9ff18;
+      background-color: #e2ffb1; }
+
+.potion-1 div span,
+.genre-color-8 {
+  transition: .75s;
+  background-color: #ff378b; }
+  .potion-1 div span:hover,
+  .genre-color-8:hover {
+    transition: .75s;
+    background-color: #ff376a; }
+
+.SearchResults .Track.color-8 h3 {
+  color: #ffb7d5; }
+.SearchResults .Track.color-8 p {
+  color: rgba(255, 132, 225, 0.75); }
+.SearchResults .Track.color-8 .track-inclusion-action,
+.SearchResults .Track.color-8 .track-preview-action {
+  transition: .25s;
+  color: #ff378b;
+  background-color: rgba(255, 55, 139, 0); }
+  .SearchResults .Track.color-8 .track-inclusion-action:hover,
+  .SearchResults .Track.color-8 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #ff378b; }
+
+.app-selections .Track.color-8 {
+  background-color: #d00057; }
+  .app-selections .Track.color-8 h3 {
+    color: #ffeaf3; }
+  .app-selections .Track.color-8 p {
+    color: rgba(255, 157, 231, 0.75); }
+  .app-selections .Track.color-8 .track-inclusion-action,
+  .app-selections .Track.color-8 .track-preview-action {
+    transition: .25s;
+    color: #ffd0e4;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-8 .track-inclusion-action:hover,
+    .app-selections .Track.color-8 .track-preview-action:hover {
+      transition: .25s;
+      color: #ff378b;
+      background-color: #ffd0e4; }
+
+.egg div span,
+.genre-color-9 {
+  transition: .75s;
+  background-color: #3f88ff; }
+  .egg div span:hover,
+  .genre-color-9:hover {
+    transition: .75s;
+    background-color: #3f68ff; }
+
+.SearchResults .Track.color-9 h3 {
+  color: #bfd7ff; }
+.SearchResults .Track.color-9 p {
+  color: rgba(140, 222, 255, 0.75); }
+.SearchResults .Track.color-9 .track-inclusion-action,
+.SearchResults .Track.color-9 .track-preview-action {
+  transition: .25s;
+  color: #3f88ff;
+  background-color: rgba(63, 136, 255, 0); }
+  .SearchResults .Track.color-9 .track-inclusion-action:hover,
+  .SearchResults .Track.color-9 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #3f88ff; }
+
+.app-selections .Track.color-9 {
+  background-color: #0052d8; }
+  .app-selections .Track.color-9 h3 {
+    color: #f2f7ff; }
+  .app-selections .Track.color-9 p {
+    color: rgba(165, 229, 255, 0.75); }
+  .app-selections .Track.color-9 .track-inclusion-action,
+  .app-selections .Track.color-9 .track-preview-action {
+    transition: .25s;
+    color: #d8e7ff;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-9 .track-inclusion-action:hover,
+    .app-selections .Track.color-9 .track-preview-action:hover {
+      transition: .25s;
+      color: #3f88ff;
+      background-color: #d8e7ff; }
+
+.diamond div span,
+.genre-color-10 {
+  transition: .75s;
+  background-color: #cca6ff; }
+  .diamond div span:hover,
+  .genre-color-10:hover {
+    transition: .75s;
+    background-color: #dba6ff; }
+
+.SearchResults .Track.color-10 h3 {
+  color: white; }
+.SearchResults .Track.color-10 p {
+  color: rgba(244, 243, 255, 0.75); }
+.SearchResults .Track.color-10 .track-inclusion-action,
+.SearchResults .Track.color-10 .track-preview-action {
+  transition: .25s;
+  color: #cca6ff;
+  background-color: rgba(204, 166, 255, 0); }
+  .SearchResults .Track.color-10 .track-inclusion-action:hover,
+  .SearchResults .Track.color-10 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #cca6ff; }
+
+.app-selections .Track.color-10 {
+  background-color: #9240ff; }
+  .app-selections .Track.color-10 h3 {
+    color: white; }
+  .app-selections .Track.color-10 p {
+    color: rgba(255, 255, 255, 0.75); }
+  .app-selections .Track.color-10 .track-inclusion-action,
+  .app-selections .Track.color-10 .track-preview-action {
+    transition: .25s;
+    color: white;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-10 .track-inclusion-action:hover,
+    .app-selections .Track.color-10 .track-preview-action:hover {
+      transition: .25s;
+      color: #cca6ff;
+      background-color: white; }
+
+.mirror div span,
+.genre-color-11 {
+  transition: .75s;
+  background-color: #28f0ff; }
+  .mirror div span:hover,
+  .genre-color-11:hover {
+    transition: .75s;
+    background-color: #28ccff; }
+
+.SearchResults .Track.color-11 h3 {
+  color: #a8f9ff; }
+.SearchResults .Track.color-11 p {
+  color: rgba(117, 255, 218, 0.75); }
+.SearchResults .Track.color-11 .track-inclusion-action,
+.SearchResults .Track.color-11 .track-preview-action {
+  transition: .25s;
+  color: #28f0ff;
+  background-color: rgba(40, 240, 255, 0); }
+  .SearchResults .Track.color-11 .track-inclusion-action:hover,
+  .SearchResults .Track.color-11 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #28f0ff; }
+
+.app-selections .Track.color-11 {
+  background-color: #00b4c1; }
+  .app-selections .Track.color-11 h3 {
+    color: #dbfcff; }
+  .app-selections .Track.color-11 p {
+    color: rgba(142, 255, 225, 0.75); }
+  .app-selections .Track.color-11 .track-inclusion-action,
+  .app-selections .Track.color-11 .track-preview-action {
+    transition: .25s;
+    color: #c1fbff;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-11 .track-inclusion-action:hover,
+    .app-selections .Track.color-11 .track-preview-action:hover {
+      transition: .25s;
+      color: #28f0ff;
+      background-color: #c1fbff; }
+
+.crystals div span,
+.genre-color-12 {
+  transition: .75s;
+  background-color: #eb0fff; }
+  .crystals div span:hover,
+  .genre-color-12:hover {
+    transition: .75s;
+    background-color: #ff0feb; }
+
+.SearchResults .Track.color-12 h3 {
+  color: #f68fff; }
+.SearchResults .Track.color-12 p {
+  color: rgba(187, 92, 255, 0.75); }
+.SearchResults .Track.color-12 .track-inclusion-action,
+.SearchResults .Track.color-12 .track-preview-action {
+  transition: .25s;
+  color: #eb0fff;
+  background-color: rgba(235, 15, 255, 0); }
+  .SearchResults .Track.color-12 .track-inclusion-action:hover,
+  .SearchResults .Track.color-12 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #eb0fff; }
+
+.app-selections .Track.color-12 {
+  background-color: #9a00a8; }
+  .app-selections .Track.color-12 h3 {
+    color: #fac2ff; }
+  .app-selections .Track.color-12 p {
+    color: rgba(198, 117, 255, 0.75); }
+  .app-selections .Track.color-12 .track-inclusion-action,
+  .app-selections .Track.color-12 .track-preview-action {
+    transition: .25s;
+    color: #f8a8ff;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-12 .track-inclusion-action:hover,
+    .app-selections .Track.color-12 .track-preview-action:hover {
+      transition: .25s;
+      color: #eb0fff;
+      background-color: #f8a8ff; }
+
+.hour-glass div span,
+.genre-color-13 {
+  transition: .75s;
+  background-color: #ffa3f9; }
+  .hour-glass div span:hover,
+  .genre-color-13:hover {
+    transition: .75s;
+    background-color: #ffa3ea; }
+
+.SearchResults .Track.color-13 h3 {
+  color: white; }
+.SearchResults .Track.color-13 p {
+  color: rgba(251, 240, 255, 0.75); }
+.SearchResults .Track.color-13 .track-inclusion-action,
+.SearchResults .Track.color-13 .track-preview-action {
+  transition: .25s;
+  color: #ffa3f9;
+  background-color: rgba(255, 163, 249, 0); }
+  .SearchResults .Track.color-13 .track-inclusion-action:hover,
+  .SearchResults .Track.color-13 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #ffa3f9; }
+
+.app-selections .Track.color-13 {
+  background-color: #ff3df2; }
+  .app-selections .Track.color-13 h3 {
+    color: white; }
+  .app-selections .Track.color-13 p {
+    color: rgba(255, 255, 255, 0.75); }
+  .app-selections .Track.color-13 .track-inclusion-action,
+  .app-selections .Track.color-13 .track-preview-action {
+    transition: .25s;
+    color: white;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-13 .track-inclusion-action:hover,
+    .app-selections .Track.color-13 .track-preview-action:hover {
+      transition: .25s;
+      color: #ffa3f9;
+      background-color: white; }
+
+.pineapple div span,
+.genre-color-14 {
+  transition: .75s;
+  background-color: #fde400; }
+  .pineapple div span:hover,
+  .genre-color-14:hover {
+    transition: .75s;
+    background-color: #ecfd00; }
+
+.SearchResults .Track.color-14 h3 {
+  color: #fff27e; }
+.SearchResults .Track.color-14 p {
+  color: rgba(255, 177, 75, 0.75); }
+.SearchResults .Track.color-14 .track-inclusion-action,
+.SearchResults .Track.color-14 .track-preview-action {
+  transition: .25s;
+  color: #fde400;
+  background-color: rgba(253, 228, 0, 0); }
+  .SearchResults .Track.color-14 .track-inclusion-action:hover,
+  .SearchResults .Track.color-14 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #fde400; }
+
+.app-selections .Track.color-14 {
+  background-color: #978800; }
+  .app-selections .Track.color-14 h3 {
+    color: #fff7b1; }
+  .app-selections .Track.color-14 p {
+    color: rgba(255, 188, 100, 0.75); }
+  .app-selections .Track.color-14 .track-inclusion-action,
+  .app-selections .Track.color-14 .track-preview-action {
+    transition: .25s;
+    color: #fff597;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-14 .track-inclusion-action:hover,
+    .app-selections .Track.color-14 .track-preview-action:hover {
+      transition: .25s;
+      color: #fde400;
+      background-color: #fff597; }
+
+.wheel div span,
+.genre-color-15 {
+  transition: .75s;
+  background-color: #fde400; }
+  .wheel div span:hover,
+  .genre-color-15:hover {
+    transition: .75s;
+    background-color: #ecfd00; }
+
+.SearchResults .Track.color-15 h3 {
+  color: #fff27e; }
+.SearchResults .Track.color-15 p {
+  color: rgba(255, 177, 75, 0.75); }
+.SearchResults .Track.color-15 .track-inclusion-action,
+.SearchResults .Track.color-15 .track-preview-action {
+  transition: .25s;
+  color: #fde400;
+  background-color: rgba(253, 228, 0, 0); }
+  .SearchResults .Track.color-15 .track-inclusion-action:hover,
+  .SearchResults .Track.color-15 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #fde400; }
+
+.app-selections .Track.color-15 {
+  background-color: #978800; }
+  .app-selections .Track.color-15 h3 {
+    color: #fff7b1; }
+  .app-selections .Track.color-15 p {
+    color: rgba(255, 188, 100, 0.75); }
+  .app-selections .Track.color-15 .track-inclusion-action,
+  .app-selections .Track.color-15 .track-preview-action {
+    transition: .25s;
+    color: #fff597;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-15 .track-inclusion-action:hover,
+    .app-selections .Track.color-15 .track-preview-action:hover {
+      transition: .25s;
+      color: #fde400;
+      background-color: #fff597; }
+
+.potion-2 div span,
+.genre-color-16 {
+  transition: .75s;
+  background-color: #ff9703; }
+  .potion-2 div span:hover,
+  .genre-color-16:hover {
+    transition: .75s;
+    background-color: #ffc103; }
+
+.SearchResults .Track.color-16 h3 {
+  color: #ffcc83; }
+.SearchResults .Track.color-16 p {
+  color: rgba(255, 124, 80, 0.75); }
+.SearchResults .Track.color-16 .track-inclusion-action,
+.SearchResults .Track.color-16 .track-preview-action {
+  transition: .25s;
+  color: #ff9703;
+  background-color: rgba(255, 151, 3, 0); }
+  .SearchResults .Track.color-16 .track-inclusion-action:hover,
+  .SearchResults .Track.color-16 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #ff9703; }
+
+.app-selections .Track.color-16 {
+  background-color: #9c5c00; }
+  .app-selections .Track.color-16 h3 {
+    color: #ffe1b6; }
+  .app-selections .Track.color-16 p {
+    color: rgba(255, 143, 105, 0.75); }
+  .app-selections .Track.color-16 .track-inclusion-action,
+  .app-selections .Track.color-16 .track-preview-action {
+    transition: .25s;
+    color: #ffd69c;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-16 .track-inclusion-action:hover,
+    .app-selections .Track.color-16 .track-preview-action:hover {
+      transition: .25s;
+      color: #ff9703;
+      background-color: #ffd69c; }
+
+.glasses div span,
+.genre-color-17 {
+  transition: .75s;
+  background-color: #71e439; }
+  .glasses div span:hover,
+  .genre-color-17:hover {
+    transition: .75s;
+    background-color: #55e439; }
+
+.SearchResults .Track.color-17 h3 {
+  color: #c1f3a9; }
+.SearchResults .Track.color-17 p {
+  color: rgba(199, 237, 124, 0.75); }
+.SearchResults .Track.color-17 .track-inclusion-action,
+.SearchResults .Track.color-17 .track-preview-action {
+  transition: .25s;
+  color: #71e439;
+  background-color: rgba(113, 228, 57, 0); }
+  .SearchResults .Track.color-17 .track-inclusion-action:hover,
+  .SearchResults .Track.color-17 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #71e439; }
+
+.app-selections .Track.color-17 {
+  background-color: #44a116; }
+  .app-selections .Track.color-17 h3 {
+    color: #e2f9d6; }
+  .app-selections .Track.color-17 p {
+    color: rgba(209, 240, 147, 0.75); }
+  .app-selections .Track.color-17 .track-inclusion-action,
+  .app-selections .Track.color-17 .track-preview-action {
+    transition: .25s;
+    color: #d2f6c0;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-17 .track-inclusion-action:hover,
+    .app-selections .Track.color-17 .track-preview-action:hover {
+      transition: .25s;
+      color: #71e439;
+      background-color: #d2f6c0; }
+
+.bacon div span,
+.genre-color-18 {
+  transition: .75s;
+  background-color: #00eca1; }
+  .bacon div span:hover,
+  .genre-color-18:hover {
+    transition: .75s;
+    background-color: #00ecc8; }
+
+.SearchResults .Track.color-18 h3 {
+  color: #6dffd0; }
+.SearchResults .Track.color-18 p {
+  color: rgba(58, 255, 126, 0.75); }
+.SearchResults .Track.color-18 .track-inclusion-action,
+.SearchResults .Track.color-18 .track-preview-action {
+  transition: .25s;
+  color: #00eca1;
+  background-color: rgba(0, 236, 161, 0); }
+  .SearchResults .Track.color-18 .track-inclusion-action:hover,
+  .SearchResults .Track.color-18 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #00eca1; }
+
+.app-selections .Track.color-18 {
+  background-color: #00865b; }
+  .app-selections .Track.color-18 h3 {
+    color: #a0ffe1; }
+  .app-selections .Track.color-18 p {
+    color: rgba(83, 255, 143, 0.75); }
+  .app-selections .Track.color-18 .track-inclusion-action,
+  .app-selections .Track.color-18 .track-preview-action {
+    transition: .25s;
+    color: #86ffd9;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-18 .track-inclusion-action:hover,
+    .app-selections .Track.color-18 .track-preview-action:hover {
+      transition: .25s;
+      color: #00eca1;
+      background-color: #86ffd9; }
+
+.potion-3 div span,
+.genre-color-19 {
+  transition: .75s;
+  background-color: #ffd736; }
+  .potion-3 div span:hover,
+  .genre-color-19:hover {
+    transition: .75s;
+    background-color: #fff936; }
+
+.SearchResults .Track.color-19 h3 {
+  color: #fff0b6; }
+.SearchResults .Track.color-19 p {
+  color: rgba(255, 189, 131, 0.75); }
+.SearchResults .Track.color-19 .track-inclusion-action,
+.SearchResults .Track.color-19 .track-preview-action {
+  transition: .25s;
+  color: #ffd736;
+  background-color: rgba(255, 215, 54, 0); }
+  .SearchResults .Track.color-19 .track-inclusion-action:hover,
+  .SearchResults .Track.color-19 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #ffd736; }
+
+.app-selections .Track.color-19 {
+  background-color: #cfa600; }
+  .app-selections .Track.color-19 h3 {
+    color: #fffbe9; }
+  .app-selections .Track.color-19 p {
+    color: rgba(255, 202, 156, 0.75); }
+  .app-selections .Track.color-19 .track-inclusion-action,
+  .app-selections .Track.color-19 .track-preview-action {
+    transition: .25s;
+    color: #fff5cf;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-19 .track-inclusion-action:hover,
+    .app-selections .Track.color-19 .track-preview-action:hover {
+      transition: .25s;
+      color: #ffd736;
+      background-color: #fff5cf; }
+
+.dinosaur-skull div span,
+.genre-color-20 {
+  transition: .75s;
+  background-color: #8316ff; }
+  .dinosaur-skull div span:hover,
+  .genre-color-20:hover {
+    transition: .75s;
+    background-color: #aa16ff; }
+
+.SearchResults .Track.color-20 h3 {
+  color: #c796ff; }
+.SearchResults .Track.color-20 p {
+  color: rgba(120, 99, 255, 0.75); }
+.SearchResults .Track.color-20 .track-inclusion-action,
+.SearchResults .Track.color-20 .track-preview-action {
+  transition: .25s;
+  color: #8316ff;
+  background-color: rgba(131, 22, 255, 0); }
+  .SearchResults .Track.color-20 .track-inclusion-action:hover,
+  .SearchResults .Track.color-20 .track-preview-action:hover {
+    transition: .25s;
+    color: #fff;
+    background-color: #8316ff; }
+
+.app-selections .Track.color-20 {
+  background-color: #5200af; }
+  .app-selections .Track.color-20 h3 {
+    color: #e2c9ff; }
+  .app-selections .Track.color-20 p {
+    color: rgba(142, 124, 255, 0.75); }
+  .app-selections .Track.color-20 .track-inclusion-action,
+  .app-selections .Track.color-20 .track-preview-action {
+    transition: .25s;
+    color: #d4afff;
+    background-color: rgba(255, 255, 255, 0); }
+    .app-selections .Track.color-20 .track-inclusion-action:hover,
+    .app-selections .Track.color-20 .track-preview-action:hover {
+      transition: .25s;
+      color: #8316ff;
+      background-color: #d4afff; }
+
+/* GENERAL */
 * {
   box-sizing: border-box; }
 
@@ -13,53 +835,413 @@ h1 {
   position: relative;
   z-index: 1;
   height: 80px;
-  color: #fff;
-  background-color: #010c3f;
+  color: #ff378b;
+  background-color: #370017;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 1.88rem;
   padding: .77rem 0; }
-
-h1 .highlight {
-  color: #6c41ec; }
 
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.55rem; }
 
 .App {
-  height: 100%;
-  padding: 0 17% 10% 17%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   color: #fff; }
+  .App .app-options {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    min-height: 100%;
+    background-color: #ff378b;
+    padding: 30px; }
+  .App .app-selections {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-height: 100%;
+    background-color: #fcf;
+    padding: 30px; }
+    .App .app-selections .Playlist {
+      width: 100%;
+      padding: 0; }
+      .App .app-selections .Playlist .track-list {
+        width: 100%; }
+        .App .app-selections .Playlist .track-list .Track {
+          border-radius: 5px;
+          margin: 0 0 5px 0; }
+  .App .App-playlist {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
 
-.app-options {
+/* GENRES */
+.Genres,
+.Items {
+  display: flex;
+  flex-direction: row;
+  position: relative; }
+  .Genres ul,
+  .Items ul {
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 5px; }
+    .Genres ul li.Item,
+    .Items ul li.Item {
+      width: 20%;
+      padding: 20% 0 0 0; }
+  .Genres button,
+  .Items button {
+    transition: .25s;
+    appearance: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    color: #ff378b;
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.65);
+    border: none;
+    border-left: 2px solid #ff378b;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 0;
+    cursor: pointer;
+    outline: none; }
+    .Genres button:hover,
+    .Items button:hover {
+      color: #ffd0e4;
+      transition: .25s;
+      background-color: rgba(0, 0, 0, 0.55); }
+    .Genres button svg.svg-inline--fa,
+    .Items button svg.svg-inline--fa {
+      width: 30%;
+      height: 100%; }
+
+.SelectedGenres,
+.SelectedItems {
+  padding: 10px; }
+  .SelectedGenres ul li.Item,
+  .SelectedItems ul li.Item {
+    width: 50%;
+    padding: 50% 0 0 0; }
+
+.Genres,
+.SelectedGenres {
+  text-align: center;
+  margin: 0 0 10px 0; }
+  .Genres h2,
+  .SelectedGenres h2 {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 0 10px 0; }
+  .Genres ul,
+  .SelectedGenres ul {
+    list-style: none; }
+    .Genres ul li,
+    .SelectedGenres ul li {
+      transition: .25s;
+      position: relative;
+      display: inline-block;
+      color: #fff;
+      font-size: 21px;
+      border-radius: 2px;
+      margin: 5px;
+      padding: 10px 30px;
+      cursor: pointer; }
+      .Genres ul li p,
+      .SelectedGenres ul li p {
+        display: inline-block; }
+      .Genres ul li span,
+      .SelectedGenres ul li span {
+        transition: .25s;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        line-height: 0;
+        margin: -7.5px 0 0 0;
+        opacity: 0; }
+        .Genres ul li span svg.svg-inline--fa,
+        .SelectedGenres ul li span svg.svg-inline--fa {
+          width: 100%;
+          height: 100%; }
+      .Genres ul li:hover,
+      .SelectedGenres ul li:hover {
+        transition: .25s;
+        padding: 10px 40px 10px 20px; }
+        .Genres ul li:hover span,
+        .SelectedGenres ul li:hover span {
+          transition: .25s;
+          right: 15px;
+          opacity: 1; }
+
+.Items,
+.SelectedItems {
+  text-align: center;
+  margin: 0 0 10px 0; }
+  .Items h2,
+  .SelectedItems h2 {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 0 10px 0; }
+  .Items ul,
+  .SelectedItems ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none; }
+    .Items ul li.Item,
+    .SelectedItems ul li.Item {
+      position: relative;
+      color: #fff;
+      cursor: pointer; }
+      .Items ul li.Item div,
+      .SelectedItems ul li.Item div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 5px; }
+        .Items ul li.Item div span,
+        .SelectedItems ul li.Item div span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          border-radius: 4px;
+          padding: 10px 0; }
+          .Items ul li.Item div span img,
+          .SelectedItems ul li.Item div span img {
+            position: relative;
+            width: 75%;
+            height: auto;
+            margin: 0 0 5px 0; }
+          .Items ul li.Item div span p,
+          .SelectedItems ul li.Item div span p {
+            font-size: 14px; }
+            .Items ul li.Item div span p.description,
+            .SelectedItems ul li.Item div span p.description {
+              transition: .25s;
+              opacity: 0;
+              position: absolute;
+              top: 0;
+              left: 0;
+              max-width: 100px;
+              color: #fff;
+              background-color: rgba(0, 0, 0, 0.7);
+              font-size: 12px; }
+      .Items ul li.Item:hover div span img,
+      .SelectedItems ul li.Item:hover div span img {
+        animation: bounce 1s ease-in-out infinite; }
+      .Items ul li.Item:hover div span p.description,
+      .SelectedItems ul li.Item:hover div span p.description {
+        transition: .25s ease-in;
+        opacity: 1;
+        top: -10px; }
+
+@keyframes bounce {
+  0%, 100% {
+    top: 0px; }
+  50% {
+    top: -10px; } }
+.App-playlist {
+  transition: .5s;
   position: absolute;
+  z-index: 100;
   top: 0;
   left: 0;
-  width: 70%;
+  display: block;
+  width: 100%;
   height: 100%;
-  background-color: #ff378b;
-  padding: 110px 30px 30px 30px; }
+  overflow: scroll;
+  background-color: rgba(255, 100, 200, 0.9);
+  visibility: hidden;
+  opacity: 0; }
+  .App-playlist.active {
+    transition: .5s;
+    visibility: visible;
+    opacity: 1; }
 
-.app-selections {
-  position: absolute;
-  top: 0;
-  left: 70%;
-  width: 30%;
-  height: 100%;
-  background-color: #fcf;
-  padding: 110px 30px 30px 30px; }
-
-.App-playlist {
+.Playlist {
   display: flex;
-  justify-content: space-between;
-  width: 100%; }
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  width: 100%;
+  padding: 30px; }
+  .Playlist .Playlist-save {
+    cursor: pointer;
+    width: 10rem;
+    padding: .77rem 0;
+    border-radius: 54px;
+    margin-top: 1.27rem;
+    background-color: #6c41ec;
+    text-align: center;
+    font-size: .83rem;
+    transition: background-color .25s; }
+    .Playlist .Playlist-save:hover {
+      background-color: rgba(108, 65, 233, 0.7); }
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; }
+
+.PreviewPlayer {
+  display: none; }
+
+.Playlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  width: 37%;
+  max-height: 950px;
+  padding: 2.27rem 1.16rem; }
+
+.Playlist input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #6f6f6f;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.55rem;
+  color: #fff; }
+
+.Playlist-save {
+  cursor: pointer;
+  width: 10rem;
+  padding: .77rem 0;
+  border-radius: 54px;
+  margin-top: 1.27rem;
+  background-color: #6c41ec;
+  text-align: center;
+  font-size: .83rem;
+  transition: background-color .25s; }
+
+.Playlist-save:hover {
+  background-color: rgba(108, 65, 233, 0.7); }
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; }
 
 @media only screen and (max-width: 1020px) {
-  .App-playlist {
+  .Playlist {
+    width: 90%; } }
+.SearchBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  margin: 0 0 2px 0;
+  padding: 10px; }
+
+.SearchBar input {
+  padding: 15px 20px;
+  color: #010c3f;
+  font-size: 21px;
+  border: none;
+  border-radius: 3px; }
+
+.SearchBar input:focus {
+  outline: none; }
+
+.SearchBar a {
+  cursor: pointer;
+  width: 8.11rem;
+  padding: .77rem 0;
+  border-radius: 54px;
+  background-color: #010c3f;
+  text-align: center;
+  font-size: .833rem;
+  transition: background-color .25s; }
+
+.SearchBar a:hover {
+  background-color: rgba(108, 65, 233, 0.7); }
+
+.SearchResults {
+  width: 100%;
+  height: auto;
+  overflow-y: scroll;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px; }
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; }
+
+@media only screen and (max-width: 1020px) {
+  .SearchResults {
+    margin-bottom: 2rem; } }
+.Track {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  background-color: rgba(0, 0, 0, 0.65);
+  margin: 0 0 2px 0; }
+  .Track .track-information {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 120px);
+    padding: 10px 20px; }
+    .Track .track-information h3,
+    .Track .track-information p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .Track .track-information h3 {
+      margin: 0 0 5px 0; }
+    .Track .track-information p {
+      font-size: .83rem;
+      font-weight: 300; }
+  .Track .track-preview-action,
+  .Track .track-inclusion-action {
+    display: flex;
     align-items: center;
-    flex-direction: column; } }
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+    line-height: 0;
+    border-radius: 25px;
+    margin: 0 10px 0 0;
+    cursor: pointer; }
+    .Track .track-preview-action.play svg.stop,
+    .Track .track-inclusion-action.play svg.stop {
+      display: none; }
+    .Track .track-preview-action.stop svg.play,
+    .Track .track-inclusion-action.stop svg.play {
+      display: none; }
+    .Track .track-preview-action.add svg.remove,
+    .Track .track-inclusion-action.add svg.remove {
+      display: none; }
+    .Track .track-preview-action.remove svg.add,
+    .Track .track-inclusion-action.remove svg.add {
+      display: none; }
+
+.TrackList {
+  width: 100%; }
 
 /*# sourceMappingURL=App.css.map */

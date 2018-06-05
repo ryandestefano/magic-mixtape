@@ -1,5 +1,4 @@
 import React from 'react';
-import './Track.css';
 
 class Track extends React.Component {
   constructor(props) {
@@ -10,17 +9,17 @@ class Track extends React.Component {
     this.handleStopPreview = this.handleStopPreview.bind(this);
   }
 
-  renderTrackAction(randomColor) {
+  renderTrackAction() {
     if (this.props.addTrack) {
       return (
-        <a className={`add track-inclusion-action track-action-color-${randomColor}`} onClick={this.addTrack}>
+        <a className="add track-inclusion-action" onClick={this.addTrack}>
           <i className="add fas fa-plus"></i>
           <i className="remove fas fa-minus"></i>
         </a>
       );
     } else if (this.props.removeTrack) {
       return (
-        <a className={`remove track-inclusion-action track-action-color-${randomColor}`}  onClick={this.removeTrack}>
+        <a className="remove track-inclusion-action" onClick={this.removeTrack}>
           <i className="add fas fa-plus"></i>
           <i className="remove fas fa-minus"></i>
         </a>
@@ -28,17 +27,17 @@ class Track extends React.Component {
     }
   }
 
-  renderPreviewAction(randomColor) {
+  renderPreviewAction() {
     if (this.props.preview !== this.props.currentPreview) {
       return (
-        <a className={`play track-preview-action track-action-color-${randomColor}`} onClick={this.handlePlayPreview}>
+        <a className="play track-preview-action" onClick={this.handlePlayPreview}>
           <i className="play fas fa-play"></i>
           <i className="stop fas fa-stop"></i>
         </a>
       );
     } else {
       return (
-        <a className={`stop track-preview-action track-action-color-${randomColor}`} onClick={this.handleStopPreview}>
+        <a className="stop track-preview-action" onClick={this.handleStopPreview}>
           <i className="play fas fa-play"></i>
           <i className="stop fas fa-stop"></i>
         </a>
@@ -65,13 +64,13 @@ class Track extends React.Component {
   render() {
     const randomColor = this.props.id.match(/\d/g).join("")  % 20 + 1;
     return (
-      <div className="Track">
+      <div className={`Track color-${randomColor}`}>
         <div className="track-information">
-          <h3 className={`color-${randomColor}`}>{this.props.name}</h3>
-          <p className={`color-${randomColor}`}>{this.props.artist} | {this.props.album}</p>
+          <h3>{this.props.name}</h3>
+          <p>{this.props.artist} | {this.props.album}</p>
         </div>
-        {this.renderPreviewAction(randomColor)}
-        {this.renderTrackAction(randomColor)}
+        {this.renderPreviewAction()}
+        {this.renderTrackAction()}
       </div>
     );
   }

@@ -1,6 +1,5 @@
 import React from 'react';
 import Item from '../Item/Item';
-import './Items.css';
 
 class Items extends React.Component {
   constructor(props) {

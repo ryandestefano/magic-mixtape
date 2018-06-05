@@ -1,6 +1,5 @@
 import React from 'react';
 import Genre from '../Genre/Genre';
-import './Genres.css';
 
 class Genres extends React.Component {
   constructor(props) {

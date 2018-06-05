@@ -1,6 +1,5 @@
 import React from 'react';
 import TrackList from '../TrackList/TrackList';
-import './RecommendationSeeds.css';
 
 class RecommendationSeeds extends React.Component {
   render() {

@@ -173,7 +173,7 @@ class App extends Component {
     return (
       <div>
         <PreviewPlayer preview={this.state.currentPreview} />
-        <h1>Ja<span className="highlight">mmm</span>ing</h1>
+        <h1>Mixtape Generator</h1>
         <div className="App">
           <div className="app-options">
             <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} addGenre={this.addGenreToSeeds} numberOfColors={this.state.availableItems.length} />
