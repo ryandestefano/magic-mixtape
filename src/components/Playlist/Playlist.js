@@ -17,15 +17,23 @@ class Playlist extends React.Component {
   }
 
   render() {
-    console.log(this.props.trackList);
-    return (
-      <div className="Playlist">
-        <p onClick={this.handleTogglePlaylistDisplay}>Close playlist</p>
-        <input defaultValue={'New Playlist'} onChange={this.handleNameChange} />
-        <TrackList trackList={this.props.trackList} removeTrack={this.props.removeTrack} playPreview={this.props.playPreview} stopPreview={this.props.stopPreview} currentPreview={this.props.currentPreview}/>
-        <a className="Playlist-save" onClick={this.props.onSave}>SAVE TO SPOTIFY</a>
-      </div>
-    );
+    if (this.props.trackList.length > 0) {
+      return (
+        <div className="Playlist">
+          <p onClick={this.handleTogglePlaylistDisplay}>Close playlist</p>
+          <input defaultValue={'New Playlist'} onChange={this.handleNameChange} />
+          <TrackList trackList={this.props.trackList} removeTrack={this.props.removeTrack} playPreview={this.props.playPreview} stopPreview={this.props.stopPreview} currentPreview={this.props.currentPreview}/>
+          <a className="Playlist-save" onClick={this.props.onSave}>SAVE TO SPOTIFY</a>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <p>There is nothing in this playlist!</p>
+          <p onClick={this.handleTogglePlaylistDisplay}>Close playlist</p>
+        </div>
+      );
+    }
   }
 }
 

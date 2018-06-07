@@ -31,19 +31,33 @@ class Genres extends React.Component {
     this.props.updateDisplayedGenres(genreStrings);
   }
 
+  renderMaxedOutMessage() {
+    if (this.props.genreSeeds.length > 2) {
+      return (
+        <div className="message">
+          <h1>There are aleady three genres in the manifest</h1>
+          <p>Try adding items or songs, or generating your mixtape!</p>
+        </div>
+      );
+    }
+  }
+
   render() {
     return (
-      <div className="Genres">
-        <ul>
-          {
-            this.props.displayedGenres.map(genre => {
-              return <Genre genre={genre} addGenre={this.props.addGenre} numberOfColors={this.props.numberOfColors} />;
-            })
-          }
-        </ul>
-        <button onClick={this.updateGenres}>
-          <i class="fas fa-sync-alt"></i>
-        </button>
+      <div className={this.props.genreSeeds.length < 3 ? "Genres" : "Genres maxed-out"}>
+        <span>
+          <ul>
+            {
+              this.props.displayedGenres.map(genre => {
+                return <Genre genre={genre} addGenre={this.props.addGenre} numberOfColors={this.props.numberOfColors} />;
+              })
+            }
+          </ul>
+          <button onClick={this.updateGenres}>
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </span>
+        {this.renderMaxedOutMessage()}
       </div>
     );
   }

@@ -17,9 +17,11 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="SearchBar">
-        <input onChange={this.handleSearchTermChange} placeholder="Enter A Song Title" />
-        <a>SEARCH</a>
+      <div className={this.props.numberOfSearchResults > 0 ? "SearchBar" : "SearchBar no-search-results"}>
+        <div className="input-container">
+          <input onChange={this.handleSearchTermChange} placeholder="Enter A Song Title" />
+        </div>
+        <a>Search</a>
       </div>
     );
   }

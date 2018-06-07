@@ -7,9 +7,10 @@ import Items from '../Items/Items';
 import SelectedItems from '../SelectedItems/SelectedItems';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
-import RecommendationSeeds from '../RecommendationSeeds/RecommendationSeeds';
+import SelectedTracks from '../SelectedTracks/SelectedTracks';
 import Playlist from '../Playlist/Playlist';
 import PreviewPlayer from '../PreviewPlayer/PreviewPlayer';
+import GenerateMixtapeButton from '../GenerateMixtapeButton/GenerateMixtapeButton';
 import Spotify from '../../util/Spotify';
 import AvailableItems from '../../util/AvailableItems';
 
@@ -76,7 +77,6 @@ class App extends Component {
   }
 
   updateDisplayedGenres(genreStrings) {
-    console.log(genreStrings);
     this.setState({displayedGenres: genreStrings});
   }
 
@@ -153,7 +153,8 @@ class App extends Component {
         <div className="app-selections">
           <SelectedGenres genreSeeds={this.state.genreSeeds} removeGenre={this.removeGenreFromSeeds} /> 
           <SelectedItems itemSeeds={this.state.itemSeeds} removeItem={this.removeItemFromSeeds} />
-          <RecommendationSeeds trackList={this.state.songSeeds} removeTrack={this.removeTrackFromSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} getRecommendations={this.getRecommendations} />
+          <SelectedTracks trackList={this.state.songSeeds} removeTrack={this.removeTrackFromSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} />
+          <GenerateMixtapeButton getRecommendations={this.getRecommendations} />
         </div>
       );
     }
@@ -171,14 +172,17 @@ class App extends Component {
   render() {
     this.getGenres();
     return (
-      <div>
+      <div className="App">
         <PreviewPlayer preview={this.state.currentPreview} />
-        <h1>Mixtape Generator</h1>
-        <div className="App">
+        <header>
+          <h1>Mixtape Generator</h1>
+          <a className="view-playlist" onClick={this.togglePlaylistDisplay}>View Playlist</a>
+        </header>
+        <div className="app-content">
           <div className="app-options">
-            <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} addGenre={this.addGenreToSeeds} numberOfColors={this.state.availableItems.length} />
-            <Items availableItems={this.state.availableItems} displayedItems={this.state.displayedItems} updateDisplayedItems={this.updateDisplayedItems} addItem={this.addItemToSeeds} />
-            <SearchBar onSearch={this.search} />
+            <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} genreSeeds={this.state.genreSeeds} addGenre={this.addGenreToSeeds} numberOfColors={this.state.availableItems.length} />
+            <Items availableItems={this.state.availableItems} displayedItems={this.state.displayedItems} updateDisplayedItems={this.updateDisplayedItems} itemSeeds={this.state.itemSeeds} addItem={this.addItemToSeeds} />
+            <SearchBar onSearch={this.search} numberOfSearchResults={this.state.searchResults.length} />
             <div className="search-results">
               <SearchResults trackList={this.state.searchResults} addTrack={this.addTrackToSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} />
             </div>

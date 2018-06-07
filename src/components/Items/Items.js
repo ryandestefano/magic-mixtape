@@ -8,6 +8,7 @@ class Items extends React.Component {
       displayedItems: this.props.displayedItems
     }
     this.updateItems = this.updateItems.bind(this);
+    this.renderMaxedOutMessage = this.renderMaxedOutMessage.bind(this);
   }
 
   updateItems() {
@@ -31,19 +32,33 @@ class Items extends React.Component {
     this.props.updateDisplayedItems(itemStrings);
   }
 
+  renderMaxedOutMessage() {
+    if (this.props.itemSeeds.length > 1) {
+      return (
+        <div className="message">
+          <h1>There are aleady two items in the manifest</h1>
+          <p>Try adding genres or songs, or generating your mixtape!</p>
+        </div>
+      );
+    }
+  }
+
   render() {
     return (
-      <div className="Items">
-        <ul>
-          { 
-            this.props.displayedItems.map(item => { 
-              return <Item item={item} addItem={this.props.addItem} />; 
-            }) 
-          } 
-        </ul>
-        <button onClick={this.updateItems}>
-          <i class="fas fa-sync-alt"></i>
-        </button>
+      <div className={this.props.itemSeeds.length < 2 ? "Items" : "Items maxed-out"}>
+        <span>
+          <ul>
+            { 
+              this.props.displayedItems.map(item => { 
+                return <Item item={item} addItem={this.props.addItem} />; 
+              }) 
+            } 
+          </ul>
+          <button onClick={this.updateItems}>
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </span>
+        {this.renderMaxedOutMessage()} 
       </div>
     );
   }

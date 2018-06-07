@@ -831,53 +831,73 @@ html,
 html {
   font-size: 18px; }
 
-h1 {
-  position: relative;
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
   z-index: 1;
+  width: 100%;
   height: 80px;
-  color: #ff378b;
   background-color: #370017;
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.88rem;
-  padding: .77rem 0; }
+  padding: 30px; }
+  header h1 {
+    display: flex;
+    flex: 1;
+    color: #ff378b;
+    font-size: 1.88rem; }
+  header a {
+    transition: .25s;
+    display: flex;
+    color: #ff378b;
+    cursor: pointer; }
+    header a:hover {
+      transition: .25s;
+      color: #ff84b7; }
 
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.55rem; }
 
 .App {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0 0 0; }
+
+.app-content {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 100%;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   color: #fff; }
-  .App .app-options {
+  .app-content .app-options {
     position: relative;
-    display: flex;
-    flex-direction: column;
     width: 70%;
-    min-height: 100%;
+    height: 100%;
+    overflow: scroll;
     background-color: #ff378b;
     padding: 30px; }
-  .App .app-selections {
+  .app-content .app-selections {
     position: relative;
-    display: flex;
-    flex-direction: column;
     width: 30%;
-    min-height: 100%;
+    height: 100%;
+    overflow: scroll;
     background-color: #fcf;
     padding: 30px; }
-    .App .app-selections .Playlist {
+    .app-content .app-selections .Playlist {
       width: 100%;
       padding: 0; }
-      .App .app-selections .Playlist .track-list {
+      .app-content .app-selections .Playlist .track-list {
         width: 100%; }
-        .App .app-selections .Playlist .track-list .Track {
+        .app-content .app-selections .Playlist .track-list .Track {
           border-radius: 5px;
           margin: 0 0 5px 0; }
-  .App .App-playlist {
+  .app-content .App-playlist {
     display: flex;
     justify-content: space-between;
     width: 100%; }
@@ -888,6 +908,11 @@ h2 {
   display: flex;
   flex-direction: row;
   position: relative; }
+  .Genres > span,
+  .Items > span {
+    display: block;
+    width: 100%;
+    height: 100%; }
   .Genres ul,
   .Items ul {
     width: 90%;
@@ -928,13 +953,27 @@ h2 {
       width: 30%;
       height: 100%; }
 
-.SelectedGenres,
-.SelectedItems {
-  padding: 10px; }
-  .SelectedGenres ul li.Item,
-  .SelectedItems ul li.Item {
-    width: 50%;
-    padding: 50% 0 0 0; }
+.maxed-out > span {
+  filter: grayscale(75%) brightness(0.15); }
+.maxed-out .message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  text-shadow: 0 0 10px #000; }
+  .maxed-out .message h1 {
+    color: #ff378b;
+    font-size: 21px;
+    margin: 0 0 10px 0; }
 
 .Genres,
 .SelectedGenres {
@@ -1033,6 +1072,15 @@ h2 {
             width: 75%;
             height: auto;
             margin: 0 0 5px 0; }
+          .Items ul li.Item div span svg,
+          .SelectedItems ul li.Item div span svg {
+            transition: .25s;
+            opacity: 0;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 15px;
+            height: 15px; }
           .Items ul li.Item div span p,
           .SelectedItems ul li.Item div span p {
             font-size: 14px; }
@@ -1050,11 +1098,26 @@ h2 {
       .Items ul li.Item:hover div span img,
       .SelectedItems ul li.Item:hover div span img {
         animation: bounce 1s ease-in-out infinite; }
+      .Items ul li.Item:hover div span svg,
+      .SelectedItems ul li.Item:hover div span svg {
+        transition: .25s;
+        opacity: 1; }
       .Items ul li.Item:hover div span p.description,
       .SelectedItems ul li.Item:hover div span p.description {
         transition: .25s ease-in;
         opacity: 1;
         top: -10px; }
+
+.SelectedGenres ul li.Item,
+.SelectedItems ul li.Item {
+  width: 50%;
+  padding: 50% 0 0 0; }
+  .SelectedGenres ul li.Item:last-of-type div,
+  .SelectedItems ul li.Item:last-of-type div {
+    padding: 2.5px 0 2.5px 5px; }
+  .SelectedGenres ul li.Item:first-of-type div,
+  .SelectedItems ul li.Item:first-of-type div {
+    padding: 2.5px 5px 2.5px 0; }
 
 @keyframes bounce {
   0%, 100% {
@@ -1086,18 +1149,6 @@ h2 {
   overflow-y: scroll;
   width: 100%;
   padding: 30px; }
-  .Playlist .Playlist-save {
-    cursor: pointer;
-    width: 10rem;
-    padding: .77rem 0;
-    border-radius: 54px;
-    margin-top: 1.27rem;
-    background-color: #6c41ec;
-    text-align: center;
-    font-size: .83rem;
-    transition: background-color .25s; }
-    .Playlist .Playlist-save:hover {
-      background-color: rgba(108, 65, 233, 0.7); }
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -1105,15 +1156,6 @@ h2 {
 
 .PreviewPlayer {
   display: none; }
-
-.Playlist {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: scroll;
-  width: 37%;
-  max-height: 950px;
-  padding: 2.27rem 1.16rem; }
 
 .Playlist input {
   width: 100%;
@@ -1125,59 +1167,73 @@ h2 {
   font-size: 1.55rem;
   color: #fff; }
 
-.Playlist-save {
-  cursor: pointer;
-  width: 10rem;
-  padding: .77rem 0;
-  border-radius: 54px;
-  margin-top: 1.27rem;
-  background-color: #6c41ec;
+.get-mixtape {
+  transition: .25s;
+  display: block;
+  width: 100%;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: #ff378b;
+  text-size: 18px;
   text-align: center;
-  font-size: .83rem;
-  transition: background-color .25s; }
-
-.Playlist-save:hover {
-  background-color: rgba(108, 65, 233, 0.7); }
+  cursor: pointer; }
+  .get-mixtape:hover {
+    transition: .25s;
+    background-color: #ff84b7; }
 
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent; }
 
-@media only screen and (max-width: 1020px) {
-  .Playlist {
-    width: 90%; } }
 .SearchBar {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.65);
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
   margin: 0 0 2px 0;
-  padding: 10px; }
-
-.SearchBar input {
-  padding: 15px 20px;
-  color: #010c3f;
-  font-size: 21px;
-  border: none;
-  border-radius: 3px; }
-
-.SearchBar input:focus {
-  outline: none; }
-
-.SearchBar a {
-  cursor: pointer;
-  width: 8.11rem;
-  padding: .77rem 0;
-  border-radius: 54px;
-  background-color: #010c3f;
-  text-align: center;
-  font-size: .833rem;
-  transition: background-color .25s; }
-
-.SearchBar a:hover {
-  background-color: rgba(108, 65, 233, 0.7); }
+  padding: 0 120px 0 0; }
+  .SearchBar .input-container {
+    display: flex;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-top-left-radius: 5px;
+    padding: 10px; }
+    .SearchBar .input-container input {
+      display: block;
+      width: 100%;
+      color: #010c3f;
+      font-size: 21px;
+      border: none;
+      border-radius: 3px;
+      padding: 15px 20px; }
+      .SearchBar .input-container input:focus {
+        outline: none; }
+  .SearchBar a {
+    transition: .25s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 100%;
+    color: #ff378b;
+    background-color: rgba(0, 0, 0, 0.65);
+    font-size: .833rem;
+    text-transform: uppercase;
+    border-top-right-radius: 5px;
+    border-left: 2px solid #ff378b;
+    padding: 0 30px;
+    cursor: pointer; }
+    .SearchBar a:hover {
+      color: #ffd0e4;
+      transition: .25s;
+      background-color: rgba(0, 0, 0, 0.55); }
+  .SearchBar.no-search-results .input-container {
+    border-bottom-left-radius: 5px; }
+  .SearchBar.no-search-results a {
+    border-bottom-right-radius: 5px; }
 
 .SearchResults {
   width: 100%;
