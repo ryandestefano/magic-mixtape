@@ -68,14 +68,43 @@ const Spotify = {
       });
   },
 
-  getRecommendations(seeds, genres) {
+  getRecommendations(songSeeds, genreSeeds, itemAttributes) {
     const userAccessToken = accessToken;
     const headers = {
       Authorization: `Bearer ${userAccessToken}`,
       "Content-Type": "application/json"
     };
 
-    return fetch(`https://api.spotify.com/v1/recommendations?seed_tracks=${seeds}&seed_genres=${genres}&limit=10`, {headers: headers})
+    let recommendationsQuery = `https://api.spotify.com/v1/recommendations?seed_tracks=${songSeeds}&seed_genres=${genreSeeds}&limit=10`;
+
+    // Check for danceability and add to query string
+    if (itemAttributes.dance !== null) {
+      recommendationsQuery += `&target_danceability=${.5 + itemAttributes.dance / 10}`;
+    }
+
+    // Check for energy and add to query string
+    if (itemAttributes.energy !== null) {
+      recommendationsQuery += `&target_energy=${.5 + itemAttributes.energy / 10}`;
+    }
+
+    // Check for instrumentalness and add to query string
+    if (itemAttributes.instrumental !== null) {
+      recommendationsQuery += `&target_instrumentalness=${.5 + itemAttributes.instrumental / 10}`;
+    }
+
+    // Check for min length and add to query string if there is no max length
+    if (itemAttributes.minLength !== null && itemAttributes.maxLength === null) {
+      recommendationsQuery += `&min_duration_ms=${itemAttributes.minLength}`;
+    }
+
+    // Check for max length and add to query string if there is no min length
+    if (itemAttributes.maxLength !== null && itemAttributes.minLength === null) {
+      recommendationsQuery += `&max_duration_ms=${itemAttributes.maxLength}`;
+    }
+
+    console.log(recommendationsQuery);
+
+    return fetch(recommendationsQuery, {headers: headers})
       .then(response => response.json())
       .then(jsonResponse => {
         if (!jsonResponse.tracks) return [];

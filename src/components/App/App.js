@@ -117,7 +117,35 @@ class App extends Component {
   getRecommendations() {
     const songSeeds = this.state.songSeeds.map(track => { return track.id });
     const genreSeeds = this.state.genreSeeds;
-    Spotify.getRecommendations(songSeeds, genreSeeds).then(recommendations => this.setState({playlist: recommendations}));
+    const itemSeeds = this.state.itemSeeds;
+
+    let dance = null;
+    let energy = null;
+    let instrumental = null;
+    let minLength = null;
+    let maxLength = null;
+
+    for (let i=0; i<itemSeeds.length; i++) {
+      if (itemSeeds[i].dance) {
+        dance += itemSeeds[i].dance;
+      }
+      if (itemSeeds[i].energy) {
+        energy += itemSeeds[i].energy;
+      }
+      if (itemSeeds[i].instrumental) {
+        instrumental += itemSeeds[i].instrumental;
+      }
+      if (itemSeeds[i].minLength) {
+        minLength = itemSeeds[i].minLength;
+      }
+      if (itemSeeds[i].maxLength) {
+        maxLength = itemSeeds[i].maxLength;
+      }
+    }
+
+    const itemAttributes = {dance, energy, instrumental, minLength, maxLength};
+
+    Spotify.getRecommendations(songSeeds, genreSeeds, itemAttributes).then(recommendations => this.setState({playlist: recommendations}));
     this.togglePlaylistDisplay();
   }
 

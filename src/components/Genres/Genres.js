@@ -54,7 +54,7 @@ class Genres extends React.Component {
             }
           </ul>
           <button onClick={this.updateGenres}>
-            <i class="fas fa-sync-alt"></i>
+            <i className="fas fa-sync-alt"></i>
           </button>
         </span>
         {this.renderMaxedOutMessage()}

@@ -28,14 +28,14 @@ class Track extends React.Component {
   }
 
   renderPreviewAction() {
-    if (this.props.preview !== this.props.currentPreview) {
+    if (this.props.preview && this.props.preview !== this.props.currentPreview) {
       return (
         <a className="play track-preview-action" onClick={this.handlePlayPreview}>
           <i className="play fas fa-play"></i>
           <i className="stop fas fa-stop"></i>
         </a>
       );
-    } else {
+    } else if (this.props.preview) {
       return (
         <a className="stop track-preview-action" onClick={this.handleStopPreview}>
           <i className="play fas fa-play"></i>

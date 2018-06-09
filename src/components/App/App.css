@@ -8,17 +8,23 @@
     transition: .75s;
     background-color: #1effc4; }
 
-.SearchResults .Track.color-1 h3 {
+.SearchResults .Track.color-1 h3,
+.Playlist .Track.color-1 h3 {
   color: #9effd5; }
-.SearchResults .Track.color-1 p {
+.SearchResults .Track.color-1 p,
+.Playlist .Track.color-1 p {
   color: rgba(107, 255, 141, 0.75); }
 .SearchResults .Track.color-1 .track-inclusion-action,
-.SearchResults .Track.color-1 .track-preview-action {
+.SearchResults .Track.color-1 .track-preview-action,
+.Playlist .Track.color-1 .track-inclusion-action,
+.Playlist .Track.color-1 .track-preview-action {
   transition: .25s;
   color: #1eff9e;
   background-color: rgba(30, 255, 158, 0); }
   .SearchResults .Track.color-1 .track-inclusion-action:hover,
-  .SearchResults .Track.color-1 .track-preview-action:hover {
+  .SearchResults .Track.color-1 .track-preview-action:hover,
+  .Playlist .Track.color-1 .track-inclusion-action:hover,
+  .Playlist .Track.color-1 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #1eff9e; }
@@ -49,17 +55,23 @@
     transition: .75s;
     background-color: #ff4f36; }
 
-.SearchResults .Track.color-2 h3 {
+.SearchResults .Track.color-2 h3,
+.Playlist .Track.color-2 h3 {
   color: #ffb6b9; }
-.SearchResults .Track.color-2 p {
+.SearchResults .Track.color-2 p,
+.Playlist .Track.color-2 p {
   color: rgba(255, 131, 178, 0.75); }
 .SearchResults .Track.color-2 .track-inclusion-action,
-.SearchResults .Track.color-2 .track-preview-action {
+.SearchResults .Track.color-2 .track-preview-action,
+.Playlist .Track.color-2 .track-inclusion-action,
+.Playlist .Track.color-2 .track-preview-action {
   transition: .25s;
   color: #ff363f;
   background-color: rgba(255, 54, 63, 0); }
   .SearchResults .Track.color-2 .track-inclusion-action:hover,
-  .SearchResults .Track.color-2 .track-preview-action:hover {
+  .SearchResults .Track.color-2 .track-preview-action:hover,
+  .Playlist .Track.color-2 .track-inclusion-action:hover,
+  .Playlist .Track.color-2 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #ff363f; }
@@ -90,17 +102,23 @@
     transition: .75s;
     background-color: #b70a24; }
 
-.SearchResults .Track.color-3 h3 {
+.SearchResults .Track.color-3 h3,
+.Playlist .Track.color-3 h3 {
   color: #f54b81; }
-.SearchResults .Track.color-3 p {
+.SearchResults .Track.color-3 p,
+.Playlist .Track.color-3 p {
   color: rgba(243, 27, 167, 0.75); }
 .SearchResults .Track.color-3 .track-inclusion-action,
-.SearchResults .Track.color-3 .track-preview-action {
+.SearchResults .Track.color-3 .track-preview-action,
+.Playlist .Track.color-3 .track-inclusion-action,
+.Playlist .Track.color-3 .track-preview-action {
   transition: .25s;
   color: #b70a41;
   background-color: rgba(183, 10, 65, 0); }
   .SearchResults .Track.color-3 .track-inclusion-action:hover,
-  .SearchResults .Track.color-3 .track-preview-action:hover {
+  .SearchResults .Track.color-3 .track-preview-action:hover,
+  .Playlist .Track.color-3 .track-inclusion-action:hover,
+  .Playlist .Track.color-3 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #b70a41; }
@@ -131,17 +149,23 @@
     transition: .75s;
     background-color: #90e2ff; }
 
-.SearchResults .Track.color-4 h3 {
+.SearchResults .Track.color-4 h3,
+.Playlist .Track.color-4 h3 {
   color: white; }
-.SearchResults .Track.color-4 p {
+.SearchResults .Track.color-4 p,
+.Playlist .Track.color-4 p {
   color: rgba(221, 255, 247, 0.75); }
 .SearchResults .Track.color-4 .track-inclusion-action,
-.SearchResults .Track.color-4 .track-preview-action {
+.SearchResults .Track.color-4 .track-preview-action,
+.Playlist .Track.color-4 .track-inclusion-action,
+.Playlist .Track.color-4 .track-preview-action {
   transition: .25s;
   color: #90f4ff;
   background-color: rgba(144, 244, 255, 0); }
   .SearchResults .Track.color-4 .track-inclusion-action:hover,
-  .SearchResults .Track.color-4 .track-preview-action:hover {
+  .SearchResults .Track.color-4 .track-preview-action:hover,
+  .Playlist .Track.color-4 .track-inclusion-action:hover,
+  .Playlist .Track.color-4 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #90f4ff; }
@@ -172,17 +196,23 @@
     transition: .75s;
     background-color: #adff52; }
 
-.SearchResults .Track.color-5 h3 {
+.SearchResults .Track.color-5 h3,
+.Playlist .Track.color-5 h3 {
   color: #f1ffd2; }
-.SearchResults .Track.color-5 p {
+.SearchResults .Track.color-5 p,
+.Playlist .Track.color-5 p {
   color: rgba(255, 252, 159, 0.75); }
 .SearchResults .Track.color-5 .track-inclusion-action,
-.SearchResults .Track.color-5 .track-preview-action {
+.SearchResults .Track.color-5 .track-preview-action,
+.Playlist .Track.color-5 .track-inclusion-action,
+.Playlist .Track.color-5 .track-preview-action {
   transition: .25s;
   color: #caff52;
   background-color: rgba(202, 255, 82, 0); }
   .SearchResults .Track.color-5 .track-inclusion-action:hover,
-  .SearchResults .Track.color-5 .track-preview-action:hover {
+  .SearchResults .Track.color-5 .track-preview-action:hover,
+  .Playlist .Track.color-5 .track-inclusion-action:hover,
+  .Playlist .Track.color-5 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #caff52; }
@@ -213,17 +243,23 @@
     transition: .75s;
     background-color: #ff6a33; }
 
-.SearchResults .Track.color-6 h3 {
+.SearchResults .Track.color-6 h3,
+.Playlist .Track.color-6 h3 {
   color: #ffbab3; }
-.SearchResults .Track.color-6 p {
+.SearchResults .Track.color-6 p,
+.Playlist .Track.color-6 p {
   color: rgba(255, 128, 157, 0.75); }
 .SearchResults .Track.color-6 .track-inclusion-action,
-.SearchResults .Track.color-6 .track-preview-action {
+.SearchResults .Track.color-6 .track-preview-action,
+.Playlist .Track.color-6 .track-inclusion-action,
+.Playlist .Track.color-6 .track-preview-action {
   transition: .25s;
   color: #ff4833;
   background-color: rgba(255, 72, 51, 0); }
   .SearchResults .Track.color-6 .track-inclusion-action:hover,
-  .SearchResults .Track.color-6 .track-preview-action:hover {
+  .SearchResults .Track.color-6 .track-preview-action:hover,
+  .Playlist .Track.color-6 .track-inclusion-action:hover,
+  .Playlist .Track.color-6 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #ff4833; }
@@ -254,17 +290,23 @@
     transition: .75s;
     background-color: #83ff18; }
 
-.SearchResults .Track.color-7 h3 {
+.SearchResults .Track.color-7 h3,
+.Playlist .Track.color-7 h3 {
   color: #d8ff98; }
-.SearchResults .Track.color-7 p {
+.SearchResults .Track.color-7 p,
+.Playlist .Track.color-7 p {
   color: rgba(249, 255, 101, 0.75); }
 .SearchResults .Track.color-7 .track-inclusion-action,
-.SearchResults .Track.color-7 .track-preview-action {
+.SearchResults .Track.color-7 .track-preview-action,
+.Playlist .Track.color-7 .track-inclusion-action,
+.Playlist .Track.color-7 .track-preview-action {
   transition: .25s;
   color: #a9ff18;
   background-color: rgba(169, 255, 24, 0); }
   .SearchResults .Track.color-7 .track-inclusion-action:hover,
-  .SearchResults .Track.color-7 .track-preview-action:hover {
+  .SearchResults .Track.color-7 .track-preview-action:hover,
+  .Playlist .Track.color-7 .track-inclusion-action:hover,
+  .Playlist .Track.color-7 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #a9ff18; }
@@ -295,17 +337,23 @@
     transition: .75s;
     background-color: #ff376a; }
 
-.SearchResults .Track.color-8 h3 {
+.SearchResults .Track.color-8 h3,
+.Playlist .Track.color-8 h3 {
   color: #ffb7d5; }
-.SearchResults .Track.color-8 p {
+.SearchResults .Track.color-8 p,
+.Playlist .Track.color-8 p {
   color: rgba(255, 132, 225, 0.75); }
 .SearchResults .Track.color-8 .track-inclusion-action,
-.SearchResults .Track.color-8 .track-preview-action {
+.SearchResults .Track.color-8 .track-preview-action,
+.Playlist .Track.color-8 .track-inclusion-action,
+.Playlist .Track.color-8 .track-preview-action {
   transition: .25s;
   color: #ff378b;
   background-color: rgba(255, 55, 139, 0); }
   .SearchResults .Track.color-8 .track-inclusion-action:hover,
-  .SearchResults .Track.color-8 .track-preview-action:hover {
+  .SearchResults .Track.color-8 .track-preview-action:hover,
+  .Playlist .Track.color-8 .track-inclusion-action:hover,
+  .Playlist .Track.color-8 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #ff378b; }
@@ -336,17 +384,23 @@
     transition: .75s;
     background-color: #3f68ff; }
 
-.SearchResults .Track.color-9 h3 {
+.SearchResults .Track.color-9 h3,
+.Playlist .Track.color-9 h3 {
   color: #bfd7ff; }
-.SearchResults .Track.color-9 p {
+.SearchResults .Track.color-9 p,
+.Playlist .Track.color-9 p {
   color: rgba(140, 222, 255, 0.75); }
 .SearchResults .Track.color-9 .track-inclusion-action,
-.SearchResults .Track.color-9 .track-preview-action {
+.SearchResults .Track.color-9 .track-preview-action,
+.Playlist .Track.color-9 .track-inclusion-action,
+.Playlist .Track.color-9 .track-preview-action {
   transition: .25s;
   color: #3f88ff;
   background-color: rgba(63, 136, 255, 0); }
   .SearchResults .Track.color-9 .track-inclusion-action:hover,
-  .SearchResults .Track.color-9 .track-preview-action:hover {
+  .SearchResults .Track.color-9 .track-preview-action:hover,
+  .Playlist .Track.color-9 .track-inclusion-action:hover,
+  .Playlist .Track.color-9 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #3f88ff; }
@@ -377,17 +431,23 @@
     transition: .75s;
     background-color: #dba6ff; }
 
-.SearchResults .Track.color-10 h3 {
+.SearchResults .Track.color-10 h3,
+.Playlist .Track.color-10 h3 {
   color: white; }
-.SearchResults .Track.color-10 p {
+.SearchResults .Track.color-10 p,
+.Playlist .Track.color-10 p {
   color: rgba(244, 243, 255, 0.75); }
 .SearchResults .Track.color-10 .track-inclusion-action,
-.SearchResults .Track.color-10 .track-preview-action {
+.SearchResults .Track.color-10 .track-preview-action,
+.Playlist .Track.color-10 .track-inclusion-action,
+.Playlist .Track.color-10 .track-preview-action {
   transition: .25s;
   color: #cca6ff;
   background-color: rgba(204, 166, 255, 0); }
   .SearchResults .Track.color-10 .track-inclusion-action:hover,
-  .SearchResults .Track.color-10 .track-preview-action:hover {
+  .SearchResults .Track.color-10 .track-preview-action:hover,
+  .Playlist .Track.color-10 .track-inclusion-action:hover,
+  .Playlist .Track.color-10 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #cca6ff; }
@@ -418,17 +478,23 @@
     transition: .75s;
     background-color: #28ccff; }
 
-.SearchResults .Track.color-11 h3 {
+.SearchResults .Track.color-11 h3,
+.Playlist .Track.color-11 h3 {
   color: #a8f9ff; }
-.SearchResults .Track.color-11 p {
+.SearchResults .Track.color-11 p,
+.Playlist .Track.color-11 p {
   color: rgba(117, 255, 218, 0.75); }
 .SearchResults .Track.color-11 .track-inclusion-action,
-.SearchResults .Track.color-11 .track-preview-action {
+.SearchResults .Track.color-11 .track-preview-action,
+.Playlist .Track.color-11 .track-inclusion-action,
+.Playlist .Track.color-11 .track-preview-action {
   transition: .25s;
   color: #28f0ff;
   background-color: rgba(40, 240, 255, 0); }
   .SearchResults .Track.color-11 .track-inclusion-action:hover,
-  .SearchResults .Track.color-11 .track-preview-action:hover {
+  .SearchResults .Track.color-11 .track-preview-action:hover,
+  .Playlist .Track.color-11 .track-inclusion-action:hover,
+  .Playlist .Track.color-11 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #28f0ff; }
@@ -459,17 +525,23 @@
     transition: .75s;
     background-color: #ff0feb; }
 
-.SearchResults .Track.color-12 h3 {
+.SearchResults .Track.color-12 h3,
+.Playlist .Track.color-12 h3 {
   color: #f68fff; }
-.SearchResults .Track.color-12 p {
+.SearchResults .Track.color-12 p,
+.Playlist .Track.color-12 p {
   color: rgba(187, 92, 255, 0.75); }
 .SearchResults .Track.color-12 .track-inclusion-action,
-.SearchResults .Track.color-12 .track-preview-action {
+.SearchResults .Track.color-12 .track-preview-action,
+.Playlist .Track.color-12 .track-inclusion-action,
+.Playlist .Track.color-12 .track-preview-action {
   transition: .25s;
   color: #eb0fff;
   background-color: rgba(235, 15, 255, 0); }
   .SearchResults .Track.color-12 .track-inclusion-action:hover,
-  .SearchResults .Track.color-12 .track-preview-action:hover {
+  .SearchResults .Track.color-12 .track-preview-action:hover,
+  .Playlist .Track.color-12 .track-inclusion-action:hover,
+  .Playlist .Track.color-12 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #eb0fff; }
@@ -500,17 +572,23 @@
     transition: .75s;
     background-color: #ffa3ea; }
 
-.SearchResults .Track.color-13 h3 {
+.SearchResults .Track.color-13 h3,
+.Playlist .Track.color-13 h3 {
   color: white; }
-.SearchResults .Track.color-13 p {
+.SearchResults .Track.color-13 p,
+.Playlist .Track.color-13 p {
   color: rgba(251, 240, 255, 0.75); }
 .SearchResults .Track.color-13 .track-inclusion-action,
-.SearchResults .Track.color-13 .track-preview-action {
+.SearchResults .Track.color-13 .track-preview-action,
+.Playlist .Track.color-13 .track-inclusion-action,
+.Playlist .Track.color-13 .track-preview-action {
   transition: .25s;
   color: #ffa3f9;
   background-color: rgba(255, 163, 249, 0); }
   .SearchResults .Track.color-13 .track-inclusion-action:hover,
-  .SearchResults .Track.color-13 .track-preview-action:hover {
+  .SearchResults .Track.color-13 .track-preview-action:hover,
+  .Playlist .Track.color-13 .track-inclusion-action:hover,
+  .Playlist .Track.color-13 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #ffa3f9; }
@@ -541,17 +619,23 @@
     transition: .75s;
     background-color: #ecfd00; }
 
-.SearchResults .Track.color-14 h3 {
+.SearchResults .Track.color-14 h3,
+.Playlist .Track.color-14 h3 {
   color: #fff27e; }
-.SearchResults .Track.color-14 p {
+.SearchResults .Track.color-14 p,
+.Playlist .Track.color-14 p {
   color: rgba(255, 177, 75, 0.75); }
 .SearchResults .Track.color-14 .track-inclusion-action,
-.SearchResults .Track.color-14 .track-preview-action {
+.SearchResults .Track.color-14 .track-preview-action,
+.Playlist .Track.color-14 .track-inclusion-action,
+.Playlist .Track.color-14 .track-preview-action {
   transition: .25s;
   color: #fde400;
   background-color: rgba(253, 228, 0, 0); }
   .SearchResults .Track.color-14 .track-inclusion-action:hover,
-  .SearchResults .Track.color-14 .track-preview-action:hover {
+  .SearchResults .Track.color-14 .track-preview-action:hover,
+  .Playlist .Track.color-14 .track-inclusion-action:hover,
+  .Playlist .Track.color-14 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #fde400; }
@@ -582,17 +666,23 @@
     transition: .75s;
     background-color: #ecfd00; }
 
-.SearchResults .Track.color-15 h3 {
+.SearchResults .Track.color-15 h3,
+.Playlist .Track.color-15 h3 {
   color: #fff27e; }
-.SearchResults .Track.color-15 p {
+.SearchResults .Track.color-15 p,
+.Playlist .Track.color-15 p {
   color: rgba(255, 177, 75, 0.75); }
 .SearchResults .Track.color-15 .track-inclusion-action,
-.SearchResults .Track.color-15 .track-preview-action {
+.SearchResults .Track.color-15 .track-preview-action,
+.Playlist .Track.color-15 .track-inclusion-action,
+.Playlist .Track.color-15 .track-preview-action {
   transition: .25s;
   color: #fde400;
   background-color: rgba(253, 228, 0, 0); }
   .SearchResults .Track.color-15 .track-inclusion-action:hover,
-  .SearchResults .Track.color-15 .track-preview-action:hover {
+  .SearchResults .Track.color-15 .track-preview-action:hover,
+  .Playlist .Track.color-15 .track-inclusion-action:hover,
+  .Playlist .Track.color-15 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #fde400; }
@@ -623,17 +713,23 @@
     transition: .75s;
     background-color: #ffc103; }
 
-.SearchResults .Track.color-16 h3 {
+.SearchResults .Track.color-16 h3,
+.Playlist .Track.color-16 h3 {
   color: #ffcc83; }
-.SearchResults .Track.color-16 p {
+.SearchResults .Track.color-16 p,
+.Playlist .Track.color-16 p {
   color: rgba(255, 124, 80, 0.75); }
 .SearchResults .Track.color-16 .track-inclusion-action,
-.SearchResults .Track.color-16 .track-preview-action {
+.SearchResults .Track.color-16 .track-preview-action,
+.Playlist .Track.color-16 .track-inclusion-action,
+.Playlist .Track.color-16 .track-preview-action {
   transition: .25s;
   color: #ff9703;
   background-color: rgba(255, 151, 3, 0); }
   .SearchResults .Track.color-16 .track-inclusion-action:hover,
-  .SearchResults .Track.color-16 .track-preview-action:hover {
+  .SearchResults .Track.color-16 .track-preview-action:hover,
+  .Playlist .Track.color-16 .track-inclusion-action:hover,
+  .Playlist .Track.color-16 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #ff9703; }
@@ -664,17 +760,23 @@
     transition: .75s;
     background-color: #55e439; }
 
-.SearchResults .Track.color-17 h3 {
+.SearchResults .Track.color-17 h3,
+.Playlist .Track.color-17 h3 {
   color: #c1f3a9; }
-.SearchResults .Track.color-17 p {
+.SearchResults .Track.color-17 p,
+.Playlist .Track.color-17 p {
   color: rgba(199, 237, 124, 0.75); }
 .SearchResults .Track.color-17 .track-inclusion-action,
-.SearchResults .Track.color-17 .track-preview-action {
+.SearchResults .Track.color-17 .track-preview-action,
+.Playlist .Track.color-17 .track-inclusion-action,
+.Playlist .Track.color-17 .track-preview-action {
   transition: .25s;
   color: #71e439;
   background-color: rgba(113, 228, 57, 0); }
   .SearchResults .Track.color-17 .track-inclusion-action:hover,
-  .SearchResults .Track.color-17 .track-preview-action:hover {
+  .SearchResults .Track.color-17 .track-preview-action:hover,
+  .Playlist .Track.color-17 .track-inclusion-action:hover,
+  .Playlist .Track.color-17 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #71e439; }
@@ -705,17 +807,23 @@
     transition: .75s;
     background-color: #00ecc8; }
 
-.SearchResults .Track.color-18 h3 {
+.SearchResults .Track.color-18 h3,
+.Playlist .Track.color-18 h3 {
   color: #6dffd0; }
-.SearchResults .Track.color-18 p {
+.SearchResults .Track.color-18 p,
+.Playlist .Track.color-18 p {
   color: rgba(58, 255, 126, 0.75); }
 .SearchResults .Track.color-18 .track-inclusion-action,
-.SearchResults .Track.color-18 .track-preview-action {
+.SearchResults .Track.color-18 .track-preview-action,
+.Playlist .Track.color-18 .track-inclusion-action,
+.Playlist .Track.color-18 .track-preview-action {
   transition: .25s;
   color: #00eca1;
   background-color: rgba(0, 236, 161, 0); }
   .SearchResults .Track.color-18 .track-inclusion-action:hover,
-  .SearchResults .Track.color-18 .track-preview-action:hover {
+  .SearchResults .Track.color-18 .track-preview-action:hover,
+  .Playlist .Track.color-18 .track-inclusion-action:hover,
+  .Playlist .Track.color-18 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #00eca1; }
@@ -746,17 +854,23 @@
     transition: .75s;
     background-color: #fff936; }
 
-.SearchResults .Track.color-19 h3 {
+.SearchResults .Track.color-19 h3,
+.Playlist .Track.color-19 h3 {
   color: #fff0b6; }
-.SearchResults .Track.color-19 p {
+.SearchResults .Track.color-19 p,
+.Playlist .Track.color-19 p {
   color: rgba(255, 189, 131, 0.75); }
 .SearchResults .Track.color-19 .track-inclusion-action,
-.SearchResults .Track.color-19 .track-preview-action {
+.SearchResults .Track.color-19 .track-preview-action,
+.Playlist .Track.color-19 .track-inclusion-action,
+.Playlist .Track.color-19 .track-preview-action {
   transition: .25s;
   color: #ffd736;
   background-color: rgba(255, 215, 54, 0); }
   .SearchResults .Track.color-19 .track-inclusion-action:hover,
-  .SearchResults .Track.color-19 .track-preview-action:hover {
+  .SearchResults .Track.color-19 .track-preview-action:hover,
+  .Playlist .Track.color-19 .track-inclusion-action:hover,
+  .Playlist .Track.color-19 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #ffd736; }
@@ -787,17 +901,23 @@
     transition: .75s;
     background-color: #aa16ff; }
 
-.SearchResults .Track.color-20 h3 {
+.SearchResults .Track.color-20 h3,
+.Playlist .Track.color-20 h3 {
   color: #c796ff; }
-.SearchResults .Track.color-20 p {
+.SearchResults .Track.color-20 p,
+.Playlist .Track.color-20 p {
   color: rgba(120, 99, 255, 0.75); }
 .SearchResults .Track.color-20 .track-inclusion-action,
-.SearchResults .Track.color-20 .track-preview-action {
+.SearchResults .Track.color-20 .track-preview-action,
+.Playlist .Track.color-20 .track-inclusion-action,
+.Playlist .Track.color-20 .track-preview-action {
   transition: .25s;
   color: #8316ff;
   background-color: rgba(131, 22, 255, 0); }
   .SearchResults .Track.color-20 .track-inclusion-action:hover,
-  .SearchResults .Track.color-20 .track-preview-action:hover {
+  .SearchResults .Track.color-20 .track-preview-action:hover,
+  .Playlist .Track.color-20 .track-inclusion-action:hover,
+  .Playlist .Track.color-20 .track-preview-action:hover {
     transition: .25s;
     color: #fff;
     background-color: #8316ff; }
@@ -879,14 +999,14 @@ h2 {
     position: relative;
     width: 70%;
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
     background-color: #ff378b;
     padding: 30px; }
   .app-content .app-selections {
     position: relative;
     width: 30%;
     height: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
     background-color: #fcf;
     padding: 30px; }
     .app-content .app-selections .Playlist {
@@ -898,9 +1018,40 @@ h2 {
           border-radius: 5px;
           margin: 0 0 5px 0; }
   .app-content .App-playlist {
+    transition: .5s;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: rgba(255, 55, 139, 0.9); }
+    .app-content .App-playlist.active {
+      transition: .5s;
+      visibility: visible;
+      opacity: 1; }
+    .app-content .App-playlist .Playlist {
+      position: relative;
+      display: flex;
+      flex-direction: row; }
+      .app-content .App-playlist .Playlist button.close-playlist {
+        position: absolute;
+        top: 0;
+        right: 0;
+        appearance: none; }
+      .app-content .App-playlist .Playlist .track-list {
+        width: 50%;
+        height: 100%;
+        overflow-y: scroll;
+        padding: 0 15px 0 0; }
+      .app-content .App-playlist .Playlist .playlist-info {
+        width: 50%;
+        padding: 0 0 0 15px; }
 
 /* GENRES */
 .Genres,
@@ -1124,24 +1275,6 @@ h2 {
     top: 0px; }
   50% {
     top: -10px; } }
-.App-playlist {
-  transition: .5s;
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
-  background-color: rgba(255, 100, 200, 0.9);
-  visibility: hidden;
-  opacity: 0; }
-  .App-playlist.active {
-    transition: .5s;
-    visibility: visible;
-    opacity: 1; }
-
 .Playlist {
   display: flex;
   flex-direction: column;
