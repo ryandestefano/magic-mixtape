@@ -10,7 +10,7 @@ class Genre extends React.Component {
   renderGenreAction() {
     if (this.props.addGenre) {
       this.props.addGenre(this.props.genre);
-    } else {
+    } else if (this.props.removeGenre) {
       this.props.removeGenre(this.props.genre);
     }
   } 
@@ -18,7 +18,7 @@ class Genre extends React.Component {
   renderGenreActionIcon() {
     if (this.props.addGenre) {
       return <i className="fas fa-plus"></i>;
-    } else {
+    } else if (this.props.removeGenre) {
       return <i className="fas fa-minus"></i>;
     }
   }

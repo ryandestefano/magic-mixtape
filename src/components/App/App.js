@@ -217,7 +217,7 @@ class App extends Component {
           </div>
           {this.renderManifest()}
           <div className={"App-playlist " + (this.state.displayPlaylist ? 'active' : '')}>
-            <Playlist togglePlaylistDisplay={this.togglePlaylistDisplay} trackList={this.state.playlist} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
+            <Playlist togglePlaylistDisplay={this.togglePlaylistDisplay} trackList={this.state.playlist} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} genreSeeds={this.state.genreSeeds} itemSeeds={this.state.itemSeeds} songSeeds={this.state.songSeeds} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
           </div>
         </div>
       </div>

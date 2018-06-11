@@ -962,7 +962,7 @@ header {
   height: 80px;
   background-color: #370017;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Work Sans", sans-serif;
   padding: 30px; }
   header h1 {
     display: flex;
@@ -979,7 +979,7 @@ header {
       color: #ff84b7; }
 
 h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1.55rem; }
 
 .App {
@@ -1030,7 +1030,7 @@ h2 {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
-    background-color: rgba(255, 55, 139, 0.9); }
+    background-color: rgba(106, 0, 45, 0.9); }
     .app-content .App-playlist.active {
       transition: .5s;
       visibility: visible;
@@ -1051,7 +1051,63 @@ h2 {
         padding: 0 15px 0 0; }
       .app-content .App-playlist .Playlist .playlist-info {
         width: 50%;
+        text-align: center;
         padding: 0 0 0 15px; }
+        .app-content .App-playlist .Playlist .playlist-info h1 {
+          font-size: 21px;
+          margin: 0 0 10px 0; }
+          .app-content .App-playlist .Playlist .playlist-info h1 + p {
+            color: #ff84b7;
+            margin: 0 0 20px 0; }
+        .app-content .App-playlist .Playlist .playlist-info h2 {
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 1.25rem;
+          margin: 0 0 10px 0; }
+        .app-content .App-playlist .Playlist .playlist-info input {
+          width: 100%;
+          color: #ff378b;
+          background-color: #fff;
+          font-family: "Work Sans", sans-serif;
+          font-size: 1.5rem;
+          border: 0;
+          border-radius: 5px;
+          outline: 0;
+          margin: 0 0 20px 0;
+          padding: 10px 20px; }
+        .app-content .App-playlist .Playlist .playlist-info > div {
+          border-top: 1px solid #ff378b;
+          margin: 30px 0 0 0; }
+          .app-content .App-playlist .Playlist .playlist-info > div > div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: rgba(255, 55, 139, 0.5);
+            border-radius: 5px;
+            margin: 15px 0 0 0;
+            padding: 15px; }
+            .app-content .App-playlist .Playlist .playlist-info > div > div:first-of-type {
+              margin: 30px 0 0 0; }
+            .app-content .App-playlist .Playlist .playlist-info > div > div h2 {
+              color: #ffd0e4;
+              font-size: 14px;
+              margin: 0; }
+        .app-content .App-playlist .Playlist .playlist-info .SelectedItems ul {
+          width: 50%;
+          margin: 0 auto; }
+        .app-content .App-playlist .Playlist .playlist-info button {
+          appearance: none;
+          color: #fff;
+          background-color: #ff378b;
+          font-family: "Work Sans", sans-serif;
+          font-size: 21px;
+          text-transform: uppercase;
+          padding: 20px 60px;
+          border: none;
+          border-radius: 100px;
+          cursor: pointer; }
+          .app-content .App-playlist .Playlist .playlist-info button:hover {
+            background-color: #ff519a; }
 
 /* GENRES */
 .Genres,
@@ -1289,16 +1345,6 @@ h2 {
 
 .PreviewPlayer {
   display: none; }
-
-.Playlist input {
-  width: 100%;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  border-bottom: 1px solid #6f6f6f;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.55rem;
-  color: #fff; }
 
 .get-mixtape {
   transition: .25s;

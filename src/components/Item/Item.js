@@ -10,7 +10,7 @@ class Item extends React.Component {
   renderItemAction() {
     if (this.props.addItem) {
       this.props.addItem(this.props.item);
-    } else {
+    } else if (this.props.removeItem) {
       this.props.removeItem(this.props.item);
     }
   } 
@@ -18,7 +18,7 @@ class Item extends React.Component {
   renderItemActionIcon() {
     if (this.props.addItem) {
       return <i className="fas fa-plus"></i>;
-    } else {
+    } else if (this.props.removeItem) {
       return <i className="fas fa-minus"></i>;
     }
   } 

@@ -10,7 +10,7 @@ class SelectedItems extends React.Component {
 
       return (
         <div className="SelectedItems">
-        <h2>Your Selected Items</h2>
+        <h2>{this.props.mixtape ? 'Your mixtape\'s danceability, energy, instrumentalness, and song length were influenced by the powers of:' : 'Your Selected Items'}</h2>
           <ul>
             {displayedItems}
           </ul>
