@@ -4,9 +4,6 @@ import Genre from '../Genre/Genre';
 class Genres extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      displayedGenres: this.props.displayedGenres
-    }
     this.updateGenres = this.updateGenres.bind(this);
   }
 
@@ -43,6 +40,10 @@ class Genres extends React.Component {
   }
 
   render() {
+    if (this.props.displayedGenres.length === 0 && this.props.availableGenres.length > 1) {
+      this.updateGenres();
+    }
+
     return (
       <div className={this.props.genreSeeds.length < 3 ? "Genres" : "Genres maxed-out"}>
         <span>

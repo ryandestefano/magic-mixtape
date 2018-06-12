@@ -7,20 +7,17 @@ let expiresIn;
 const Spotify = {
   getAccessToken() {
     if (accessToken) {
-      console.log('case 1');
       return accessToken;
     }
     const urlAccessToken = window.location.href.match(/access_token=([^&]*)/);
     const urlExpiresIn = window.location.href.match(/expires_in=([^&]*)/); 
     if (urlAccessToken && urlExpiresIn) {
-      console.log('case 2');
       accessToken = urlAccessToken[1];
       expiresIn = urlExpiresIn[1];
       window.setTimeout(() => accessToken = '', expiresIn * 1000);
       window.history.pushState('Access Token', null, '/');
       return accessToken;
     } else {
-      console.log('case 3');
       window.location = spotifyUrl;
     }
   },
@@ -101,8 +98,6 @@ const Spotify = {
     if (itemAttributes.maxLength !== null && itemAttributes.minLength === null) {
       recommendationsQuery += `&max_duration_ms=${itemAttributes.maxLength}`;
     }
-
-    console.log(recommendationsQuery);
 
     return fetch(recommendationsQuery, {headers: headers})
       .then(response => response.json())

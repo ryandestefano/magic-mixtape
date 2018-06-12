@@ -4,9 +4,6 @@ import Item from '../Item/Item';
 class Items extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      displayedItems: this.props.displayedItems
-    }
     this.updateItems = this.updateItems.bind(this);
     this.renderMaxedOutMessage = this.renderMaxedOutMessage.bind(this);
   }
@@ -44,6 +41,10 @@ class Items extends React.Component {
   }
 
   render() {
+    if (this.props.displayedItems.length === 0) {
+      this.updateItems();
+    }
+
     return (
       <div className={this.props.itemSeeds.length < 2 ? "Items" : "Items maxed-out"}>
         <span>

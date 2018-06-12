@@ -51,6 +51,12 @@ class App extends Component {
     this.savePlaylist = this.savePlaylist.bind(this);
   }
 
+  componentWillMount() {
+    if (this.state.availableGenres.length === 0) {
+      Spotify.getGenres().then(genres => this.setState({availableGenres: genres}));
+    }
+  }
+
   search(searchTerm) {
     Spotify.search(searchTerm).then(searchResults => this.setState({searchResults: searchResults}));
   }
@@ -71,7 +77,6 @@ class App extends Component {
 
   getGenres() {
     if (this.state.availableGenres.length === 0) {
-      console.log('getting genres');
       Spotify.getGenres().then(genres => this.setState({availableGenres: genres}));
     }
   }
@@ -198,7 +203,6 @@ class App extends Component {
   }
 
   render() {
-    this.getGenres();
     return (
       <div className="App">
         <PreviewPlayer preview={this.state.currentPreview} />
