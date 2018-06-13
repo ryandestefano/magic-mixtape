@@ -1,5 +1,5 @@
 const clientId = process.env.REACT_APP_CLIENT_ID;
-const redirectUri = 'http://localhost:3000/'
+const redirectUri = process.env.REACT_APP_REDIRECT_URI; //'http://localhost:3000/'
 const spotifyUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;
 let accessToken;
 let expiresIn;
