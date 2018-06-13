@@ -50,7 +50,7 @@ class Genres extends React.Component {
           <ul>
             {
               this.props.displayedGenres.map(genre => {
-                return <Genre genre={genre} addGenre={this.props.addGenre} numberOfColors={this.props.numberOfColors} />;
+                return <Genre key={genre} genre={genre} addGenre={this.props.addGenre} numberOfColors={this.props.numberOfColors} />;
               })
             }
           </ul>

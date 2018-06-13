@@ -32,7 +32,6 @@ class Item extends React.Component {
             <img src={`${imagePath}/${this.props.item.tag}.png`} title={this.props.name} alt={this.props.name} />
             {this.renderItemActionIcon()}
             <p>{this.props.item.name}</p>
-            <p className="description">{this.props.item.description}</p>
           </span>
         </div>
       </li>

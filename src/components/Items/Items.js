@@ -56,7 +56,7 @@ class Items extends React.Component {
             } 
           </ul>
           <button onClick={this.updateItems}>
-            <i class="fas fa-sync-alt"></i>
+            <i className="fas fa-sync-alt"></i>
           </button>
         </span>
         {this.renderMaxedOutMessage()} 
