@@ -44,6 +44,7 @@ class App extends Component {
     this.removeTrackFromSeeds = this.removeTrackFromSeeds.bind(this);
     this.togglePlaylistDisplay = this.togglePlaylistDisplay.bind(this);
     this.getRecommendations = this.getRecommendations.bind(this);
+    this.renderGenerateMixtapeButton = this.renderGenerateMixtapeButton.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
     this.playPreview = this.playPreview.bind(this);
     this.stopPreview = this.stopPreview.bind(this);
@@ -174,6 +175,12 @@ class App extends Component {
     this.setState({currentPreview: ''});
   }
 
+  renderGenerateMixtapeButton() {
+    if (this.state.genreSeeds.length > 0 || this.state.songSeeds.length > 0) {
+      return <GenerateMixtapeButton getRecommendations={this.getRecommendations} />;
+    }
+  }
+
   renderManifest() {
     if (this.state.genreSeeds.length < 1 && this.state.itemSeeds.length < 1 && this.state.songSeeds.length < 1) {
       return (
@@ -187,7 +194,7 @@ class App extends Component {
           <SelectedGenres genreSeeds={this.state.genreSeeds} removeGenre={this.removeGenreFromSeeds} /> 
           <SelectedItems itemSeeds={this.state.itemSeeds} removeItem={this.removeItemFromSeeds} />
           <SelectedTracks trackList={this.state.songSeeds} removeTrack={this.removeTrackFromSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} />
-          <GenerateMixtapeButton getRecommendations={this.getRecommendations} />
+          {this.renderGenerateMixtapeButton()}
         </div>
       );
     }

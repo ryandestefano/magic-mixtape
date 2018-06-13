@@ -1,6 +1,7 @@
 /* VARIABLES + COLORS */
 
-$pink: #ff378b;
+$app-color: #1c4c4a;
+$light-app-color: lighten($app-color, 30%);
 $font: 'Work Sans';
 
 $colors: (
@@ -84,6 +85,29 @@ $colors: (
   }
 }
 
+/* MIXINS */
+
+@mixin app-button {
+  transition: .25s;
+  appearance: none;
+  display: block;
+  color: #fff;
+  background-color: $app-color;
+  font-family: $font, sans-serif;
+  font-size: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 60px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    transition: .25s;
+    background-color: lighten($app-color, 5%);
+  }
+}
+
 /* GENERAL */
 
 * {
@@ -109,24 +133,24 @@ header {
   z-index: 1;
   width: 100%;
   height: 80px;
-  background-color: darken($pink, 50%);
+  background-color: darken($app-color, 50%);
   text-align: center;
   font-family: $font, sans-serif;
   padding: 30px;
   h1 {
     display: flex;
     flex: 1;
-    color: $pink;
+    color: $app-color;
     font-size: 1.88rem;
   }
   a {
     transition: .25s;
     display: flex;
-    color: $pink;
+    color: $app-color;
     cursor: pointer;
     &:hover {
       transition: .25s;
-      color: lighten($pink, 15%);
+      color: lighten($app-color, 15%);
     }
   }
 }
@@ -155,7 +179,7 @@ h2 {
     width: 70%;
     height: 100%;
     overflow-y: scroll;
-    background-color: $pink;
+    background-color: $app-color;
     padding: 30px;
   }
   .app-selections {
@@ -163,16 +187,33 @@ h2 {
     width: 30%;
     height: 100%;
     overflow-y: scroll;
-    background-color: #fcf;
+    background-color: darken($app-color, 10%);
     padding: 30px;
+    > div {
+      border-bottom: 1px solid $app-color;
+      margin: 0 0 20px 0;
+      padding: 0 0 20px 0;
+      h2 {
+        color: $light-app-color;
+        font-size: 18px;
+        margin: 0 0 10px 0;
+      }
+    }
+    .SelectedItems {
+      h2 {
+        margin: 0 0 12.5px 0;
+      }
+    }
     .Playlist {
       width: 100%;
-      padding: 0;
+      h2 {
+        margin: 0 0 5px 0;
+      }
       .track-list {
         width: 100%;
         .Track {
           border-radius: 5px;
-          margin: 0 0 5px 0;
+          margin: 10px 0 0 0;
         }
       }
     }
@@ -190,11 +231,36 @@ h2 {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
-    background-color: rgba(darken($pink, 40%), .9);
+    background-color: rgba(darken($app-color, 15%), .97);
     &.active {
       transition: .5s;
       visibility: visible;
       opacity: 1;
+    }
+    .empty-playlist {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 600px;
+      height: 100%;
+      text-align: center;
+      margin: 0 auto;
+      h1 {
+        color: $light-app-color;
+        font-size: 24px;
+        margin: 0 0 30px 0;
+      }
+      p { 
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.5em;
+        margin: 0 0 30px 0;
+      }
+      button {
+        @include app-button;
+      }
     }
     .Playlist {
       position: relative;
@@ -220,7 +286,7 @@ h2 {
           font-size: 21px;
           margin: 0 0 10px 0;
           & + p {
-            color: lighten($pink, 15%);
+            color: lighten($app-color, 15%);
             margin: 0 0 20px 0;
           }
         }
@@ -232,7 +298,7 @@ h2 {
         }
         input {
           width: 100%;
-          color: $pink;
+          color: $app-color;
           background-color: #fff;
           font-family: $font, sans-serif;
           font-size: 1.5rem;
@@ -243,13 +309,13 @@ h2 {
           padding: 10px 20px;
         }
         > div {
-          border-top: 1px solid $pink;
+          border-top: 1px solid $app-color;
           margin: 30px 0 0 0;
           > div {
             display: flex;
             flex-direction: row;
             align-items: center;
-            background-color: rgba($pink, .5);
+            background-color: rgba($app-color, .5);
             border-radius: 5px;
             margin: 15px 0 0 0;
             padding: 15px;
@@ -257,7 +323,7 @@ h2 {
               margin: 30px 0 0 0;
             }
             h2 {
-              color: lighten($pink, 30%);
+              color: lighten($app-color, 30%);
               font-size: 14px;
               margin: 0;
             }
@@ -270,19 +336,7 @@ h2 {
           }
         }
         button {
-          appearance: none;
-          color: #fff;
-          background-color: $pink;
-          font-family: $font, sans-serif;
-          font-size: 21px;
-          text-transform: uppercase;
-          padding: 20px 60px;
-          border: none;
-          border-radius: 100px;
-          cursor: pointer;
-          &:hover {
-            background-color: lighten($pink, 5%);
-          }
+          @include app-button;
         }
       }
     }
@@ -320,18 +374,18 @@ h2 {
     right: 0;
     width: 10%;
     height: 100%;
-    color: $pink;
+    color: $light-app-color;
     background-color: transparent;
     background-color: rgba(0, 0, 0, .65);
     border: none;
-    border-left: 2px solid $pink;
+    border-left: 2px solid $app-color;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     padding: 0;
     cursor: pointer;
     outline: none;
     &:hover {
-      color: lighten($pink, 30%);
+      color: lighten($light-app-color, 20%);
       transition: .25s;
       background-color: rgba(0, 0, 0, .55);
     }
@@ -362,7 +416,7 @@ h2 {
     text-align: center;
     text-shadow: 0 0 10px #000;
     h1 {
-      color: $pink;
+      color: $app-color;
       font-size: 21px;
       margin: 0 0 10px 0;
     }
@@ -517,6 +571,7 @@ h2 {
   ul {
     li.Item {
       width: 50%;
+      margin: 0 auto;
       padding: 50% 0 0 0;
       &:last-of-type {
         div {
@@ -559,21 +614,8 @@ h2 {
   display: none;
 }
 
-
 .get-mixtape {
-  transition: .25s;
-  display: block;
-  width: 100%;
-  padding: 10px 30px;
-  border-radius: 5px;
-  background-color: $pink;
-  text-size: 18px;
-  text-align: center;
-  cursor: pointer;
-  &:hover {
-    transition: .25s;
-    background-color: lighten($pink, 15%);
-  }   
+  @include app-button;
 }
 
 ::-webkit-scrollbar {
@@ -617,16 +659,16 @@ h2 {
     justify-content: center;
     width: 120px;
     height: 100%;
-    color: $pink;
+    color: $light-app-color;
     background-color: rgba(0, 0, 0, .65);
     font-size: .833rem;
     text-transform: uppercase;
     border-top-right-radius: 5px;
-    border-left: 2px solid $pink;
+    border-left: 2px solid $app-color;
     padding: 0 30px;
     cursor: pointer;
     &:hover {
-      color: lighten($pink, 30%);
+      color: lighten($light-app-color, 20%);
       transition: .25s;
       background-color: rgba(0, 0, 0, .55);
     }

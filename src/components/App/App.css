@@ -939,6 +939,7 @@
       color: #8316ff;
       background-color: #d4afff; }
 
+/* MIXINS */
 /* GENERAL */
 * {
   box-sizing: border-box; }
@@ -960,23 +961,23 @@ header {
   z-index: 1;
   width: 100%;
   height: 80px;
-  background-color: #370017;
+  background-color: black;
   text-align: center;
   font-family: "Work Sans", sans-serif;
   padding: 30px; }
   header h1 {
     display: flex;
     flex: 1;
-    color: #ff378b;
+    color: #1c4c4a;
     font-size: 1.88rem; }
   header a {
     transition: .25s;
     display: flex;
-    color: #ff378b;
+    color: #1c4c4a;
     cursor: pointer; }
     header a:hover {
       transition: .25s;
-      color: #ff84b7; }
+      color: #318480; }
 
 h2 {
   font-family: "Work Sans", sans-serif;
@@ -1000,23 +1001,34 @@ h2 {
     width: 70%;
     height: 100%;
     overflow-y: scroll;
-    background-color: #ff378b;
+    background-color: #1c4c4a;
     padding: 30px; }
   .app-content .app-selections {
     position: relative;
     width: 30%;
     height: 100%;
     overflow-y: scroll;
-    background-color: #fcf;
+    background-color: #0e2726;
     padding: 30px; }
+    .app-content .app-selections > div {
+      border-bottom: 1px solid #1c4c4a;
+      margin: 0 0 20px 0;
+      padding: 0 0 20px 0; }
+      .app-content .app-selections > div h2 {
+        color: #46bbb6;
+        font-size: 18px;
+        margin: 0 0 10px 0; }
+    .app-content .app-selections .SelectedItems h2 {
+      margin: 0 0 12.5px 0; }
     .app-content .app-selections .Playlist {
-      width: 100%;
-      padding: 0; }
+      width: 100%; }
+      .app-content .app-selections .Playlist h2 {
+        margin: 0 0 5px 0; }
       .app-content .app-selections .Playlist .track-list {
         width: 100%; }
         .app-content .app-selections .Playlist .track-list .Track {
           border-radius: 5px;
-          margin: 0 0 5px 0; }
+          margin: 10px 0 0 0; }
   .app-content .App-playlist {
     transition: .5s;
     visibility: hidden;
@@ -1030,11 +1042,48 @@ h2 {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
-    background-color: rgba(106, 0, 45, 0.9); }
+    background-color: rgba(7, 20, 20, 0.97); }
     .app-content .App-playlist.active {
       transition: .5s;
       visibility: visible;
       opacity: 1; }
+    .app-content .App-playlist .empty-playlist {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 600px;
+      height: 100%;
+      text-align: center;
+      margin: 0 auto; }
+      .app-content .App-playlist .empty-playlist h1 {
+        color: #46bbb6;
+        font-size: 24px;
+        margin: 0 0 30px 0; }
+      .app-content .App-playlist .empty-playlist p {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.5em;
+        margin: 0 0 30px 0; }
+      .app-content .App-playlist .empty-playlist button {
+        transition: .25s;
+        appearance: none;
+        display: block;
+        color: #fff;
+        background-color: #1c4c4a;
+        font-family: "Work Sans", sans-serif;
+        font-size: 21px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px 60px;
+        border: none;
+        border-radius: 100px;
+        outline: none;
+        cursor: pointer; }
+        .app-content .App-playlist .empty-playlist button:hover {
+          transition: .25s;
+          background-color: #235f5c; }
     .app-content .App-playlist .Playlist {
       position: relative;
       display: flex;
@@ -1057,7 +1106,7 @@ h2 {
           font-size: 21px;
           margin: 0 0 10px 0; }
           .app-content .App-playlist .Playlist .playlist-info h1 + p {
-            color: #ff84b7;
+            color: #318480;
             margin: 0 0 20px 0; }
         .app-content .App-playlist .Playlist .playlist-info h2 {
           font-size: 16px;
@@ -1066,7 +1115,7 @@ h2 {
           margin: 0 0 10px 0; }
         .app-content .App-playlist .Playlist .playlist-info input {
           width: 100%;
-          color: #ff378b;
+          color: #1c4c4a;
           background-color: #fff;
           font-family: "Work Sans", sans-serif;
           font-size: 1.5rem;
@@ -1076,38 +1125,43 @@ h2 {
           margin: 0 0 20px 0;
           padding: 10px 20px; }
         .app-content .App-playlist .Playlist .playlist-info > div {
-          border-top: 1px solid #ff378b;
+          border-top: 1px solid #1c4c4a;
           margin: 30px 0 0 0; }
           .app-content .App-playlist .Playlist .playlist-info > div > div {
             display: flex;
             flex-direction: row;
             align-items: center;
-            background-color: rgba(255, 55, 139, 0.5);
+            background-color: rgba(28, 76, 74, 0.5);
             border-radius: 5px;
             margin: 15px 0 0 0;
             padding: 15px; }
             .app-content .App-playlist .Playlist .playlist-info > div > div:first-of-type {
               margin: 30px 0 0 0; }
             .app-content .App-playlist .Playlist .playlist-info > div > div h2 {
-              color: #ffd0e4;
+              color: #46bbb6;
               font-size: 14px;
               margin: 0; }
         .app-content .App-playlist .Playlist .playlist-info .SelectedItems ul {
           width: 50%;
           margin: 0 auto; }
         .app-content .App-playlist .Playlist .playlist-info button {
+          transition: .25s;
           appearance: none;
+          display: block;
           color: #fff;
-          background-color: #ff378b;
+          background-color: #1c4c4a;
           font-family: "Work Sans", sans-serif;
           font-size: 21px;
+          text-align: center;
           text-transform: uppercase;
           padding: 20px 60px;
           border: none;
           border-radius: 100px;
+          outline: none;
           cursor: pointer; }
           .app-content .App-playlist .Playlist .playlist-info button:hover {
-            background-color: #ff519a; }
+            transition: .25s;
+            background-color: #235f5c; }
 
 /* GENRES */
 .Genres,
@@ -1140,11 +1194,11 @@ h2 {
     right: 0;
     width: 10%;
     height: 100%;
-    color: #ff378b;
+    color: #46bbb6;
     background-color: transparent;
     background-color: rgba(0, 0, 0, 0.65);
     border: none;
-    border-left: 2px solid #ff378b;
+    border-left: 2px solid #1c4c4a;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     padding: 0;
@@ -1152,7 +1206,7 @@ h2 {
     outline: none; }
     .Genres button:hover,
     .Items button:hover {
-      color: #ffd0e4;
+      color: #91d6d3;
       transition: .25s;
       background-color: rgba(0, 0, 0, 0.55); }
     .Genres button svg.svg-inline--fa,
@@ -1178,7 +1232,7 @@ h2 {
   text-align: center;
   text-shadow: 0 0 10px #000; }
   .maxed-out .message h1 {
-    color: #ff378b;
+    color: #1c4c4a;
     font-size: 21px;
     margin: 0 0 10px 0; }
 
@@ -1318,6 +1372,7 @@ h2 {
 .SelectedGenres ul li.Item,
 .SelectedItems ul li.Item {
   width: 50%;
+  margin: 0 auto;
   padding: 50% 0 0 0; }
   .SelectedGenres ul li.Item:last-of-type div,
   .SelectedItems ul li.Item:last-of-type div {
@@ -1348,17 +1403,22 @@ h2 {
 
 .get-mixtape {
   transition: .25s;
+  appearance: none;
   display: block;
-  width: 100%;
-  padding: 10px 30px;
-  border-radius: 5px;
-  background-color: #ff378b;
-  text-size: 18px;
+  color: #fff;
+  background-color: #1c4c4a;
+  font-family: "Work Sans", sans-serif;
+  font-size: 21px;
   text-align: center;
+  text-transform: uppercase;
+  padding: 20px 60px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
   cursor: pointer; }
   .get-mixtape:hover {
     transition: .25s;
-    background-color: #ff84b7; }
+    background-color: #235f5c; }
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -1397,16 +1457,16 @@ h2 {
     justify-content: center;
     width: 120px;
     height: 100%;
-    color: #ff378b;
+    color: #46bbb6;
     background-color: rgba(0, 0, 0, 0.65);
     font-size: .833rem;
     text-transform: uppercase;
     border-top-right-radius: 5px;
-    border-left: 2px solid #ff378b;
+    border-left: 2px solid #1c4c4a;
     padding: 0 30px;
     cursor: pointer; }
     .SearchBar a:hover {
-      color: #ffd0e4;
+      color: #91d6d3;
       transition: .25s;
       background-color: rgba(0, 0, 0, 0.55); }
   .SearchBar.no-search-results .input-container {

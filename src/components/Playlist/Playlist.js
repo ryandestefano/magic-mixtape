@@ -62,9 +62,10 @@ class Playlist extends React.Component {
       );
     } else {
       return (
-        <div>
-          <p>There is nothing in this playlist!</p>
-          <p onClick={this.handleTogglePlaylistDisplay}>Close playlist</p>
+        <div className="empty-playlist">
+          <h1>Your playlist is empty!</h1>
+          <p>Spotify was unable to create a mixtape that meets your requirements. Try selecting different genres or songs.</p>
+          <button onClick={this.handleTogglePlaylistDisplay}>Try again</button>
         </div>
       );
     }
