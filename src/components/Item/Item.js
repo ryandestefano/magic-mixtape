@@ -24,11 +24,12 @@ class Item extends React.Component {
   } 
 
   render() {
+    const imagePath = process.env.REACT_APP_IMAGE_PATH;
     return (
       <li className={`Item ${this.props.item.tag}`} onClick={this.renderItemAction}>
         <div>
           <span>
-            <img src={`./../images/${this.props.item.tag}.png`} title={this.props.name} alt={this.props.name} />
+            <img src={`${imagePath}/${this.props.item.tag}.png`} title={this.props.name} alt={this.props.name} />
             {this.renderItemActionIcon()}
             <p>{this.props.item.name}</p>
             <p className="description">{this.props.item.description}</p>
