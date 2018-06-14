@@ -18,7 +18,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hasAccessToken: false,
       availableGenres: [],
       displayedGenres: [],
       searchResults: [],
@@ -32,6 +31,7 @@ class App extends Component {
       playlistName: 'New Playlist',
       currentPreview: ''
     };
+    this.handleAccessSpotify = this.handleAccessSpotify.bind(this);
     this.getGenres = this.getGenres.bind(this);
     this.updateDisplayedGenres = this.updateDisplayedGenres.bind(this);
     this.addGenreToSeeds = this.addGenreToSeeds.bind(this);
@@ -52,10 +52,9 @@ class App extends Component {
     this.savePlaylist = this.savePlaylist.bind(this);
   }
 
-  componentWillMount() {
-    if (this.state.availableGenres.length === 0) {
-      Spotify.getGenres().then(genres => this.setState({availableGenres: genres}));
-    }
+  handleAccessSpotify() {
+    sessionStorage.setItem('displayIntro', true);
+    this.getGenres();
   }
 
   search(searchTerm) {
@@ -210,29 +209,64 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="App">
-        <PreviewPlayer preview={this.state.currentPreview} />
-        <header>
-          <h1>Mixtape Generator</h1>
-          <a className="view-playlist" onClick={this.togglePlaylistDisplay}>View Playlist</a>
-        </header>
-        <div className="app-content">
-          <div className="app-options">
-            <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} genreSeeds={this.state.genreSeeds} addGenre={this.addGenreToSeeds} numberOfColors={this.state.availableItems.length} />
-            <Items availableItems={this.state.availableItems} displayedItems={this.state.displayedItems} updateDisplayedItems={this.updateDisplayedItems} itemSeeds={this.state.itemSeeds} addItem={this.addItemToSeeds} />
-            <SearchBar onSearch={this.search} numberOfSearchResults={this.state.searchResults.length} />
-            <div className="search-results">
-              <SearchResults trackList={this.state.searchResults} addTrack={this.addTrackToSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} />
+    let displayIntro = sessionStorage.getItem('displayIntro');
+    if (!displayIntro) {
+      const imagePath = process.env.REACT_APP_IMAGE_PATH;
+      return (
+        <div className="app-intro">
+          <span>
+            <h1><span>M</span><span>i</span><span>x</span><span>t</span><span>a</span><span>p</span><span>e</span></h1>
+            <p>This app requires access to Spotify to generate and save mixtapes</p>
+            <p>Choose genres to set the tone for your mixtape</p>
+            <p>Select tracks that reflect the kinds of songs you would like in your mixtape</p>
+            <div className="images">
+              <span className="mask">
+                <img src={`${imagePath}/mask.png`} alt="Haunted Mask" />
+              </span>
+              <span className="pineapple">
+                <img src={`${imagePath}/pineapple.png`} alt="Pineapple" />
+              </span>
+              <span className="kitty">
+                <img src={`${imagePath}/kitty.png`} alt="Lucky Kitty" />
+              </span>
+              <span className="dinosaur-skull">
+                <img src={`${imagePath}/dinosaur-skull.png`} alt="Ancient Skull" />
+              </span>
+              <span className="hour-glass">
+                <img src={`${imagePath}/hour-glass.png`} alt="House Glass" />
+              </span>
+            </div>
+            <p>Add items to your manifest — each item has special characteristics that could affect the <span>energy</span>, <span>danceability</span>, <span>instrumentalness</span>, and <span>length</span> of the songs in your mixtape!</p>
+            <button onClick={this.handleAccessSpotify}>Connect to Spotify</button>
+          </span>
+        </div>
+      );
+    } else {
+      this.getGenres();
+      return (
+        <div className="App">
+          <PreviewPlayer preview={this.state.currentPreview} />
+          <header>
+            <h1>Mixtape Generator</h1>
+            <a className="view-playlist" onClick={this.togglePlaylistDisplay}>View Playlist</a>
+          </header>
+          <div className="app-content">
+            <div className="app-options">
+              <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} genreSeeds={this.state.genreSeeds} addGenre={this.addGenreToSeeds} numberOfColors={this.state.availableItems.length} />
+              <Items availableItems={this.state.availableItems} displayedItems={this.state.displayedItems} updateDisplayedItems={this.updateDisplayedItems} itemSeeds={this.state.itemSeeds} addItem={this.addItemToSeeds} />
+              <SearchBar onSearch={this.search} numberOfSearchResults={this.state.searchResults.length} />
+              <div className="search-results">
+                <SearchResults trackList={this.state.searchResults} addTrack={this.addTrackToSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} />
+              </div>
+            </div>
+            {this.renderManifest()}
+            <div className={"App-playlist " + (this.state.displayPlaylist ? 'active' : '')}>
+              <Playlist togglePlaylistDisplay={this.togglePlaylistDisplay} trackList={this.state.playlist} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} genreSeeds={this.state.genreSeeds} itemSeeds={this.state.itemSeeds} songSeeds={this.state.songSeeds} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
             </div>
           </div>
-          {this.renderManifest()}
-          <div className={"App-playlist " + (this.state.displayPlaylist ? 'active' : '')}>
-            <Playlist togglePlaylistDisplay={this.togglePlaylistDisplay} trackList={this.state.playlist} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} genreSeeds={this.state.genreSeeds} itemSeeds={this.state.itemSeeds} songSeeds={this.state.songSeeds} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
-          </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
 
