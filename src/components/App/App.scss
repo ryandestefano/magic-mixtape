@@ -91,6 +91,7 @@ $colors: (
 /* MIXINS */
 
 @mixin app-logo {
+  transform: translateZ(0);
   color: map-get($colors, kitty);
   font-size: 42px;
   margin: 0 0 20px 0;
@@ -126,6 +127,7 @@ $colors: (
   border: none;
   border-radius: 100px;
   outline: none;
+  margin: 0 auto;
   cursor: pointer;
   &:hover {
     transition: .25s;
@@ -322,6 +324,35 @@ h2 {
         }
       }
     }
+    &.no-selections {
+      text-align: center;
+      h1 {
+        color: $light-app-color;
+        font-size: 18px;
+        margin: 20px;
+      }
+      p {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.25em;
+        margin: 0;
+        span {
+          font-weight: 500;
+        }
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+        margin: 10px 0;
+        &:first-of-type {
+          color: map-get($colors, potion-1);
+        }
+        &:last-of-type {
+          color: map-get($colors, bacon);
+        }
+      }
+    }
   }
   .App-playlist {
     transition: .5s;
@@ -348,7 +379,7 @@ h2 {
       height: 100%;
       align-items: center;
       justify-content: center;
-      button {
+      div {
         animation: rotate 1.5s linear infinite;
         appearance: none;
         width: 60px;
@@ -392,10 +423,22 @@ h2 {
       display: flex;
       flex-direction: row;
       button.close-playlist {
-        position: absolute;
-        top: 0;
-        right: 0;
         appearance: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: $light-app-color;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &:hover {
+          color: lighten($light-app-color, 10%);
+        }
+        svg {
+          width: 30px;
+          height: 30px;
+        }
       }
       .track-list {
         width: 50%;
@@ -408,22 +451,20 @@ h2 {
         text-align: center;
         padding: 0 0 0 15px;
         h1 {
+          color: $light-app-color;
           font-size: 21px;
-          margin: 0 0 10px 0;
+          margin: 0 0 20px 0;
           & + p {
-            color: lighten($app-color, 15%);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.25em;
             margin: 0 0 20px 0;
           }
         }
-        h2 {
-          font-size: 16px;
-          font-weight: 300;
-          line-height: 1.25rem;
-          margin: 0 0 10px 0;
-        }
         input {
           width: 100%;
-          color: $app-color;
+          color: $light-app-color;
           background-color: #fff;
           font-family: $font, sans-serif;
           font-size: 1.5rem;
@@ -431,37 +472,20 @@ h2 {
           border-radius: 5px;
           outline: 0;
           margin: 0 0 20px 0;
-          padding: 10px 20px;
-        }
-        > div {
-          border-top: 1px solid $app-color;
-          margin: 30px 0 0 0;
-          > div {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            background-color: rgba($app-color, .5);
-            border-radius: 5px;
-            margin: 15px 0 0 0;
-            padding: 15px;
-            &:first-of-type {
-              margin: 30px 0 0 0;
-            }
-            h2 {
-              color: lighten($app-color, 30%);
-              font-size: 14px;
-              margin: 0;
-            }
-          }
-        }
-        .SelectedItems {
-          ul {
-            width: 50%;
-            margin: 0 auto;
-          }
+          padding: 20px;
         }
         button {
           @include app-button;
+          margin-bottom: 10px;
+        }
+        a.close-playlist {
+          color: lighten($app-color, 15%);
+          font-size: 14px;
+          font-weight: 300;
+          cursor: pointer;
+          &:hover {
+            color: $light-app-color;
+          }
         }
       }
     }
@@ -542,7 +566,7 @@ h2 {
     text-align: center;
     text-shadow: 0 0 10px #000;
     h1 {
-      color: $app-color;
+      color: $light-app-color;
       font-size: 21px;
       margin: 0 0 10px 0;
     }
@@ -644,7 +668,7 @@ h2 {
             position: relative;
             width: 75%;
             height: auto;
-            margin: 0 0 5px 0;
+            margin: -5px 0 10px 0;
           }
           svg {
             transition: .25s;

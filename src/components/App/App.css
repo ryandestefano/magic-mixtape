@@ -1023,6 +1023,7 @@ header {
   font-family: "Work Sans", sans-serif;
   padding: 20px; }
   header h1 {
+    transform: translateZ(0);
     color: #ff363f;
     font-size: 42px;
     margin: 0 0 20px 0; }
@@ -1067,6 +1068,7 @@ h2 {
     text-align: center;
     padding: 30px; }
     .app-intro > span h1 {
+      transform: translateZ(0);
       color: #ff363f;
       font-size: 42px;
       margin: 0 0 20px 0; }
@@ -1128,6 +1130,7 @@ h2 {
       border: none;
       border-radius: 100px;
       outline: none;
+      margin: 0 auto;
       cursor: pointer;
       margin: 0 auto; }
       .app-intro > span button:hover {
@@ -1180,6 +1183,28 @@ h2 {
         .app-content .app-selections .Playlist .track-list .Track {
           border-radius: 5px;
           margin: 10px 0 0 0; }
+    .app-content .app-selections.no-selections {
+      text-align: center; }
+      .app-content .app-selections.no-selections h1 {
+        color: #46bbb6;
+        font-size: 18px;
+        margin: 20px; }
+      .app-content .app-selections.no-selections p {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.25em;
+        margin: 0; }
+        .app-content .app-selections.no-selections p span {
+          font-weight: 500; }
+      .app-content .app-selections.no-selections svg {
+        width: 20px;
+        height: 20px;
+        margin: 10px 0; }
+        .app-content .app-selections.no-selections svg:first-of-type {
+          color: #ff378b; }
+        .app-content .app-selections.no-selections svg:last-of-type {
+          color: #00eca1; }
   .app-content .App-playlist {
     transition: .5s;
     visibility: hidden;
@@ -1204,14 +1229,14 @@ h2 {
       height: 100%;
       align-items: center;
       justify-content: center; }
-      .app-content .App-playlist .loading-playlist button {
+      .app-content .App-playlist .loading-playlist div {
         animation: rotate 1.5s linear infinite;
         appearance: none;
         width: 60px;
         height: 60px;
         background-color: transparent;
         border: none; }
-        .app-content .App-playlist .loading-playlist button svg {
+        .app-content .App-playlist .loading-playlist div svg {
           color: #46bbb6;
           width: 100%;
           height: 100%; }
@@ -1248,6 +1273,7 @@ h2 {
         border: none;
         border-radius: 100px;
         outline: none;
+        margin: 0 auto;
         cursor: pointer; }
         .app-content .App-playlist .empty-playlist button:hover {
           transition: .25s;
@@ -1257,10 +1283,20 @@ h2 {
       display: flex;
       flex-direction: row; }
       .app-content .App-playlist .Playlist button.close-playlist {
+        appearance: none;
         position: absolute;
-        top: 0;
-        right: 0;
-        appearance: none; }
+        top: 20px;
+        right: 20px;
+        color: #46bbb6;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer; }
+        .app-content .App-playlist .Playlist button.close-playlist:hover {
+          color: #6bc9c5; }
+        .app-content .App-playlist .Playlist button.close-playlist svg {
+          width: 30px;
+          height: 30px; }
       .app-content .App-playlist .Playlist .track-list {
         width: 50%;
         height: 100%;
@@ -1271,19 +1307,18 @@ h2 {
         text-align: center;
         padding: 0 0 0 15px; }
         .app-content .App-playlist .Playlist .playlist-info h1 {
+          color: #46bbb6;
           font-size: 21px;
-          margin: 0 0 10px 0; }
+          margin: 0 0 20px 0; }
           .app-content .App-playlist .Playlist .playlist-info h1 + p {
-            color: #318480;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.25em;
             margin: 0 0 20px 0; }
-        .app-content .App-playlist .Playlist .playlist-info h2 {
-          font-size: 16px;
-          font-weight: 300;
-          line-height: 1.25rem;
-          margin: 0 0 10px 0; }
         .app-content .App-playlist .Playlist .playlist-info input {
           width: 100%;
-          color: #1c4c4a;
+          color: #46bbb6;
           background-color: #fff;
           font-family: "Work Sans", sans-serif;
           font-size: 1.5rem;
@@ -1291,27 +1326,7 @@ h2 {
           border-radius: 5px;
           outline: 0;
           margin: 0 0 20px 0;
-          padding: 10px 20px; }
-        .app-content .App-playlist .Playlist .playlist-info > div {
-          border-top: 1px solid #1c4c4a;
-          margin: 30px 0 0 0; }
-          .app-content .App-playlist .Playlist .playlist-info > div > div {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            background-color: rgba(28, 76, 74, 0.5);
-            border-radius: 5px;
-            margin: 15px 0 0 0;
-            padding: 15px; }
-            .app-content .App-playlist .Playlist .playlist-info > div > div:first-of-type {
-              margin: 30px 0 0 0; }
-            .app-content .App-playlist .Playlist .playlist-info > div > div h2 {
-              color: #46bbb6;
-              font-size: 14px;
-              margin: 0; }
-        .app-content .App-playlist .Playlist .playlist-info .SelectedItems ul {
-          width: 50%;
-          margin: 0 auto; }
+          padding: 20px; }
         .app-content .App-playlist .Playlist .playlist-info button {
           transition: .25s;
           appearance: none;
@@ -1326,10 +1341,19 @@ h2 {
           border: none;
           border-radius: 100px;
           outline: none;
-          cursor: pointer; }
+          margin: 0 auto;
+          cursor: pointer;
+          margin-bottom: 10px; }
           .app-content .App-playlist .Playlist .playlist-info button:hover {
             transition: .25s;
             background-color: #235f5c; }
+        .app-content .App-playlist .Playlist .playlist-info a.close-playlist {
+          color: #318480;
+          font-size: 14px;
+          font-weight: 300;
+          cursor: pointer; }
+          .app-content .App-playlist .Playlist .playlist-info a.close-playlist:hover {
+            color: #46bbb6; }
 
 /* GENRES */
 .Genres,
@@ -1401,7 +1425,7 @@ h2 {
   text-align: center;
   text-shadow: 0 0 10px #000; }
   .maxed-out .message h1 {
-    color: #1c4c4a;
+    color: #46bbb6;
     font-size: 21px;
     margin: 0 0 10px 0; }
 
@@ -1502,7 +1526,7 @@ h2 {
             position: relative;
             width: 75%;
             height: auto;
-            margin: 0 0 5px 0; }
+            margin: -5px 0 10px 0; }
           .Items ul li.Item div span svg,
           .SelectedItems ul li.Item div span svg {
             transition: .25s;
@@ -1564,6 +1588,7 @@ h2 {
   border: none;
   border-radius: 100px;
   outline: none;
+  margin: 0 auto;
   cursor: pointer; }
   .get-mixtape:hover {
     transition: .25s;
