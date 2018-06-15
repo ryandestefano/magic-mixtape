@@ -102,8 +102,8 @@ const Spotify = {
     return fetch(recommendationsQuery, {headers: headers})
       .then(response => response.json())
       .then(jsonResponse => {
-        if (!jsonResponse.tracks) return [];
-        return jsonResponse.tracks.map(track => {
+        if (!jsonResponse.tracks) return [[], false];
+        return [jsonResponse.tracks.map(track => {
           const trackInformation = {
             id: track.id,
             name: track.name,
@@ -113,7 +113,7 @@ const Spotify = {
             uri: track.uri
           } 
           return trackInformation;
-        });
+        }), true];
       });
   },
 

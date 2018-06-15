@@ -27,6 +27,7 @@ class App extends Component {
       genreSeeds: [],
       songSeeds: [],
       playlist: [],
+      getRecommendationsWasSuccessful: true,
       displayPlaylist: false,
       playlistName: 'New Playlist',
       currentPreview: ''
@@ -150,13 +151,14 @@ class App extends Component {
 
     const itemAttributes = {dance, energy, instrumental, minLength, maxLength};
 
-    Spotify.getRecommendations(songSeeds, genreSeeds, itemAttributes).then(recommendations => this.setState({playlist: recommendations}));
-    this.togglePlaylistDisplay();
+    Spotify.getRecommendations(songSeeds, genreSeeds, itemAttributes)
+      .then(recommendations => this.setState({playlist: recommendations[0], getRecommendationsWasSuccessful: recommendations[1]}))
+      this.togglePlaylistDisplay();
   }
 
   togglePlaylistDisplay() {
     if (this.state.displayPlaylist) {
-      this.setState({displayPlaylist: false});
+      this.setState({displayPlaylist: false, getRecommendationsWasSuccessful: true});
     } else {
       this.setState({displayPlaylist: true});
     }
@@ -215,10 +217,9 @@ class App extends Component {
       return (
         <div className="app-intro">
           <span>
-            <h1><span>M</span><span>i</span><span>x</span><span>t</span><span>a</span><span>p</span><span>e</span></h1>
-            <p>This app requires access to Spotify to generate and save mixtapes</p>
-            <p>Choose genres to set the tone for your mixtape</p>
-            <p>Select tracks that reflect the kinds of songs you would like in your mixtape</p>
+            <h1><span>M</span><span>a</span><span>g</span><span>i</span><span>c</span> <span>M</span><span>i</span><span>x</span><span>t</span><span>a</span><span>p</span><span>e</span><sup>Beta</sup></h1>
+            <p>Generate mixtapes inspired by your favorite songs and save them to your Spotify account. Choose your favorite genres, or explore some new ones.</p>
+            <p>Add magic items to your manifest — each item has special characteristics that could affect the <span>energy</span>, <span>danceability</span>, <span>instrumentalness</span>, and <span>length</span> of the songs in your mixtape!</p>
             <div className="images">
               <span className="mask">
                 <img src={`${imagePath}/mask.png`} alt="Haunted Mask" />
@@ -236,7 +237,7 @@ class App extends Component {
                 <img src={`${imagePath}/hour-glass.png`} alt="House Glass" />
               </span>
             </div>
-            <p>Add items to your manifest — each item has special characteristics that could affect the <span>energy</span>, <span>danceability</span>, <span>instrumentalness</span>, and <span>length</span> of the songs in your mixtape!</p>
+            <p>This app requires access to Spotify in order to search genres and songs, and to save mixtapes to your Spotify account.  Connect Magic Mixtape to your Spotify account by clicking below.</p>
             <button onClick={this.handleAccessSpotify}>Connect to Spotify</button>
           </span>
         </div>
@@ -247,7 +248,7 @@ class App extends Component {
         <div className="App">
           <PreviewPlayer preview={this.state.currentPreview} />
           <header>
-            <h1>Mixtape Generator</h1>
+            <h1><span>M</span><span>a</span><span>g</span><span>i</span><span>c</span> <span>M</span><span>i</span><span>x</span><span>t</span><span>a</span><span>p</span><span>e</span><sup>Beta</sup></h1>
             <a className="view-playlist" onClick={this.togglePlaylistDisplay}>View Playlist</a>
           </header>
           <div className="app-content">
@@ -261,7 +262,7 @@ class App extends Component {
             </div>
             {this.renderManifest()}
             <div className={"App-playlist " + (this.state.displayPlaylist ? 'active' : '')}>
-              <Playlist togglePlaylistDisplay={this.togglePlaylistDisplay} trackList={this.state.playlist} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} genreSeeds={this.state.genreSeeds} itemSeeds={this.state.itemSeeds} songSeeds={this.state.songSeeds} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
+              <Playlist togglePlaylistDisplay={this.togglePlaylistDisplay} trackList={this.state.playlist} getRecommendationsWasSuccessful={this.state.getRecommendationsWasSuccessful} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} genreSeeds={this.state.genreSeeds} itemSeeds={this.state.itemSeeds} songSeeds={this.state.songSeeds} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
             </div>
           </div>
         </div>

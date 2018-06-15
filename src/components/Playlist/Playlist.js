@@ -60,11 +60,18 @@ class Playlist extends React.Component {
           </div>
         </div>
       );
-    } else {
+    } else if (!this.props.getRecommendationsWasSuccessful) {
       return (
         <div className="empty-playlist">
           <h1>Your playlist is empty!</h1>
           <p>Spotify was unable to create a mixtape that meets your requirements. Try selecting different genres or songs.</p>
+          <button onClick={this.handleTogglePlaylistDisplay}>Try again</button>
+        </div>
+      );
+    } else {
+      return (
+        <div className="loading-playlist">
+          <h1>Loading</h1>
           <button onClick={this.handleTogglePlaylistDisplay}>Try again</button>
         </div>
       );

@@ -21,7 +21,7 @@ class SearchBar extends React.Component {
     return (
       <div className={this.props.numberOfSearchResults > 0 ? "SearchBar" : "SearchBar no-search-results"}>
         <div className="input-container">
-          <input id="search-bar" onKeyPress={this.foo} placeholder="Enter A Song Title" />
+          <input id="search-bar" onKeyPress={this.foo} placeholder="Search by artist, song, or album name" />
         </div>
         <a onClick={this.search}>Search</a>
       </div>
