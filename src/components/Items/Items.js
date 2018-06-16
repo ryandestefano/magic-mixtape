@@ -33,8 +33,8 @@ class Items extends React.Component {
     if (this.props.itemSeeds.length > 1) {
       return (
         <div className="message">
-          <h1>There are aleady two items in the manifest</h1>
-          <p>Try adding genres or songs, or generating your mixtape!</p>
+          <h1>You have added the maximum number of magic items!</h1>
+          <p>Try adding genres or songs, or creating your mixtape</p>
         </div>
       );
     }

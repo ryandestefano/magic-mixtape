@@ -29,11 +29,11 @@ class Genres extends React.Component {
   }
 
   renderMaxedOutMessage() {
-    if (this.props.genreSeeds.length > 2) {
+    if (this.props.genreSeeds.length > 1) {
       return (
         <div className="message">
-          <h1>There are aleady three genres in the manifest</h1>
-          <p>Try adding items or songs, or generating your mixtape!</p>
+          <h1>You have added the maximum number of genres!</h1>
+          <p>Try adding items or songs, or creating your mixtape</p>
         </div>
       );
     }
@@ -45,7 +45,7 @@ class Genres extends React.Component {
     }
 
     return (
-      <div className={this.props.genreSeeds.length < 3 ? "Genres" : "Genres maxed-out"}>
+      <div className={this.props.genreSeeds.length < 2 ? "Genres" : "Genres maxed-out"}>
         <span>
           <ul>
             {

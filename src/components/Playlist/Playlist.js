@@ -1,8 +1,5 @@
 import React from 'react';
 import TrackList from '../TrackList/TrackList';
-import SelectedGenres from '../SelectedGenres/SelectedGenres';
-import SelectedItems from '../SelectedItems/SelectedItems';
-import SelectedTracks from '../SelectedTracks/SelectedTracks';
 
 class Playlist extends React.Component {
   constructor(props) {

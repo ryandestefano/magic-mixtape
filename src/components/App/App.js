@@ -188,9 +188,9 @@ class App extends Component {
         <div className="app-selections no-selections">
           <h1>Start building your magic mixtape!</h1>
           <p>Select at least one genre or song. Your mixtape's style will be based on your selections.</p>
-          <svg class="svg-inline--fa fa-compact-disc fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="compact-disc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM88 256H56c0-105.9 86.1-192 192-192v32c-88.2 0-160 71.8-160 160zm160 96c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"></path></svg>
+          <svg className="svg-inline--fa fa-compact-disc fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="compact-disc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM88 256H56c0-105.9 86.1-192 192-192v32c-88.2 0-160 71.8-160 160zm160 96c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"></path></svg>
           <p>Optionally, add a magic item or two — each item can affect your mixtape's <span>energy</span>, <span>danceability</span>, <span>instrumentalness</span>, and <span>track length</span>.</p>
-          <svg class="svg-inline--fa fa-compact-disc fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="compact-disc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM88 256H56c0-105.9 86.1-192 192-192v32c-88.2 0-160 71.8-160 160zm160 96c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"></path></svg>
+          <svg className="svg-inline--fa fa-compact-disc fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="compact-disc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM88 256H56c0-105.9 86.1-192 192-192v32c-88.2 0-160 71.8-160 160zm160 96c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"></path></svg>
           <p>Create your mixtape, listen to track previews, and if you like what your hear save your mixtapes to your Spotify account!</p>
         </div>
       );
@@ -213,6 +213,7 @@ class App extends Component {
       playlist: [],
       playlistName: 'New Playlist'
     });
+    this.togglePlaylistDisplay();
   }
 
   render() {
@@ -254,7 +255,6 @@ class App extends Component {
           <PreviewPlayer preview={this.state.currentPreview} />
           <header>
             <h1><span>M</span><span>a</span><span>g</span><span>i</span><span>c</span> <span>M</span><span>i</span><span>x</span><span>t</span><span>a</span><span>p</span><span>e</span><sup>Beta</sup></h1>
-            <a className="view-playlist" onClick={this.togglePlaylistDisplay}>View Playlist</a>
           </header>
           <div className="app-content">
             <div className="app-options">
@@ -267,7 +267,7 @@ class App extends Component {
             </div>
             {this.renderManifest()}
             <div className={"App-playlist " + (this.state.displayPlaylist ? 'active' : '')}>
-              <Playlist togglePlaylistDisplay={this.togglePlaylistDisplay} trackList={this.state.playlist} getRecommendationsWasSuccessful={this.state.getRecommendationsWasSuccessful} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} genreSeeds={this.state.genreSeeds} itemSeeds={this.state.itemSeeds} songSeeds={this.state.songSeeds} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
+              <Playlist togglePlaylistDisplay={this.togglePlaylistDisplay} trackList={this.state.playlist} getRecommendationsWasSuccessful={this.state.getRecommendationsWasSuccessful} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} onNameChange={this.updatePlaylistName} onSave={this.savePlaylist} />
             </div>
           </div>
         </div>

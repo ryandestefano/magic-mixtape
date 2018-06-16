@@ -992,12 +992,14 @@
 @keyframes color-cycle {
   0%, 100% {
     color: #ff363f; }
-  25% {
+  20% {
     color: #fde400; }
-  50% {
+  40% {
     color: #1eff9e; }
-  75% {
-    color: #90f4ff; } }
+  60% {
+    color: #90f4ff; }
+  80% {
+    color: #ffa3f9; } }
 /* GENERAL */
 * {
   font-family: "Work Sans", sans-serif;
@@ -1046,10 +1048,6 @@ header {
     header a:hover {
       transition: .25s;
       color: #318480; }
-
-h2 {
-  font-family: "Work Sans", sans-serif;
-  font-size: 1.55rem; }
 
 .app-intro {
   display: flex;
@@ -1420,14 +1418,16 @@ h2 {
   justify-content: center;
   width: 100%;
   height: 100%;
-  color: #fff;
-  font-size: 14px;
   text-align: center;
   text-shadow: 0 0 10px #000; }
   .maxed-out .message h1 {
     color: #46bbb6;
-    font-size: 21px;
-    margin: 0 0 10px 0; }
+    font-size: 16px;
+    margin: 0 0 5px 0; }
+  .maxed-out .message p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300; }
 
 .Genres,
 .SelectedGenres {
@@ -1633,8 +1633,9 @@ h2 {
     height: 100%;
     color: #46bbb6;
     background-color: rgba(0, 0, 0, 0.65);
-    font-size: .833rem;
+    font-size: 14px;
     text-transform: uppercase;
+    line-height: 1.25em;
     border-top-right-radius: 5px;
     border-left: 2px solid #1c4c4a;
     padding: 0 30px;
@@ -1683,8 +1684,9 @@ h2 {
     .Track .track-information h3 {
       margin: 0 0 5px 0; }
     .Track .track-information p {
-      font-size: .83rem;
-      font-weight: 300; }
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.25em; }
   .Track .track-preview-action,
   .Track .track-inclusion-action {
     display: flex;

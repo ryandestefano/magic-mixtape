@@ -147,9 +147,10 @@ $colors: (
 
 @keyframes color-cycle {
   0%, 100% {color: map-get($colors, kitty);}
-  25% {color: map-get($colors, pineapple);}
-  50% {color: map-get($colors, mask);}
-  75% {color: map-get($colors, statue);}
+  20% {color: map-get($colors, pineapple);}
+  40% {color: map-get($colors, mask);}
+  60% {color: map-get($colors, statue);}
+  80% {color: map-get($colors, hour-glass);}
 }
 
 /* GENERAL */
@@ -192,11 +193,6 @@ header {
       color: lighten($app-color, 15%);
     }
   }
-}
-
-h2 {
-  font-family: $font, sans-serif;
-  font-size: 1.55rem;
 }
 
 .app-intro {
@@ -561,14 +557,17 @@ h2 {
     justify-content: center;
     width: 100%;
     height: 100%;
-    color: #fff;
-    font-size: 14px;
     text-align: center;
     text-shadow: 0 0 10px #000;
     h1 {
       color: $light-app-color;
-      font-size: 21px;
-      margin: 0 0 10px 0;
+      font-size: 16px;
+      margin: 0 0 5px 0;
+    }
+    p {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 300;
     }
   }
 }
@@ -787,8 +786,9 @@ h2 {
     height: 100%;
     color: $light-app-color;
     background-color: rgba(0, 0, 0, .65);
-    font-size: .833rem;
+    font-size: 14px;
     text-transform: uppercase;
+    line-height: 1.25em;
     border-top-right-radius: 5px;
     border-left: 2px solid $app-color;
     padding: 0 30px;
@@ -851,8 +851,9 @@ h2 {
       margin: 0 0 5px 0;
     }   
     p { 
-      font-size: .83rem;
+      font-size: 14px;
       font-weight: 300;
+      line-height: 1.25em;
     }   
   }
   .track-preview-action,
