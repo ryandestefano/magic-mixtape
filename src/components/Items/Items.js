@@ -8,6 +8,12 @@ class Items extends React.Component {
     this.renderMaxedOutMessage = this.renderMaxedOutMessage.bind(this);
   }
 
+  componentWillMount() {
+    if (this.props.displayedItems.length === 0) {
+      this.updateItems();
+    }
+  }
+
   updateItems() {
     const availableItems = this.props.availableItems;
     const numberOfAvailableItems = availableItems.length;
@@ -41,10 +47,6 @@ class Items extends React.Component {
   }
 
   render() {
-    if (this.props.displayedItems.length === 0) {
-      this.updateItems();
-    }
-
     return (
       <div className={this.props.itemSeeds.length < 2 ? "Items" : "Items maxed-out"}>
         <span>
