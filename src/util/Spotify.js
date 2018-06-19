@@ -6,7 +6,6 @@ let expiresIn;
 
 const Spotify = {
   getAccessToken() {
-    console.log('get access token');
     if (accessToken) {
       return accessToken;
     }
@@ -15,8 +14,8 @@ const Spotify = {
     if (urlAccessToken && urlExpiresIn) {
       accessToken = urlAccessToken[1];
       expiresIn = urlExpiresIn[1];
-      window.setTimeout(() => accessToken = '', expiresIn * 1000);
-      window.history.pushState('Access Token', null, '/mixtape-generator');
+      //window.setTimeout(() => accessToken = '', expiresIn * 1000);
+      //window.history.pushState('Access Token', null, '/mixtape-generator');
       return accessToken;
     } else {
       window.location = spotifyUrl;

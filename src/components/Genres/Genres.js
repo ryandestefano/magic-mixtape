@@ -40,6 +40,10 @@ class Genres extends React.Component {
   }
 
   render() {
+    if (this.props.displayedGenres.length === 0 && this.props.availableGenres.length > 1) {
+      this.updateGenres();
+    }
+
     return (
       <div className={this.props.genreSeeds.length < 2 ? "Genres" : "Genres maxed-out"}>
         <span>
