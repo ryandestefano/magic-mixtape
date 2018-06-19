@@ -54,7 +54,7 @@ class App extends Component {
   }
 
   handleAccessSpotify() {
-    sessionStorage.setItem('displayIntro', true);
+    //sessionStorage.setItem('displayIntro', true);
     this.getGenres();
   }
 
@@ -217,7 +217,8 @@ class App extends Component {
   }
 
   render() {
-    let displayIntro = sessionStorage.getItem('displayIntro');
+    //let displayIntro = sessionStorage.getItem('displayIntro');
+    const displayIntro = 'foo';
     if (!displayIntro) {
       const imagePath = process.env.REACT_APP_IMAGE_PATH;
       return (
