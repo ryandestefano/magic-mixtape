@@ -59,9 +59,13 @@ const Spotify = {
     return fetch('https://api.spotify.com/v1/recommendations/available-genre-seeds', {headers: headers})
       .then(response => response.json())
       .then(jsonResponse => {
-        return jsonResponse.genres.map(genre => {
-          return genre;
-        })
+        if (jsonResponse.genres) {
+          return jsonResponse.genres.map(genre => {
+            return genre;
+          })
+        } else {
+          return;
+        }
       });
   },
 
