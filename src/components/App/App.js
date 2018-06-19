@@ -78,7 +78,11 @@ class App extends Component {
 
   getGenres() {
     if (this.state.availableGenres.length === 0) {
-      Spotify.getGenres().then(genres => this.setState({availableGenres: genres}));
+      Spotify.getGenres().then(genres => {
+        if (genres !== undefined) {
+          this.setState({availableGenres: genres})
+        }
+      });
     }
   }
 
