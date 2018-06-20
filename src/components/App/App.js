@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import './mobile.css';
 
+import MobileToggle from '../MobileToggle/MobileToggle';
 import Genres from '../Genres/Genres';
 import SelectedGenres from '../SelectedGenres/SelectedGenres';
 import Items from '../Items/Items';
@@ -19,6 +20,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      mobileDisplaySelections: false,
       availableGenres: [],
       displayedGenres: [],
       searchResults: [],
@@ -34,6 +36,8 @@ class App extends Component {
       currentPreview: ''
     };
     this.handleAccessSpotify = this.handleAccessSpotify.bind(this);
+    this.mobileShowOptions = this.mobileShowOptions.bind(this);
+    this.mobileShowSelections = this.mobileShowSelections.bind(this);
     this.getGenres = this.getGenres.bind(this);
     this.updateDisplayedGenres = this.updateDisplayedGenres.bind(this);
     this.addGenreToSeeds = this.addGenreToSeeds.bind(this);
@@ -57,6 +61,14 @@ class App extends Component {
   handleAccessSpotify() {
     sessionStorage.setItem('displayIntro', true);
     this.getGenres();
+  }
+
+  mobileShowOptions() {
+    this.setState({mobileDisplaySelections: false});
+  }
+
+  mobileShowSelections() {
+    this.setState({mobileDisplaySelections: true});
   }
 
   search(searchTerm) {
@@ -190,7 +202,7 @@ class App extends Component {
   renderManifest() {
     if (this.state.genreSeeds.length < 1 && this.state.itemSeeds.length < 1 && this.state.songSeeds.length < 1) {
       return (
-        <div className="app-selections no-selections">
+        <div className={this.state.mobileDisplaySelections ? "app-selections no-selections active" : "app-selections no-selections"}>
           <h1>Start building your magic mixtape!</h1>
           <p>Select at least one genre or song. Your mixtape's style will be based on your selections.</p>
           <svg className="svg-inline--fa fa-compact-disc fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="compact-disc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM88 256H56c0-105.9 86.1-192 192-192v32c-88.2 0-160 71.8-160 160zm160 96c-53 0-96-43-96-96s43-96 96-96 96 43 96 96-43 96-96 96zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z"></path></svg>
@@ -201,7 +213,7 @@ class App extends Component {
       );
     } else {
       return (
-        <div className="app-selections">
+        <div className={this.state.mobileDisplaySelections ? "app-selections active" : "app-selections"}>
           <SelectedGenres genreSeeds={this.state.genreSeeds} removeGenre={this.removeGenreFromSeeds} /> 
           <SelectedItems itemSeeds={this.state.itemSeeds} removeItem={this.removeItemFromSeeds} />
           <SelectedTracks trackList={this.state.songSeeds} removeTrack={this.removeTrackFromSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} />
@@ -261,8 +273,9 @@ class App extends Component {
           <header>
             <h1><span>M</span><span>a</span><span>g</span><span>i</span><span>c</span> <span>M</span><span>i</span><span>x</span><span>t</span><span>a</span><span>p</span><span>e</span><sup>Beta</sup></h1>
           </header>
+          <MobileToggle mobileDisplaySelections={this.state.mobileDisplaySelections} showOptions={this.mobileShowOptions} showSelections={this.mobileShowSelections} numberOfSeeds={this.state.genreSeeds.length + this.state.itemSeeds.length + this.state.songSeeds.length}/>
           <div className="app-content">
-            <div className="app-options">
+            <div className={!this.state.mobileDisplaySelections ? "app-options active" : "app-options"}>
               <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} genreSeeds={this.state.genreSeeds} addGenre={this.addGenreToSeeds} numberOfColors={this.state.availableItems.length} />
               <Items availableItems={this.state.availableItems} displayedItems={this.state.displayedItems} updateDisplayedItems={this.updateDisplayedItems} itemSeeds={this.state.itemSeeds} addItem={this.addItemToSeeds} />
               <SearchBar onSearch={this.search} numberOfSearchResults={this.state.searchResults.length} />

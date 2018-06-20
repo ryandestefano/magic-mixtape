@@ -1,2 +1,6 @@
- $breakpoint-mobile: 480px;
- $mobile-header-height: 38px;
+$app-color: #1c4c4a;
+$light-app-color: lighten($app-color, 30%);
+$font: 'Work Sans';
+
+$breakpoint-mobile: 480px;
+$mobile-header-height: 38px;

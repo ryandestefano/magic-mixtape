@@ -19,15 +19,61 @@
       }
     }
 
-    .app-content {
+    .mobile-toggle {
       display: block;
+      background-color: darken($app-color, 7.5%);
+      a {
+        display: inline-block;
+        width: 50%;
+        color: $light-app-color;
+        font-family: $font, sans-serif;
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
+        padding: 10px;
+
+        &.active {
+          color: lighten($light-app-color, 35%);
+          background-color: darken($app-color, 5%);
+        }
+
+        p {
+          display: inline-block;
+        }
+
+        span {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          color: #fff;
+          background-color: $light-app-color;
+          font-size: 10px;
+          line-height: 20px;
+          vertical-align: middle;
+          border-radius: 10px;
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+
+    .app-content {
+      display: table;
       height: auto;
+      min-height: calc(100% - #{$mobile-header-height});
+
       .app-options {
+        display: none;
         width: 100%;
         height: auto;
         padding: 10px;
+
+        &.active {
+          display: table-cell;
+        }
+
         .Genres,
         .Items {
+
           ul {
             width: 85%;
             padding: 2.5px;
@@ -35,6 +81,10 @@
 
           button {
             width: 15%;
+
+             svg {
+               height: auto;
+             }
           }
 
           &.maxed-out {
@@ -122,9 +172,15 @@
       }
       
       .app-selections {
+        display: none;
         width: 100%;
         height: auto;
         padding: 10px;
+
+        &.active {
+          display: table-cell;
+        }
+
         > div {
           h2 {
             font-size: 14px;

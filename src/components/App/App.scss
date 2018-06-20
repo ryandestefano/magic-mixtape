@@ -2,10 +2,6 @@
 
 /* VARIABLES + COLORS */
 
-$app-color: #1c4c4a;
-$light-app-color: lighten($app-color, 30%);
-$font: 'Work Sans';
-
 $colors: (
   mask: #1eff9e,
   kitty: #ff363f,
@@ -200,6 +196,10 @@ header {
       color: lighten($app-color, 15%);
     }
   }
+}
+
+.mobile-toggle {
+  display: none;
 }
 
 .app-intro {

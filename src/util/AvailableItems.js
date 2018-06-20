@@ -15,7 +15,7 @@ const AvailableItems = [
     dance: 2,
     energy: 1
   }, {
-    name: 'Potion',
+    name: 'Mystery Potion #1',
     tag: 'potion-1',
     dance: 2
   }, {
@@ -32,7 +32,7 @@ const AvailableItems = [
     dance: -1,
     maxLength: 150000
   }, {
-    name: 'Potion 2',
+    name: 'Mystery Potion #2',
     tag: 'potion-2',
     dance: -1,
     energy: -2
@@ -79,7 +79,7 @@ const AvailableItems = [
     tag: 'feathers',
     instrumental: 2
   }, {
-    name: 'Potion 3',
+    name: 'Mystery Potion #3',
     tag: 'potion-3',
     instrumental: 3
   }, {

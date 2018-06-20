@@ -1049,6 +1049,9 @@ header {
       transition: .25s;
       color: #318480; }
 
+.mobile-toggle {
+  display: none; }
+
 .app-intro {
   display: flex;
   flex-direction: column;

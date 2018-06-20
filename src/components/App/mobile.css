@@ -12,13 +12,45 @@
         font-size: 18px; }
         .App header h1 sup {
           font-size: 8px; }
-    .App .app-content {
+    .App .mobile-toggle {
       display: block;
-      height: auto; }
+      background-color: #12302f; }
+      .App .mobile-toggle a {
+        display: inline-block;
+        width: 50%;
+        color: #46bbb6;
+        font-family: "Work Sans", sans-serif;
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
+        padding: 10px; }
+        .App .mobile-toggle a.active {
+          color: #c9ebea;
+          background-color: #153938; }
+        .App .mobile-toggle a p {
+          display: inline-block; }
+        .App .mobile-toggle a span {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          color: #fff;
+          background-color: #46bbb6;
+          font-size: 10px;
+          line-height: 20px;
+          vertical-align: middle;
+          border-radius: 10px;
+          margin: 0 0 0 10px; }
+    .App .app-content {
+      display: table;
+      height: auto;
+      min-height: calc(100% - 38px); }
       .App .app-content .app-options {
+        display: none;
         width: 100%;
         height: auto;
         padding: 10px; }
+        .App .app-content .app-options.active {
+          display: table-cell; }
         .App .app-content .app-options .Genres ul,
         .App .app-content .app-options .Items ul {
           width: 85%;
@@ -26,6 +58,9 @@
         .App .app-content .app-options .Genres button,
         .App .app-content .app-options .Items button {
           width: 15%; }
+          .App .app-content .app-options .Genres button svg,
+          .App .app-content .app-options .Items button svg {
+            height: auto; }
         .App .app-content .app-options .Genres.maxed-out .message,
         .App .app-content .app-options .Items.maxed-out .message {
           padding: 10px; }
@@ -73,9 +108,12 @@
           border-radius: 15px;
           margin: 0 5px 0 0; }
       .App .app-content .app-selections {
+        display: none;
         width: 100%;
         height: auto;
         padding: 10px; }
+        .App .app-content .app-selections.active {
+          display: table-cell; }
         .App .app-content .app-selections > div h2 {
           font-size: 14px; }
         .App .app-content .app-selections .SelectedGenres ul li {
