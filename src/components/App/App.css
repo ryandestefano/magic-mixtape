@@ -983,9 +983,9 @@
 /* KEYFRAMES */
 @keyframes bounce {
   0%, 100% {
-    top: 0px; }
+    top: 0; }
   50% {
-    top: -10px; } }
+    top: -7.5%; } }
 @keyframes rotate {
   100% {
     transform: rotate(360deg); } }
@@ -1134,6 +1134,11 @@ header {
       .app-intro > span button:hover {
         transition: .25s;
         background-color: #235f5c; }
+      @media (max-width: 480px) {
+        .app-intro > span button {
+          font-size: 14px;
+          width: 100%;
+          padding: 20px; } }
 
 .App {
   width: 100%;
@@ -1207,7 +1212,7 @@ header {
     transition: .5s;
     visibility: hidden;
     opacity: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
@@ -1216,7 +1221,7 @@ header {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
-    background-color: rgba(7, 20, 20, 0.97); }
+    background-color: #0b1d1d; }
     .app-content .App-playlist.active {
       transition: .5s;
       visibility: visible;
@@ -1276,10 +1281,15 @@ header {
         .app-content .App-playlist .empty-playlist button:hover {
           transition: .25s;
           background-color: #235f5c; }
+        @media (max-width: 480px) {
+          .app-content .App-playlist .empty-playlist button {
+            font-size: 14px;
+            width: 100%;
+            padding: 20px; } }
     .app-content .App-playlist .Playlist {
       position: relative;
       display: flex;
-      flex-direction: row; }
+      flex-direction: row-reverse; }
       .app-content .App-playlist .Playlist button.close-playlist {
         appearance: none;
         position: absolute;
@@ -1345,6 +1355,11 @@ header {
           .app-content .App-playlist .Playlist .playlist-info button:hover {
             transition: .25s;
             background-color: #235f5c; }
+          @media (max-width: 480px) {
+            .app-content .App-playlist .Playlist .playlist-info button {
+              font-size: 14px;
+              width: 100%;
+              padding: 20px; } }
         .app-content .App-playlist .Playlist .playlist-info a.close-playlist {
           color: #318480;
           font-size: 14px;
@@ -1526,7 +1541,7 @@ header {
             position: relative;
             width: 75%;
             height: auto;
-            margin: -5px 0 10px 0; }
+            margin: -2.5% 0 5% 0; }
           .Items ul li.Item div span svg,
           .SelectedItems ul li.Item div span svg {
             transition: .25s;
@@ -1538,7 +1553,15 @@ header {
             height: 15px; }
           .Items ul li.Item div span p,
           .SelectedItems ul li.Item div span p {
-            font-size: 14px; }
+            position: absolute;
+            bottom: 5%;
+            width: 100%;
+            font-size: 14px;
+            line-height: 1.25em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 10px; }
       .Items ul li.Item:hover div span img,
       .SelectedItems ul li.Item:hover div span img {
         animation: bounce 1s ease-in-out infinite; }
@@ -1593,6 +1616,11 @@ header {
   .get-mixtape:hover {
     transition: .25s;
     background-color: #235f5c; }
+  @media (max-width: 480px) {
+    .get-mixtape {
+      font-size: 14px;
+      width: 100%;
+      padding: 20px; } }
 
 ::-webkit-scrollbar {
   width: 0px;

@@ -1,0 +1,193 @@
+@import 'variables';
+
+@media (max-width: $breakpoint-mobile) {
+  .app-intro {
+    display: block;
+    height: auto;
+  }
+
+  .App {
+    padding: $mobile-header-height 0 0 0;
+    header {
+      height: $mobile-header-height;
+      padding: 10px;
+      h1 {
+        font-size: 18px;
+        sup {
+          font-size: 8px;
+        }
+      }
+    }
+
+    .app-content {
+      display: block;
+      height: auto;
+      .app-options {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        .Genres,
+        .Items {
+          ul {
+            width: 85%;
+            padding: 2.5px;
+          }
+
+          button {
+            width: 15%;
+          }
+
+          &.maxed-out {
+            .message {
+              padding: 10px;
+              h1,
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
+        .Genres {
+          ul {
+            li {
+              font-size: 12px;
+              margin: 2.5px;
+              padding: 5px 10px;
+            }
+          }
+        }
+
+        .Items {
+          ul {
+            li {
+              width: 33.33%;
+              padding: 33.33% 0 0 0;
+
+              &:nth-child(4),
+              &:nth-child(5) {
+                display: none;
+              }
+
+              div {
+                padding: 2.5px;
+              }
+
+              p {
+                font-size: 8px;
+              }
+            }
+          }
+        }
+
+        .SearchBar {
+          padding: 0 15% 0 0;
+          .input-container {
+            input {
+              font-size: 12px;
+              padding: 10px;
+            }
+          }
+
+          a {
+            width: 15%;
+            font-size: 8px;
+            padding: 0;
+          }
+        }
+      }
+
+      .Track {
+        height: 60px;
+        .track-information {
+          padding: 0 10px;
+          h3 {
+            font-size: 14px;
+            margin: 0 0 2.5px 0;
+          }
+          
+          p {
+            font-size: 12px;
+          }
+        }
+
+        a.track-preview-action,
+        a.track-inclusion-action {
+          font-size: 14px;
+          width: 30px;
+          height: 30px;
+          border-radius: 15px;
+          margin: 0 5px 0 0;
+        }
+      }
+      
+      .app-selections {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        > div {
+          h2 {
+            font-size: 14px;
+          }
+        }
+
+        .SelectedGenres {
+          ul {
+            li {
+              font-size: 14px;
+              padding: 7.5px 15px;
+            }
+          }
+        }
+
+        .SelectedItems {
+          ul {
+            li {
+              width: 33.33%;
+              padding: 33.33% 0 0 0;
+            }
+          }
+        }
+      }
+
+      .App-playlist {
+        .Playlist {
+          display: block;
+          padding: 10px;
+
+          button.close-playlist {
+            top: 10px;
+            right: 10px;
+
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .track-list,
+          .playlist-info {
+            width: 100%;
+            height: auto;
+            padding: 0;
+          }
+
+          .playlist-info {
+            padding: 20px 0;
+
+            h1 {
+              font-size: 16px;
+              margin: 0 0 10px 0;
+            }
+
+            input {
+              font-size: 16px;
+              border-radius: 3px;
+              padding: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

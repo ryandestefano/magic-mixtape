@@ -1,3 +1,5 @@
+@import 'variables';
+
 /* VARIABLES + COLORS */
 
 $app-color: #1c4c4a;
@@ -133,13 +135,18 @@ $colors: (
     transition: .25s;
     background-color: lighten($app-color, 5%);
   }
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+    width: 100%;
+    padding: 20px;
+  }
 }
 
 /* KEYFRAMES */
 
 @keyframes bounce {
-  0%, 100% {top: 0px;}
-  50% {top: -10px;}
+  0%, 100% {top: 0;}
+  50% {top: -7.5%;}
 }
 @keyframes rotate {
   100% {transform:rotate(360deg);}
@@ -354,7 +361,7 @@ header {
     transition: .5s;
     visibility: hidden;
     opacity: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
@@ -363,7 +370,7 @@ header {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
-    background-color: rgba(darken($app-color, 15%), .97);
+    background-color: darken($app-color, 12.5%);
     &.active {
       transition: .5s;
       visibility: visible;
@@ -417,7 +424,7 @@ header {
     .Playlist {
       position: relative;
       display: flex;
-      flex-direction: row;
+      flex-direction: row-reverse;
       button.close-playlist {
         appearance: none;
         position: absolute;
@@ -667,7 +674,7 @@ header {
             position: relative;
             width: 75%;
             height: auto;
-            margin: -5px 0 10px 0;
+            margin: -2.5% 0 5% 0;
           }
           svg {
             transition: .25s;
@@ -679,7 +686,15 @@ header {
             height: 15px;
           }
           p {
+            position: absolute;
+            bottom: 5%;
+            width: 100%;
             font-size: 14px;
+            line-height: 1.25em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 10px;
           }
         }
       }

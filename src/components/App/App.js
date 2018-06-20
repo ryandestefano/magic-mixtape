@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './mobile.css';
 
 import Genres from '../Genres/Genres';
 import SelectedGenres from '../SelectedGenres/SelectedGenres';
@@ -265,9 +266,7 @@ class App extends Component {
               <Genres availableGenres={this.state.availableGenres} displayedGenres={this.state.displayedGenres} updateDisplayedGenres={this.updateDisplayedGenres} genreSeeds={this.state.genreSeeds} addGenre={this.addGenreToSeeds} numberOfColors={this.state.availableItems.length} />
               <Items availableItems={this.state.availableItems} displayedItems={this.state.displayedItems} updateDisplayedItems={this.updateDisplayedItems} itemSeeds={this.state.itemSeeds} addItem={this.addItemToSeeds} />
               <SearchBar onSearch={this.search} numberOfSearchResults={this.state.searchResults.length} />
-              <div className="search-results">
-                <SearchResults trackList={this.state.searchResults} addTrack={this.addTrackToSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} />
-              </div>
+              <SearchResults trackList={this.state.searchResults} addTrack={this.addTrackToSeeds} playPreview={this.playPreview} stopPreview={this.stopPreview} currentPreview={this.state.currentPreview} />
             </div>
             {this.renderManifest()}
             <div className={"App-playlist " + (this.state.displayPlaylist ? 'active' : '')}>
