@@ -1,6 +1,45 @@
+/* COLORS */
+
 $app-color: #1c4c4a;
 $light-app-color: lighten($app-color, 30%);
+
+$colors: (
+  mask: #1eff9e,
+  kitty: #ff363f,
+  feathers : #b70a41,
+  statue : #90f4ff,
+  harp: #caff52,
+  pyramid: #ff4833,
+  palm-frond: #a9ff18,
+  potion-1: #ff378b,
+  egg: #3f88ff,
+  diamond: #cca6ff,
+  mirror: #28f0ff,
+  crystals: #eb0fff,
+  hour-glass: #ffa3f9,
+  pineapple: #fde400,
+  wheel: #fde400,
+  potion-2: #ff9703,
+  glasses: #71e439,
+  bacon: #00eca1,
+  potion-3: #ffd736,
+  dinosaur-skull: #8316ff
+);
+
+/* FONTS */
+
 $font: 'Work Sans';
+
+$type-base: 14px;
+$type-medium: 16px;
+$type-large: 18px;
+$type-xlarge: 21px;
+
+/* SPACING */
+
+$unit: 10px;
+
+/* MOBILE */
 
 $breakpoint-mobile: 480px;
 $mobile-header-height: 38px;

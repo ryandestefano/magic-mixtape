@@ -1,30 +1,5 @@
 @import 'variables';
 
-/* VARIABLES + COLORS */
-
-$colors: (
-  mask: #1eff9e,
-  kitty: #ff363f,
-  feathers : #b70a41,
-  statue : #90f4ff,
-  harp: #caff52,
-  pyramid: #ff4833,
-  palm-frond: #a9ff18,
-  potion-1: #ff378b,
-  egg: #3f88ff,
-  diamond: #cca6ff,
-  mirror: #28f0ff,
-  crystals: #eb0fff,
-  hour-glass: #ffa3f9,
-  pineapple: #fde400,
-  wheel: #fde400,
-  potion-2: #ff9703,
-  glasses: #71e439,
-  bacon: #00eca1,
-  potion-3: #ffd736,
-  dinosaur-skull: #8316ff
-);
-
 @each $item, $color in $colors {
   // Genres and Items
   .#{$item} div span,
@@ -92,7 +67,7 @@ $colors: (
   transform: translateZ(0);
   color: map-get($colors, kitty);
   font-size: 42px;
-  margin: 0 0 20px 0;
+  margin: 0 0 $unit*2 0;
   span {
     animation: color-cycle 5s linear infinite;
     &:nth-child(3n-1) {
@@ -105,7 +80,7 @@ $colors: (
   sup {
     content: "Beta";
     color: #fff;
-    font-size: 14px;
+    font-size: $type-base;
     text-transform: uppercase;
     vertical-align: super;
   }
@@ -118,10 +93,10 @@ $colors: (
   color: #fff;
   background-color: $app-color;
   font-family: $font, sans-serif;
-  font-size: 21px;
+  font-size: $type-xlarge;
   text-align: center;
   text-transform: uppercase;
-  padding: 20px 60px;
+  padding: $unit*2 $unit*6;
   border: none;
   border-radius: 100px;
   outline: none;
@@ -132,9 +107,9 @@ $colors: (
     background-color: lighten($app-color, 5%);
   }
   @media (max-width: $breakpoint-mobile) {
-    font-size: 14px;
+    font-size: $type-base;
     width: 100%;
-    padding: 20px;
+    padding: $unit*2;
   }
 }
 
@@ -170,7 +145,7 @@ html,
 }
 
 html {
-  font-size: 18px;
+  font-size: $type-large;
 }
 
 header {
@@ -179,11 +154,11 @@ header {
   left: 0;
   z-index: 1;
   width: 100%;
-  height: 80px;
+  height: $unit*8;
   background-color: darken($app-color, 15%);
   text-align: center;
   font-family: $font, sans-serif;
-  padding: 20px;
+  padding: $unit*2;
   h1 {
     @include app-logo;
   }
@@ -217,28 +192,28 @@ header {
     width: 100%;
     max-width: 600px;
     text-align: center;
-    padding: 30px;
+    padding: $unit*3;
     h1 {
       @include app-logo;
     }
     p {
-      font-size: 14px;
+      font-size: $type-base;
       font-weight: 300;
       line-height: 1.25em;
-      margin: 0 0 20px 0;
+      margin: 0 0 $unit*2 0;
       span {
         font-weight: 500;
       }
     }
     .images {
-      margin: 0 0 20px 0;
+      margin: 0 0 $unit*2 0;
       span {
         position: relative;
         display: inline-block;
-        width: 60px;
-        height: 60px;
-        border-radius: 30px;
-        margin: 0 7.5px;
+        width: $unit*6;
+        height: $unit*6;
+        border-radius: $unit*3;
+        margin: 0 $unit*.75;
         &.mask {
           background-color: map-get($colors, mask);
         }
@@ -273,7 +248,7 @@ header {
 .App {
   width: 100%;
   height: 100%;
-  padding: 80px 0 0 0;
+  padding: $unit*8 0 0 0;
 }
 
 .app-content {
@@ -290,7 +265,7 @@ header {
     height: 100%;
     overflow-y: scroll;
     background-color: $app-color;
-    padding: 30px;
+    padding: $unit*3;
   }
   .app-selections {
     position: relative;
@@ -298,32 +273,32 @@ header {
     height: 100%;
     overflow-y: scroll;
     background-color: darken($app-color, 10%);
-    padding: 30px;
+    padding: $unit*3;
     > div {
       border-bottom: 1px solid $app-color;
-      margin: 0 0 20px 0;
-      padding: 0 0 20px 0;
+      margin: 0 0 $unit*2 0;
+      padding: 0 0 $unit*2 0;
       h2 {
         color: $light-app-color;
-        font-size: 18px;
-        margin: 0 0 10px 0;
+        font-size: $type-large;
+        margin: 0 0 $unit 0;
       }
     }
     .SelectedItems {
       h2 {
-        margin: 0 0 12.5px 0;
+        margin: 0 0 $unit*1.25 0;
       }
     }
     .Playlist {
       width: 100%;
       h2 {
-        margin: 0 0 5px 0;
+        margin: 0 0 $unit/2 0;
       }
       .track-list {
         width: 100%;
         .Track {
-          border-radius: 5px;
-          margin: 10px 0 0 0;
+          border-radius: $unit/2;
+          margin: $unit 0 0 0;
         }
       }
     }
@@ -331,12 +306,12 @@ header {
       text-align: center;
       h1 {
         color: $light-app-color;
-        font-size: 18px;
-        margin: 20px;
+        font-size: $type-large;
+        margin: $unit*2;
       }
       p {
         color: #fff;
-        font-size: 14px;
+        font-size: $type-base;
         font-weight: 300;
         line-height: 1.25em;
         margin: 0;
@@ -345,9 +320,9 @@ header {
         }
       }
       svg {
-        width: 20px;
-        height: 20px;
-        margin: 10px 0;
+        width: $unit*2;
+        height: $unit*2;
+        margin: $unit 0;
         &:first-of-type {
           color: map-get($colors, potion-1);
         }
@@ -385,8 +360,8 @@ header {
       div {
         animation: rotate 1.5s linear infinite;
         appearance: none;
-        width: 60px;
-        height: 60px;
+        width: $unit*6;
+        height: $unit*6;
         background-color: transparent;
         border: none;
         svg {
@@ -409,13 +384,13 @@ header {
       h1 {
         color: $light-app-color;
         font-size: 24px;
-        margin: 0 0 30px 0;
+        margin: 0 0 $unit*3 0;
       }
       p { 
-        font-size: 16px;
+        font-size: $type-medium;
         font-weight: 300;
         line-height: 1.5em;
-        margin: 0 0 30px 0;
+        margin: 0 0 $unit*3 0;
       }
       button {
         @include app-button;
@@ -428,8 +403,8 @@ header {
       button.close-playlist {
         appearance: none;
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: $unit*2;
+        right: $unit*2;
         color: $light-app-color;
         background-color: transparent;
         border: none;
@@ -439,30 +414,30 @@ header {
           color: lighten($light-app-color, 10%);
         }
         svg {
-          width: 30px;
-          height: 30px;
+          width: $unit*3;
+          height: $unit*3;
         }
       }
       .track-list {
         width: 50%;
         height: 100%;
         overflow-y: scroll;
-        padding: 0 15px 0 0;
+        padding: 0 $unit*1.5 0 0;
       }
       .playlist-info {
         width: 50%;
         text-align: center;
-        padding: 0 0 0 15px;
+        padding: 0 0 0 $unit*1.5;
         h1 {
           color: $light-app-color;
-          font-size: 21px;
-          margin: 0 0 20px 0;
+          font-size: $type-xlarge;
+          margin: 0 0 $unit*2 0;
           & + p {
             color: #fff;
-            font-size: 14px;
+            font-size: $type-base;
             font-weight: 300;
             line-height: 1.25em;
-            margin: 0 0 20px 0;
+            margin: 0 0 $unit*2 0;
           }
         }
         input {
@@ -472,18 +447,18 @@ header {
           font-family: $font, sans-serif;
           font-size: 1.5rem;
           border: 0;
-          border-radius: 5px;
+          border-radius: $unit/2;
           outline: 0;
-          margin: 0 0 20px 0;
-          padding: 20px;
+          margin: 0 0 $unit*2 0;
+          padding: $unit*2;
         }
         button {
           @include app-button;
-          margin-bottom: 10px;
+          margin-bottom: $unit;
         }
         a.close-playlist {
           color: lighten($app-color, 15%);
-          font-size: 14px;
+          font-size: $type-base;
           font-weight: 300;
           cursor: pointer;
           &:hover {
@@ -511,9 +486,9 @@ header {
     width: 90%;
     height: 100%;
     background-color: rgba(0, 0, 0, .65);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    padding: 5px;
+    border-top-left-radius: $unit/2;
+    border-bottom-left-radius: $unit/2;
+    padding: $unit/2;
     li.Item {
       width: 20%;
       padding: 20% 0 0 0;
@@ -532,8 +507,8 @@ header {
     background-color: rgba(0, 0, 0, .65);
     border: none;
     border-left: 2px solid $app-color;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
+    border-bottom-right-radius: $unit/2;
+    border-top-right-radius: $unit/2;
     padding: 0;
     cursor: pointer;
     outline: none;
@@ -565,15 +540,15 @@ header {
     width: 100%;
     height: 100%;
     text-align: center;
-    text-shadow: 0 0 10px #000;
+    text-shadow: 0 0 $unit #000;
     h1 {
       color: $light-app-color;
-      font-size: 16px;
-      margin: 0 0 5px 0;
+      font-size: $type-medium;
+      margin: 0 0 $unit/2 0;
     }
     p {
       color: #fff;
-      font-size: 14px;
+      font-size: $type-base;
       font-weight: 300;
     }
   }
@@ -583,11 +558,11 @@ header {
 .Genres,
 .SelectedGenres {
   text-align: center;
-  margin: 0 0 10px 0;
+  margin: 0 0 $unit 0;
   h2 {
     color: #fff;
-    font-size: 18px;
-    margin: 0 0 10px 0;
+    font-size: $type-large;
+    margin: 0 0 $unit 0;
   }
   ul {
     list-style: none;
@@ -596,10 +571,10 @@ header {
       position: relative;
       display: inline-block;
       color: #fff;
-      font-size: 21px;
+      font-size: $type-xlarge;
       border-radius: 2px;
-      margin: 5px;
-      padding: 10px 30px;
+      margin: $unit/2;
+      padding: $unit $unit*3;
       cursor: pointer;
       p {
         display: inline-block;
@@ -608,12 +583,12 @@ header {
         transition: .25s;
         position: absolute;
         top: 50%;
-        right: 20px;
+        right: $unit*2;
         display: inline-block;
-        width: 15px;
-        height: 15px;
+        width: $unit*1.5;
+        height: $unit*1.5;
         line-height: 0;
-        margin: -7.5px 0 0 0;
+        margin: -$unit*.75 0 0 0;
         opacity: 0;
         svg.svg-inline--fa {
           width: 100%;
@@ -622,10 +597,10 @@ header {
       }
       &:hover {
         transition: .25s;
-        padding: 10px 40px 10px 20px;
+        padding: $unit $unit*4 $unit $unit*2;
         span {
           transition: .25s;
-          right: 15px;
+          right: $unit*1.5;
           opacity: 1;
         }
       }
@@ -637,11 +612,11 @@ header {
 .Items,
 .SelectedItems {
   text-align: center;
-  margin: 0 0 10px 0;
+  margin: 0 0 $unit 0;
   h2 {
     color: #fff;
-    font-size: 18px;
-    margin: 0 0 10px 0;
+    font-size: $type-large;
+    margin: 0 0 $unit 0;
   }
   ul {
     list-style: none;
@@ -659,7 +634,7 @@ header {
         display: block;
         width: 100%;
         height: 100%;
-        padding: 5px;
+        padding: $unit/2;
         span {
           display: flex;
           flex-direction: column;
@@ -668,8 +643,8 @@ header {
           width: 100%;
           height: 100%;
           text-align: center;
-          border-radius: 4px;
-          padding: 10px 0;
+          border-radius: $unit/2;
+          padding: $unit 0;
           img {
             position: relative;
             width: 75%;
@@ -680,21 +655,21 @@ header {
             transition: .25s;
             opacity: 0;
             position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 15px;
-            height: 15px;
+            top: $unit;
+            right: $unit;
+            width: $unit*1.5;
+            height: $unit*1.5;
           }
           p {
             position: absolute;
             bottom: 5%;
             width: 100%;
-            font-size: 14px;
+            font-size: $type-base;
             line-height: 1.25em;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            padding: 0 10px;
+            padding: 0 $unit;
           }
         }
       }
@@ -724,12 +699,12 @@ header {
       padding: 50% 0 0 0;
       &:last-of-type {
         div {
-          padding: 2.5px 0 2.5px 5px;
+          padding: $unit/4 0 $unit/4 $unit/2;
         }
       }
       &:first-of-type {
         div {
-          padding: 2.5px 5px 2.5px 0;
+          padding: $unit/4 $unit/2 $unit/4 0;
         }
       }
     }
@@ -742,11 +717,11 @@ header {
   align-items: center;
   overflow-y: scroll;
   width: 100%;
-  padding: 30px;
+  padding: $unit*3;
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 0;
   background: transparent;
 }
 
@@ -758,32 +733,27 @@ header {
   @include app-button;
 }
 
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
 .SearchBar {
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 0 0 2px 0;
-  padding: 0 120px 0 0;
+  padding: 0 $unit*12 0 0;
   .input-container {
     display: flex;
     flex: 1;
     background-color: rgba(0, 0, 0, .65);
-    border-top-left-radius: 5px;
-    padding: 10px;
+    border-top-left-radius: $unit/2;
+    padding: $unit;
     input {
       display: block;
       width: 100%;
-      color: #010c3f;
-      font-size: 21px;
+      color: $app-color;
+      font-size: $type-xlarge;
       border: none;
-      border-radius: 3px;
-      padding: 15px 20px;
+      border-radius: $unit/4;
+      padding: $unit*1.5 $unit*2;
       &:focus {
         outline: none;
       }
@@ -797,16 +767,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
+    width: $unit*12;
     height: 100%;
     color: $light-app-color;
     background-color: rgba(0, 0, 0, .65);
-    font-size: 14px;
+    font-size: $type-base;
     text-transform: uppercase;
     line-height: 1.25em;
-    border-top-right-radius: 5px;
+    border-top-right-radius: $unit/2;
     border-left: 2px solid $app-color;
-    padding: 0 30px;
+    padding: 0 $unit*3;
     cursor: pointer;
     &:hover {
       color: lighten($light-app-color, 20%);
@@ -816,10 +786,10 @@ header {
   }
   &.no-search-results {
     .input-container {
-      border-bottom-left-radius: 5px;
+      border-bottom-left-radius: $unit/2;
     }
     a {
-      border-bottom-right-radius: 5px;
+      border-bottom-right-radius: $unit/2;
     }
   }
 }
@@ -828,25 +798,14 @@ header {
   width: 100%;
   height: auto;
   overflow-y: scroll;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-@media only screen and (max-width: 1020px) {
-  .SearchResults {
-    margin-bottom: 2rem;
-  }
+  border-bottom-right-radius: $unit/2;
+  border-bottom-left-radius: $unit/2;
 }
 
 .Track {
   display: flex;
   align-items: center;
-  height: 75px;
+  height: $unit*7.5;
   background-color: rgba(0, 0, 0, .65); 
   margin: 0 0 2px 0;
   .track-information {
@@ -854,8 +813,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: calc(100% - 120px);
-    padding: 10px 20px;
+    width: calc(100% - $unit*12);
+    padding: $unit $unit*2;
     h3, 
     p { 
       white-space: nowrap;
@@ -863,10 +822,10 @@ header {
       text-overflow: ellipsis;
     }   
     h3 {
-      margin: 0 0 5px 0;
+      margin: 0 0 $unit/2 0;
     }   
     p { 
-      font-size: 14px;
+      font-size: $type-base;
       font-weight: 300;
       line-height: 1.25em;
     }   
@@ -876,12 +835,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    font-size: 21px;
+    width: $unit*5;
+    height: $unit*5;
+    font-size: $type-xlarge;
     line-height: 0;
-    border-radius: 25px;
-    margin: 0 10px 0 0;
+    border-radius: $unit*2.5;
+    margin: 0 $unit 0 0;
     cursor: pointer;
     &.play {
       svg.stop {
@@ -904,8 +863,4 @@ header {
       }
     }
   }
-}
-
-.TrackList {
-  width: 100%;
 }

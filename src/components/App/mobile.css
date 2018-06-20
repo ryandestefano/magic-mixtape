@@ -1,3 +1,7 @@
+/* COLORS */
+/* FONTS */
+/* SPACING */
+/* MOBILE */
 @media (max-width: 480px) {
   .app-intro {
     display: block;
@@ -143,7 +147,7 @@
             margin: 0 0 10px 0; }
           .App .app-content .App-playlist .Playlist .playlist-info input {
             font-size: 16px;
-            border-radius: 3px;
+            border-radius: 5px;
             padding: 15px; } }
 
 /*# sourceMappingURL=mobile.css.map */

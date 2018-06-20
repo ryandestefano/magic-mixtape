@@ -10,9 +10,9 @@
     padding: $mobile-header-height 0 0 0;
     header {
       height: $mobile-header-height;
-      padding: 10px;
+      padding: $unit;
       h1 {
-        font-size: 18px;
+        font-size: $type-large;
         sup {
           font-size: 8px;
         }
@@ -27,10 +27,10 @@
         width: 50%;
         color: $light-app-color;
         font-family: $font, sans-serif;
-        font-size: 14px;
+        font-size: $type-base;
         text-align: center;
-        line-height: 20px;
-        padding: 10px;
+        line-height: $unit*2;
+        padding: $unit;
 
         &.active {
           color: lighten($light-app-color, 35%);
@@ -43,15 +43,15 @@
 
         span {
           display: inline-block;
-          width: 20px;
-          height: 20px;
+          width: $unit*2;
+          height: $unit*2;
           color: #fff;
           background-color: $light-app-color;
-          font-size: 10px;
-          line-height: 20px;
+          font-size: $unit;
+          line-height: $unit*2;
           vertical-align: middle;
-          border-radius: 10px;
-          margin: 0 0 0 10px;
+          border-radius: $unit;
+          margin: 0 0 0 $unit;
         }
       }
     }
@@ -65,7 +65,7 @@
         display: none;
         width: 100%;
         height: auto;
-        padding: 10px;
+        padding: $unit;
 
         &.active {
           display: table-cell;
@@ -76,7 +76,7 @@
 
           ul {
             width: 85%;
-            padding: 2.5px;
+            padding: $unit/4;
           }
 
           button {
@@ -89,7 +89,7 @@
 
           &.maxed-out {
             .message {
-              padding: 10px;
+              padding: $unit;
               h1,
               p {
                 font-size: 12px;
@@ -102,8 +102,8 @@
           ul {
             li {
               font-size: 12px;
-              margin: 2.5px;
-              padding: 5px 10px;
+              margin: $unit/4;
+              padding: $unit/2 $unit;
             }
           }
         }
@@ -120,7 +120,7 @@
               }
 
               div {
-                padding: 2.5px;
+                padding: $unit/4;
               }
 
               p {
@@ -135,7 +135,7 @@
           .input-container {
             input {
               font-size: 12px;
-              padding: 10px;
+              padding: $unit;
             }
           }
 
@@ -148,12 +148,12 @@
       }
 
       .Track {
-        height: 60px;
+        height: $unit*6;
         .track-information {
-          padding: 0 10px;
+          padding: 0 $unit;
           h3 {
-            font-size: 14px;
-            margin: 0 0 2.5px 0;
+            font-size: $type-base;
+            margin: 0 0 $unit/4 0;
           }
           
           p {
@@ -163,11 +163,11 @@
 
         a.track-preview-action,
         a.track-inclusion-action {
-          font-size: 14px;
-          width: 30px;
-          height: 30px;
-          border-radius: 15px;
-          margin: 0 5px 0 0;
+          font-size: $type-base;
+          width: $unit*3;
+          height: $unit*3;
+          border-radius: $unit*1.5;
+          margin: 0 $unit/2 0 0;
         }
       }
       
@@ -175,7 +175,7 @@
         display: none;
         width: 100%;
         height: auto;
-        padding: 10px;
+        padding: $unit;
 
         &.active {
           display: table-cell;
@@ -183,15 +183,15 @@
 
         > div {
           h2 {
-            font-size: 14px;
+            font-size: $type-base;
           }
         }
 
         .SelectedGenres {
           ul {
             li {
-              font-size: 14px;
-              padding: 7.5px 15px;
+              font-size: $type-base;
+              padding: $unit*.75 $unit*1.5;
             }
           }
         }
@@ -209,15 +209,15 @@
       .App-playlist {
         .Playlist {
           display: block;
-          padding: 10px;
+          padding: $unit;
 
           button.close-playlist {
-            top: 10px;
-            right: 10px;
+            top: $unit;
+            right: $unit;
 
             svg {
-              width: 20px;
-              height: 20px;
+              width: $unit*2;
+              height: $unit*2;
             }
           }
 
@@ -229,17 +229,17 @@
           }
 
           .playlist-info {
-            padding: 20px 0;
+            padding: $unit*2 0;
 
             h1 {
-              font-size: 16px;
-              margin: 0 0 10px 0;
+              font-size: $type-medium;
+              margin: 0 0 $unit 0;
             }
 
             input {
-              font-size: 16px;
-              border-radius: 3px;
-              padding: 15px;
+              font-size: $type-medium;
+              border-radius: $unit/2;
+              padding: $unit*1.5;
             }
           }
         }
