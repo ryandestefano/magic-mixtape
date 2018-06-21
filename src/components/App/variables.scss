@@ -6,8 +6,8 @@ $light-app-color: lighten($app-color, 30%);
 $colors: (
   mask: #1eff9e,
   kitty: #ff363f,
-  feathers : #b70a41,
-  statue : #90f4ff,
+  feathers: #b70a41,
+  statue: #90f4ff,
   harp: #caff52,
   pyramid: #ff4833,
   palm-frond: #a9ff18,
@@ -45,5 +45,5 @@ $unit: 10px;
 
 $breakpoint-tablet: 960px;
 $breakpoint-mobile: 480px;
-$header-height: $unit*8;
-$mobile-header-height: $unit*5;
+$header-height: $unit * 8;
+$mobile-header-height: $unit * 5;

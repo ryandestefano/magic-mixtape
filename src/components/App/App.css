@@ -4,12 +4,12 @@
 /* RESPONSIVE */
 .mask div span,
 .genre-color-1 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #1eff9e;
   text-shadow: 0 0 4px rgba(0, 209, 119, 0.5); }
   .mask div span:hover,
   .genre-color-1:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #1effc4;
     text-shadow: 0 0 4px rgba(0, 209, 153, 0.5); }
 
@@ -23,14 +23,14 @@
 .SearchResults .Track.color-1 .track-preview-action,
 .Playlist .Track.color-1 .track-inclusion-action,
 .Playlist .Track.color-1 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #1eff9e;
   background-color: rgba(30, 255, 158, 0); }
   .SearchResults .Track.color-1 .track-inclusion-action:hover,
   .SearchResults .Track.color-1 .track-preview-action:hover,
   .Playlist .Track.color-1 .track-inclusion-action:hover,
   .Playlist .Track.color-1 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #1eff9e; }
 
@@ -42,23 +42,23 @@
     color: rgba(132, 255, 161, 0.75); }
   .app-selections .Track.color-1 .track-inclusion-action,
   .app-selections .Track.color-1 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #b7ffe0;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-1 .track-inclusion-action:hover,
     .app-selections .Track.color-1 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #1eff9e;
       background-color: #b7ffe0; }
 
 .kitty div span,
 .genre-color-2 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #ff363f;
   text-shadow: 0 0 4px rgba(233, 0, 10, 0.5); }
   .kitty div span:hover,
   .genre-color-2:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #ff4f36;
     text-shadow: 0 0 4px rgba(233, 28, 0, 0.5); }
 
@@ -72,14 +72,14 @@
 .SearchResults .Track.color-2 .track-preview-action,
 .Playlist .Track.color-2 .track-inclusion-action,
 .Playlist .Track.color-2 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #ff363f;
   background-color: rgba(255, 54, 63, 0); }
   .SearchResults .Track.color-2 .track-inclusion-action:hover,
   .SearchResults .Track.color-2 .track-preview-action:hover,
   .Playlist .Track.color-2 .track-inclusion-action:hover,
   .Playlist .Track.color-2 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #ff363f; }
 
@@ -91,23 +91,23 @@
     color: rgba(255, 156, 193, 0.75); }
   .app-selections .Track.color-2 .track-inclusion-action,
   .app-selections .Track.color-2 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #ffcfd1;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-2 .track-inclusion-action:hover,
     .app-selections .Track.color-2 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #ff363f;
       background-color: #ffcfd1; }
 
 .feathers div span,
 .genre-color-3 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #b70a41;
   text-shadow: 0 0 4px rgba(110, 6, 39, 0.5); }
   .feathers div span:hover,
   .genre-color-3:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #b70a24;
     text-shadow: 0 0 4px rgba(110, 6, 22, 0.5); }
 
@@ -121,14 +121,14 @@
 .SearchResults .Track.color-3 .track-preview-action,
 .Playlist .Track.color-3 .track-inclusion-action,
 .Playlist .Track.color-3 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #b70a41;
   background-color: rgba(183, 10, 65, 0); }
   .SearchResults .Track.color-3 .track-inclusion-action:hover,
   .SearchResults .Track.color-3 .track-preview-action:hover,
   .Playlist .Track.color-3 .track-inclusion-action:hover,
   .Playlist .Track.color-3 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #b70a41; }
 
@@ -140,23 +140,23 @@
     color: rgba(244, 51, 177, 0.75); }
   .app-selections .Track.color-3 .track-inclusion-action,
   .app-selections .Track.color-3 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #f76392;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-3 .track-inclusion-action:hover,
     .app-selections .Track.color-3 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #b70a41;
       background-color: #f76392; }
 
 .statue div span,
 .genre-color-4 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #90f4ff;
   text-shadow: 0 0 4px rgba(68, 236, 255, 0.5); }
   .statue div span:hover,
   .genre-color-4:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #90e2ff;
     text-shadow: 0 0 4px rgba(68, 205, 255, 0.5); }
 
@@ -170,14 +170,14 @@
 .SearchResults .Track.color-4 .track-preview-action,
 .Playlist .Track.color-4 .track-inclusion-action,
 .Playlist .Track.color-4 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #90f4ff;
   background-color: rgba(144, 244, 255, 0); }
   .SearchResults .Track.color-4 .track-inclusion-action:hover,
   .SearchResults .Track.color-4 .track-preview-action:hover,
   .Playlist .Track.color-4 .track-inclusion-action:hover,
   .Playlist .Track.color-4 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #90f4ff; }
 
@@ -189,23 +189,23 @@
     color: rgba(246, 255, 253, 0.75); }
   .app-selections .Track.color-4 .track-inclusion-action,
   .app-selections .Track.color-4 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: white;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-4 .track-inclusion-action:hover,
     .app-selections .Track.color-4 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #90f4ff;
       background-color: white; }
 
 .harp div span,
 .genre-color-5 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #caff52;
   text-shadow: 0 0 4px rgba(179, 255, 6, 0.5); }
   .harp div span:hover,
   .genre-color-5:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #adff52;
     text-shadow: 0 0 4px rgba(137, 255, 6, 0.5); }
 
@@ -219,14 +219,14 @@
 .SearchResults .Track.color-5 .track-preview-action,
 .Playlist .Track.color-5 .track-inclusion-action,
 .Playlist .Track.color-5 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #caff52;
   background-color: rgba(202, 255, 82, 0); }
   .SearchResults .Track.color-5 .track-inclusion-action:hover,
   .SearchResults .Track.color-5 .track-preview-action:hover,
   .Playlist .Track.color-5 .track-inclusion-action:hover,
   .Playlist .Track.color-5 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #caff52; }
 
@@ -238,23 +238,23 @@
     color: rgba(255, 253, 184, 0.75); }
   .app-selections .Track.color-5 .track-inclusion-action,
   .app-selections .Track.color-5 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #f9ffeb;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-5 .track-inclusion-action:hover,
     .app-selections .Track.color-5 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #caff52;
       background-color: #f9ffeb; }
 
 .pyramid div span,
 .genre-color-6 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #ff4833;
   text-shadow: 0 0 4px rgba(230, 24, 0, 0.5); }
   .pyramid div span:hover,
   .genre-color-6:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #ff6a33;
     text-shadow: 0 0 4px rgba(230, 62, 0, 0.5); }
 
@@ -268,14 +268,14 @@
 .SearchResults .Track.color-6 .track-preview-action,
 .Playlist .Track.color-6 .track-inclusion-action,
 .Playlist .Track.color-6 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #ff4833;
   background-color: rgba(255, 72, 51, 0); }
   .SearchResults .Track.color-6 .track-inclusion-action:hover,
   .SearchResults .Track.color-6 .track-preview-action:hover,
   .Playlist .Track.color-6 .track-inclusion-action:hover,
   .Playlist .Track.color-6 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #ff4833; }
 
@@ -287,23 +287,23 @@
     color: rgba(255, 153, 177, 0.75); }
   .app-selections .Track.color-6 .track-inclusion-action,
   .app-selections .Track.color-6 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #ffd1cc;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-6 .track-inclusion-action:hover,
     .app-selections .Track.color-6 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #ff4833;
       background-color: #ffd1cc; }
 
 .palm-frond div span,
 .genre-color-7 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #a9ff18;
   text-shadow: 0 0 4px rgba(127, 203, 0, 0.5); }
   .palm-frond div span:hover,
   .genre-color-7:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #83ff18;
     text-shadow: 0 0 4px rgba(93, 203, 0, 0.5); }
 
@@ -317,14 +317,14 @@
 .SearchResults .Track.color-7 .track-preview-action,
 .Playlist .Track.color-7 .track-inclusion-action,
 .Playlist .Track.color-7 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #a9ff18;
   background-color: rgba(169, 255, 24, 0); }
   .SearchResults .Track.color-7 .track-inclusion-action:hover,
   .SearchResults .Track.color-7 .track-preview-action:hover,
   .Playlist .Track.color-7 .track-inclusion-action:hover,
   .Playlist .Track.color-7 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #a9ff18; }
 
@@ -336,23 +336,23 @@
     color: rgba(250, 255, 126, 0.75); }
   .app-selections .Track.color-7 .track-inclusion-action,
   .app-selections .Track.color-7 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #e2ffb1;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-7 .track-inclusion-action:hover,
     .app-selections .Track.color-7 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #a9ff18;
       background-color: #e2ffb1; }
 
 .potion-1 div span,
 .genre-color-8 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #ff378b;
   text-shadow: 0 0 4px rgba(234, 0, 98, 0.5); }
   .potion-1 div span:hover,
   .genre-color-8:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #ff376a;
     text-shadow: 0 0 4px rgba(234, 0, 59, 0.5); }
 
@@ -366,14 +366,14 @@
 .SearchResults .Track.color-8 .track-preview-action,
 .Playlist .Track.color-8 .track-inclusion-action,
 .Playlist .Track.color-8 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #ff378b;
   background-color: rgba(255, 55, 139, 0); }
   .SearchResults .Track.color-8 .track-inclusion-action:hover,
   .SearchResults .Track.color-8 .track-preview-action:hover,
   .Playlist .Track.color-8 .track-inclusion-action:hover,
   .Playlist .Track.color-8 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #ff378b; }
 
@@ -385,23 +385,23 @@
     color: rgba(255, 157, 231, 0.75); }
   .app-selections .Track.color-8 .track-inclusion-action,
   .app-selections .Track.color-8 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #ffd0e4;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-8 .track-inclusion-action:hover,
     .app-selections .Track.color-8 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #ff378b;
       background-color: #ffd0e4; }
 
 .egg div span,
 .genre-color-9 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #3f88ff;
   text-shadow: 0 0 4px rgba(0, 92, 242, 0.5); }
   .egg div span:hover,
   .genre-color-9:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #3f68ff;
     text-shadow: 0 0 4px rgba(0, 52, 242, 0.5); }
 
@@ -415,14 +415,14 @@
 .SearchResults .Track.color-9 .track-preview-action,
 .Playlist .Track.color-9 .track-inclusion-action,
 .Playlist .Track.color-9 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #3f88ff;
   background-color: rgba(63, 136, 255, 0); }
   .SearchResults .Track.color-9 .track-inclusion-action:hover,
   .SearchResults .Track.color-9 .track-preview-action:hover,
   .Playlist .Track.color-9 .track-inclusion-action:hover,
   .Playlist .Track.color-9 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #3f88ff; }
 
@@ -434,23 +434,23 @@
     color: rgba(165, 229, 255, 0.75); }
   .app-selections .Track.color-9 .track-inclusion-action,
   .app-selections .Track.color-9 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #d8e7ff;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-9 .track-inclusion-action:hover,
     .app-selections .Track.color-9 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #3f88ff;
       background-color: #d8e7ff; }
 
 .diamond div span,
 .genre-color-10 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #cca6ff;
   text-shadow: 0 0 4px rgba(160, 90, 255, 0.5); }
   .diamond div span:hover,
   .genre-color-10:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #dba6ff;
     text-shadow: 0 0 4px rgba(188, 90, 255, 0.5); }
 
@@ -464,14 +464,14 @@
 .SearchResults .Track.color-10 .track-preview-action,
 .Playlist .Track.color-10 .track-inclusion-action,
 .Playlist .Track.color-10 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #cca6ff;
   background-color: rgba(204, 166, 255, 0); }
   .SearchResults .Track.color-10 .track-inclusion-action:hover,
   .SearchResults .Track.color-10 .track-preview-action:hover,
   .Playlist .Track.color-10 .track-inclusion-action:hover,
   .Playlist .Track.color-10 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #cca6ff; }
 
@@ -483,23 +483,23 @@
     color: rgba(255, 255, 255, 0.75); }
   .app-selections .Track.color-10 .track-inclusion-action,
   .app-selections .Track.color-10 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: white;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-10 .track-inclusion-action:hover,
     .app-selections .Track.color-10 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #cca6ff;
       background-color: white; }
 
 .mirror div span,
 .genre-color-11 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #28f0ff;
   text-shadow: 0 0 4px rgba(0, 203, 219, 0.5); }
   .mirror div span:hover,
   .genre-color-11:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #28ccff;
     text-shadow: 0 0 4px rgba(0, 167, 219, 0.5); }
 
@@ -513,14 +513,14 @@
 .SearchResults .Track.color-11 .track-preview-action,
 .Playlist .Track.color-11 .track-inclusion-action,
 .Playlist .Track.color-11 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #28f0ff;
   background-color: rgba(40, 240, 255, 0); }
   .SearchResults .Track.color-11 .track-inclusion-action:hover,
   .SearchResults .Track.color-11 .track-preview-action:hover,
   .Playlist .Track.color-11 .track-inclusion-action:hover,
   .Playlist .Track.color-11 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #28f0ff; }
 
@@ -532,23 +532,23 @@
     color: rgba(142, 255, 225, 0.75); }
   .app-selections .Track.color-11 .track-inclusion-action,
   .app-selections .Track.color-11 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #c1fbff;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-11 .track-inclusion-action:hover,
     .app-selections .Track.color-11 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #28f0ff;
       background-color: #c1fbff; }
 
 .crystals div span,
 .genre-color-12 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #eb0fff;
   text-shadow: 0 0 4px rgba(177, 0, 194, 0.5); }
   .crystals div span:hover,
   .genre-color-12:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #ff0feb;
     text-shadow: 0 0 4px rgba(194, 0, 177, 0.5); }
 
@@ -562,14 +562,14 @@
 .SearchResults .Track.color-12 .track-preview-action,
 .Playlist .Track.color-12 .track-inclusion-action,
 .Playlist .Track.color-12 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #eb0fff;
   background-color: rgba(235, 15, 255, 0); }
   .SearchResults .Track.color-12 .track-inclusion-action:hover,
   .SearchResults .Track.color-12 .track-preview-action:hover,
   .Playlist .Track.color-12 .track-inclusion-action:hover,
   .Playlist .Track.color-12 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #eb0fff; }
 
@@ -581,23 +581,23 @@
     color: rgba(198, 117, 255, 0.75); }
   .app-selections .Track.color-12 .track-inclusion-action,
   .app-selections .Track.color-12 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #f8a8ff;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-12 .track-inclusion-action:hover,
     .app-selections .Track.color-12 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #eb0fff;
       background-color: #f8a8ff; }
 
 .hour-glass div span,
 .genre-color-13 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #ffa3f9;
   text-shadow: 0 0 4px rgba(255, 87, 244, 0.5); }
   .hour-glass div span:hover,
   .genre-color-13:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #ffa3ea;
     text-shadow: 0 0 4px rgba(255, 87, 216, 0.5); }
 
@@ -611,14 +611,14 @@
 .SearchResults .Track.color-13 .track-preview-action,
 .Playlist .Track.color-13 .track-inclusion-action,
 .Playlist .Track.color-13 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #ffa3f9;
   background-color: rgba(255, 163, 249, 0); }
   .SearchResults .Track.color-13 .track-inclusion-action:hover,
   .SearchResults .Track.color-13 .track-preview-action:hover,
   .Playlist .Track.color-13 .track-inclusion-action:hover,
   .Playlist .Track.color-13 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #ffa3f9; }
 
@@ -630,23 +630,23 @@
     color: rgba(255, 255, 255, 0.75); }
   .app-selections .Track.color-13 .track-inclusion-action,
   .app-selections .Track.color-13 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: white;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-13 .track-inclusion-action:hover,
     .app-selections .Track.color-13 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #ffa3f9;
       background-color: white; }
 
 .pineapple div span,
 .genre-color-14 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #fde400;
   text-shadow: 0 0 4px rgba(177, 159, 0, 0.5); }
   .pineapple div span:hover,
   .genre-color-14:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #ecfd00;
     text-shadow: 0 0 4px rgba(165, 177, 0, 0.5); }
 
@@ -660,14 +660,14 @@
 .SearchResults .Track.color-14 .track-preview-action,
 .Playlist .Track.color-14 .track-inclusion-action,
 .Playlist .Track.color-14 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #fde400;
   background-color: rgba(253, 228, 0, 0); }
   .SearchResults .Track.color-14 .track-inclusion-action:hover,
   .SearchResults .Track.color-14 .track-preview-action:hover,
   .Playlist .Track.color-14 .track-inclusion-action:hover,
   .Playlist .Track.color-14 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #fde400; }
 
@@ -679,23 +679,23 @@
     color: rgba(255, 188, 100, 0.75); }
   .app-selections .Track.color-14 .track-inclusion-action,
   .app-selections .Track.color-14 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff597;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-14 .track-inclusion-action:hover,
     .app-selections .Track.color-14 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #fde400;
       background-color: #fff597; }
 
 .wheel div span,
 .genre-color-15 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #fde400;
   text-shadow: 0 0 4px rgba(177, 159, 0, 0.5); }
   .wheel div span:hover,
   .genre-color-15:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #ecfd00;
     text-shadow: 0 0 4px rgba(165, 177, 0, 0.5); }
 
@@ -709,14 +709,14 @@
 .SearchResults .Track.color-15 .track-preview-action,
 .Playlist .Track.color-15 .track-inclusion-action,
 .Playlist .Track.color-15 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #fde400;
   background-color: rgba(253, 228, 0, 0); }
   .SearchResults .Track.color-15 .track-inclusion-action:hover,
   .SearchResults .Track.color-15 .track-preview-action:hover,
   .Playlist .Track.color-15 .track-inclusion-action:hover,
   .Playlist .Track.color-15 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #fde400; }
 
@@ -728,23 +728,23 @@
     color: rgba(255, 188, 100, 0.75); }
   .app-selections .Track.color-15 .track-inclusion-action,
   .app-selections .Track.color-15 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff597;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-15 .track-inclusion-action:hover,
     .app-selections .Track.color-15 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #fde400;
       background-color: #fff597; }
 
 .potion-2 div span,
 .genre-color-16 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #ff9703;
   text-shadow: 0 0 4px rgba(182, 107, 0, 0.5); }
   .potion-2 div span:hover,
   .genre-color-16:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #ffc103;
     text-shadow: 0 0 4px rgba(182, 137, 0, 0.5); }
 
@@ -758,14 +758,14 @@
 .SearchResults .Track.color-16 .track-preview-action,
 .Playlist .Track.color-16 .track-inclusion-action,
 .Playlist .Track.color-16 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #ff9703;
   background-color: rgba(255, 151, 3, 0); }
   .SearchResults .Track.color-16 .track-inclusion-action:hover,
   .SearchResults .Track.color-16 .track-preview-action:hover,
   .Playlist .Track.color-16 .track-inclusion-action:hover,
   .Playlist .Track.color-16 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #ff9703; }
 
@@ -777,23 +777,23 @@
     color: rgba(255, 143, 105, 0.75); }
   .app-selections .Track.color-16 .track-inclusion-action,
   .app-selections .Track.color-16 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #ffd69c;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-16 .track-inclusion-action:hover,
     .app-selections .Track.color-16 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #ff9703;
       background-color: #ffd69c; }
 
 .glasses div span,
 .genre-color-17 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #71e439;
   text-shadow: 0 0 4px rgba(77, 183, 25, 0.5); }
   .glasses div span:hover,
   .genre-color-17:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #55e439;
     text-shadow: 0 0 4px rgba(51, 183, 25, 0.5); }
 
@@ -807,14 +807,14 @@
 .SearchResults .Track.color-17 .track-preview-action,
 .Playlist .Track.color-17 .track-inclusion-action,
 .Playlist .Track.color-17 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #71e439;
   background-color: rgba(113, 228, 57, 0); }
   .SearchResults .Track.color-17 .track-inclusion-action:hover,
   .SearchResults .Track.color-17 .track-preview-action:hover,
   .Playlist .Track.color-17 .track-inclusion-action:hover,
   .Playlist .Track.color-17 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #71e439; }
 
@@ -826,23 +826,23 @@
     color: rgba(209, 240, 147, 0.75); }
   .app-selections .Track.color-17 .track-inclusion-action,
   .app-selections .Track.color-17 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #d2f6c0;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-17 .track-inclusion-action:hover,
     .app-selections .Track.color-17 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #71e439;
       background-color: #d2f6c0; }
 
 .bacon div span,
 .genre-color-18 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #00eca1;
   text-shadow: 0 0 4px rgba(0, 160, 109, 0.5); }
   .bacon div span:hover,
   .genre-color-18:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #00ecc8;
     text-shadow: 0 0 4px rgba(0, 160, 135, 0.5); }
 
@@ -856,14 +856,14 @@
 .SearchResults .Track.color-18 .track-preview-action,
 .Playlist .Track.color-18 .track-inclusion-action,
 .Playlist .Track.color-18 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #00eca1;
   background-color: rgba(0, 236, 161, 0); }
   .SearchResults .Track.color-18 .track-inclusion-action:hover,
   .SearchResults .Track.color-18 .track-preview-action:hover,
   .Playlist .Track.color-18 .track-inclusion-action:hover,
   .Playlist .Track.color-18 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #00eca1; }
 
@@ -875,23 +875,23 @@
     color: rgba(83, 255, 143, 0.75); }
   .app-selections .Track.color-18 .track-inclusion-action,
   .app-selections .Track.color-18 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #86ffd9;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-18 .track-inclusion-action:hover,
     .app-selections .Track.color-18 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #00eca1;
       background-color: #86ffd9; }
 
 .potion-3 div span,
 .genre-color-19 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #ffd736;
   text-shadow: 0 0 4px rgba(233, 186, 0, 0.5); }
   .potion-3 div span:hover,
   .genre-color-19:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #fff936;
     text-shadow: 0 0 4px rgba(233, 225, 0, 0.5); }
 
@@ -905,14 +905,14 @@
 .SearchResults .Track.color-19 .track-preview-action,
 .Playlist .Track.color-19 .track-inclusion-action,
 .Playlist .Track.color-19 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #ffd736;
   background-color: rgba(255, 215, 54, 0); }
   .SearchResults .Track.color-19 .track-inclusion-action:hover,
   .SearchResults .Track.color-19 .track-preview-action:hover,
   .Playlist .Track.color-19 .track-inclusion-action:hover,
   .Playlist .Track.color-19 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #ffd736; }
 
@@ -924,23 +924,23 @@
     color: rgba(255, 202, 156, 0.75); }
   .app-selections .Track.color-19 .track-inclusion-action,
   .app-selections .Track.color-19 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff5cf;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-19 .track-inclusion-action:hover,
     .app-selections .Track.color-19 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #ffd736;
       background-color: #fff5cf; }
 
 .dinosaur-skull div span,
 .genre-color-20 {
-  transition: .75s;
+  transition: 0.75s;
   background-color: #8316ff;
   text-shadow: 0 0 4px rgba(94, 0, 201, 0.5); }
   .dinosaur-skull div span:hover,
   .genre-color-20:hover {
-    transition: .75s;
+    transition: 0.75s;
     background-color: #aa16ff;
     text-shadow: 0 0 4px rgba(127, 0, 201, 0.5); }
 
@@ -954,14 +954,14 @@
 .SearchResults .Track.color-20 .track-preview-action,
 .Playlist .Track.color-20 .track-inclusion-action,
 .Playlist .Track.color-20 .track-preview-action {
-  transition: .25s;
+  transition: 0.25s;
   color: #8316ff;
   background-color: rgba(131, 22, 255, 0); }
   .SearchResults .Track.color-20 .track-inclusion-action:hover,
   .SearchResults .Track.color-20 .track-preview-action:hover,
   .Playlist .Track.color-20 .track-inclusion-action:hover,
   .Playlist .Track.color-20 .track-preview-action:hover {
-    transition: .25s;
+    transition: 0.25s;
     color: #fff;
     background-color: #8316ff; }
 
@@ -973,19 +973,20 @@
     color: rgba(142, 124, 255, 0.75); }
   .app-selections .Track.color-20 .track-inclusion-action,
   .app-selections .Track.color-20 .track-preview-action {
-    transition: .25s;
+    transition: 0.25s;
     color: #d4afff;
     background-color: rgba(255, 255, 255, 0); }
     .app-selections .Track.color-20 .track-inclusion-action:hover,
     .app-selections .Track.color-20 .track-preview-action:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #8316ff;
       background-color: #d4afff; }
 
 /* MIXINS */
 /* KEYFRAMES */
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     top: 0; }
   50% {
     top: -7.5%; } }
@@ -993,7 +994,8 @@
   100% {
     transform: rotate(360deg); } }
 @keyframes color-cycle {
-  0%, 100% {
+  0%,
+  100% {
     color: #ff363f; }
   20% {
     color: #fde400; }
@@ -1039,17 +1041,17 @@ header {
       header h1 span:nth-child(3n-2) {
         animation-delay: -2.5s; }
     header h1 sup {
-      content: "Beta";
+      content: 'Beta';
       color: #fff;
       font-size: 14px;
       text-transform: uppercase;
       vertical-align: super; }
   header a {
-    transition: .25s;
+    transition: 0.25s;
     color: #1c4c4a;
     cursor: pointer; }
     header a:hover {
-      transition: .25s;
+      transition: 0.25s;
       color: #318480; }
 
 .mobile-toggle {
@@ -1070,6 +1072,7 @@ header {
     width: 100%;
     max-width: 600px;
     text-align: center;
+    margin: 0 auto;
     padding: 30px; }
     .app-intro > span h1 {
       transform: translateZ(0);
@@ -1083,7 +1086,7 @@ header {
         .app-intro > span h1 span:nth-child(3n-2) {
           animation-delay: -2.5s; }
       .app-intro > span h1 sup {
-        content: "Beta";
+        content: 'Beta';
         color: #fff;
         font-size: 14px;
         text-transform: uppercase;
@@ -1121,7 +1124,7 @@ header {
           width: 70%;
           height: 70%; }
     .app-intro > span button {
-      transition: .25s;
+      transition: 0.25s;
       appearance: none;
       display: block;
       color: #fff;
@@ -1138,7 +1141,7 @@ header {
       cursor: pointer;
       margin: 0 auto; }
       .app-intro > span button:hover {
-        transition: .25s;
+        transition: 0.25s;
         background-color: #235f5c; }
       @media (max-width: 480px) {
         .app-intro > span button {
@@ -1215,7 +1218,7 @@ header {
         .app-content .app-selections.no-selections svg:last-of-type {
           color: #00eca1; }
   .app-content .App-playlist {
-    transition: .5s;
+    transition: 0.5s;
     visibility: hidden;
     opacity: 0;
     position: fixed;
@@ -1229,7 +1232,7 @@ header {
     overflow-y: scroll;
     background-color: #0b1d1d; }
     .app-content .App-playlist.active {
-      transition: .5s;
+      transition: 0.5s;
       visibility: visible;
       opacity: 1; }
     .app-content .App-playlist .loading-playlist {
@@ -1269,7 +1272,7 @@ header {
         line-height: 1.5em;
         margin: 0 0 30px 0; }
       .app-content .App-playlist .empty-playlist button {
-        transition: .25s;
+        transition: 0.25s;
         appearance: none;
         display: block;
         color: #fff;
@@ -1285,7 +1288,7 @@ header {
         margin: 0 auto;
         cursor: pointer; }
         .app-content .App-playlist .empty-playlist button:hover {
-          transition: .25s;
+          transition: 0.25s;
           background-color: #235f5c; }
         @media (max-width: 480px) {
           .app-content .App-playlist .empty-playlist button {
@@ -1342,7 +1345,7 @@ header {
           margin: 0 0 20px 0;
           padding: 20px; }
         .app-content .App-playlist .Playlist .playlist-info button {
-          transition: .25s;
+          transition: 0.25s;
           appearance: none;
           display: block;
           color: #fff;
@@ -1359,7 +1362,7 @@ header {
           cursor: pointer;
           margin-bottom: 10px; }
           .app-content .App-playlist .Playlist .playlist-info button:hover {
-            transition: .25s;
+            transition: 0.25s;
             background-color: #235f5c; }
           @media (max-width: 480px) {
             .app-content .App-playlist .Playlist .playlist-info button {
@@ -1399,7 +1402,7 @@ header {
       padding: 20% 0 0 0; }
   .Genres button,
   .Items button {
-    transition: .25s;
+    transition: 0.25s;
     appearance: none;
     position: absolute;
     top: 0;
@@ -1419,7 +1422,7 @@ header {
     .Genres button:hover,
     .Items button:hover {
       color: #91d6d3;
-      transition: .25s;
+      transition: 0.25s;
       background-color: rgba(0, 0, 0, 0.55); }
     .Genres button svg.svg-inline--fa,
     .Items button svg.svg-inline--fa {
@@ -1464,7 +1467,7 @@ header {
     list-style: none; }
     .Genres ul li,
     .SelectedGenres ul li {
-      transition: .25s;
+      transition: 0.25s;
       position: relative;
       display: inline-block;
       color: #fff;
@@ -1478,7 +1481,7 @@ header {
         display: inline-block; }
       .Genres ul li span,
       .SelectedGenres ul li span {
-        transition: .25s;
+        transition: 0.25s;
         position: absolute;
         top: 50%;
         right: 20px;
@@ -1494,11 +1497,11 @@ header {
           height: 100%; }
       .Genres ul li:hover,
       .SelectedGenres ul li:hover {
-        transition: .25s;
+        transition: 0.25s;
         padding: 10px 40px 10px 20px; }
         .Genres ul li:hover span,
         .SelectedGenres ul li:hover span {
-          transition: .25s;
+          transition: 0.25s;
           right: 15px;
           opacity: 1; }
 
@@ -1550,7 +1553,7 @@ header {
             margin: -2.5% 0 5% 0; }
           .Items ul li.Item div span svg,
           .SelectedItems ul li.Item div span svg {
-            transition: .25s;
+            transition: 0.25s;
             opacity: 0;
             position: absolute;
             top: 10px;
@@ -1573,7 +1576,7 @@ header {
         animation: bounce 1s ease-in-out infinite; }
       .Items ul li.Item:hover div span svg,
       .SelectedItems ul li.Item:hover div span svg {
-        transition: .25s;
+        transition: 0.25s;
         opacity: 1; }
 
 .SelectedGenres ul li.Item,
@@ -1604,7 +1607,7 @@ header {
   display: none; }
 
 .get-mixtape {
-  transition: .25s;
+  transition: 0.25s;
   appearance: none;
   display: block;
   color: #fff;
@@ -1620,7 +1623,7 @@ header {
   margin: 0 auto;
   cursor: pointer; }
   .get-mixtape:hover {
-    transition: .25s;
+    transition: 0.25s;
     background-color: #235f5c; }
   @media (max-width: 480px) {
     .get-mixtape {
@@ -1652,7 +1655,7 @@ header {
       .SearchBar .input-container input:focus {
         outline: none; }
   .SearchBar a {
-    transition: .25s;
+    transition: 0.25s;
     position: absolute;
     top: 0;
     right: 0;
@@ -1672,7 +1675,7 @@ header {
     cursor: pointer; }
     .SearchBar a:hover {
       color: #91d6d3;
-      transition: .25s;
+      transition: 0.25s;
       background-color: rgba(0, 0, 0, 0.55); }
   .SearchBar.no-search-results .input-container {
     border-bottom-left-radius: 5px; }
@@ -1697,7 +1700,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: calc(100% - (10px*12));
+    width: calc(100% - (10px* 12));
     padding: 10px 20px; }
     .Track .track-information h3,
     .Track .track-information p {

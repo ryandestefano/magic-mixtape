@@ -3,10 +3,6 @@
 /* SPACING */
 /* RESPONSIVE */
 @media (max-width: 960px) {
-  .app-intro {
-    display: block;
-    height: auto; }
-
   .App {
     background-color: #0e2726; }
     .App .mobile-toggle {
@@ -86,7 +82,7 @@
             font-size: 12px;
             padding: 0; }
       .App .app-content .Track .track-information {
-        width: calc(100% - (10px*9.5)); }
+        width: calc(100% - (10px* 9.5)); }
       .App .app-content .Track a.track-preview-action,
       .App .app-content .Track a.track-inclusion-action {
         font-size: 18px;
@@ -98,7 +94,7 @@
         display: none;
         width: 100%;
         height: auto;
-        padding: 20px; }
+        padding: 20px 20px 40px 20px; }
         .App .app-content .app-selections.active {
           display: block; }
         .App .app-content .app-selections > div h2 {
@@ -134,6 +130,18 @@
             border-radius: 5px;
             padding: 15px; } }
 @media (max-width: 480px) {
+  .app-intro {
+    display: block;
+    min-height: 100%;
+    height: auto; }
+    .app-intro > span .images span {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      margin: 0 5px; }
+
   .App {
     padding: 50px 0 0 0; }
     .App header {
@@ -183,7 +191,7 @@
       .App .app-content .Track {
         height: 60px; }
         .App .app-content .Track .track-information {
-          width: calc(100% - (10px*7));
+          width: calc(100% - (10px* 7));
           padding: 0 10px; }
           .App .app-content .Track .track-information h3 {
             font-size: 16px;
@@ -198,7 +206,7 @@
           border-radius: 15px;
           margin: 0 5px 0 0; }
       .App .app-content .app-selections {
-        padding: 10px; }
+        padding: 10px 10px 30px 10px; }
         .App .app-content .app-selections > div h2 {
           font-size: 14px; }
         .App .app-content .app-selections .SelectedGenres ul li {

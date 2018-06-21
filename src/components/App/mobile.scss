@@ -1,11 +1,6 @@
 @import 'variables';
 
 @media (max-width: $breakpoint-tablet) {
-  .app-intro {
-    display: block;
-    height: auto;
-  }
-
   .App {
     background-color: darken($app-color, 10%);
 
@@ -19,7 +14,7 @@
         font-family: $font, sans-serif;
         font-size: $type-large;
         text-align: center;
-        line-height: $unit*2.5;
+        line-height: $unit * 2.5;
         padding: $unit;
 
         &.active {
@@ -33,15 +28,15 @@
 
         span {
           display: inline-block;
-          width: $unit*2.5;
-          height: $unit*2.5;
+          width: $unit * 2.5;
+          height: $unit * 2.5;
           color: #fff;
           background-color: $light-app-color;
           font-size: $type-base;
-          line-height: $unit*2.5;
+          line-height: $unit * 2.5;
           vertical-align: middle;
-          border-radius: $unit*1.25;
-          margin: 0 0 0 $unit*1.25;
+          border-radius: $unit * 1.25;
+          margin: 0 0 0 $unit * 1.25;
         }
       }
     }
@@ -56,7 +51,7 @@
         width: 100%;
         height: auto;
         background-color: darken($app-color, 10%);
-        padding: $unit*2;
+        padding: $unit * 2;
 
         &.active {
           display: block;
@@ -64,7 +59,6 @@
 
         .Genres,
         .Items {
-
           ul {
             width: 85%;
           }
@@ -72,9 +66,9 @@
           button {
             width: 15%;
 
-             svg {
-               height: auto;
-             }
+            svg {
+              height: auto;
+            }
           }
 
           &.maxed-out {
@@ -120,7 +114,7 @@
           .input-container {
             input {
               font-size: $type-large;
-              padding: $unit*1.25 $unit*1.5;
+              padding: $unit * 1.25 $unit * 1.5;
             }
           }
 
@@ -134,24 +128,24 @@
 
       .Track {
         .track-information {
-          width: calc(100% - (#{$unit}*9.5));
+          width: calc(100% - (#{$unit}* 9.5));
         }
 
         a.track-preview-action,
         a.track-inclusion-action {
           font-size: $type-large;
-          width: $unit*4;
-          height: $unit*4;
-          border-radius: $unit*2;
-          margin: 0 $unit*.75 0 0;
+          width: $unit * 4;
+          height: $unit * 4;
+          border-radius: $unit * 2;
+          margin: 0 $unit * 0.75 0 0;
         }
       }
-      
+
       .app-selections {
         display: none;
         width: 100%;
         height: auto;
-        padding: $unit*2;
+        padding: $unit * 2 $unit * 2 $unit * 4 $unit * 2;
 
         &.active {
           display: block;
@@ -183,20 +177,20 @@
 
       .App-playlist {
         .empty-playlist {
-          padding: $unit*2;
+          padding: $unit * 2;
         }
 
         .Playlist {
           display: block;
-          padding: $unit*2;
+          padding: $unit * 2;
 
           button.close-playlist {
-            top: $unit*1.5;
-            right: $unit*1.5;
+            top: $unit * 1.5;
+            right: $unit * 1.5;
 
             svg {
-              width: $unit*2;
-              height: $unit*2;
+              width: $unit * 2;
+              height: $unit * 2;
             }
           }
 
@@ -208,17 +202,17 @@
           }
 
           .playlist-info {
-            padding: $unit*2 0;
+            padding: $unit * 2 0;
 
             h1 {
               font-size: $type-large;
             }
 
             input {
-              max-width: $unit*60;
+              max-width: $unit * 60;
               font-size: $type-xlarge;
               border-radius: $unit/2;
-              padding: $unit*1.5;
+              padding: $unit * 1.5;
             }
           }
         }
@@ -229,6 +223,22 @@
 
 @media (max-width: $breakpoint-mobile) {
   .app-intro {
+    display: block;
+    min-height: 100%;
+    height: auto;
+
+    > span {
+      .images {
+        span {
+          position: relative;
+          display: inline-block;
+          width: $unit * 4;
+          height: $unit * 4;
+          border-radius: $unit * 2;
+          margin: 0 $unit * 0.5;
+        }
+      }
+    }
   }
 
   .App {
@@ -247,14 +257,14 @@
     .mobile-toggle {
       a {
         font-size: $type-medium;
-        line-height: $unit*2;
+        line-height: $unit * 2;
         padding: $unit;
 
         span {
-          width: $unit*2;
-          height: $unit*2;
+          width: $unit * 2;
+          height: $unit * 2;
           font-size: $unit;
-          line-height: $unit*2;
+          line-height: $unit * 2;
           border-radius: $unit;
         }
       }
@@ -268,7 +278,6 @@
 
         .Genres,
         .Items {
-
           &.maxed-out {
             .message {
               padding: $unit;
@@ -284,7 +293,7 @@
           ul {
             li {
               font-size: $type-medium;
-              padding: $unit*.75 $unit;
+              padding: $unit * 0.75 $unit;
             }
           }
         }
@@ -321,15 +330,15 @@
       }
 
       .Track {
-        height: $unit*6;
+        height: $unit * 6;
         .track-information {
-          width: calc(100% - (#{$unit}*7));
+          width: calc(100% - (#{$unit}* 7));
           padding: 0 $unit;
           h3 {
             font-size: $type-medium;
             margin: 0 0 $unit/4 0;
           }
-          
+
           p {
             font-size: $type-base;
           }
@@ -338,15 +347,15 @@
         a.track-preview-action,
         a.track-inclusion-action {
           font-size: $type-base;
-          width: $unit*3;
-          height: $unit*3;
-          border-radius: $unit*1.5;
+          width: $unit * 3;
+          height: $unit * 3;
+          border-radius: $unit * 1.5;
           margin: 0 $unit/2 0 0;
         }
       }
-      
+
       .app-selections {
-        padding: $unit;
+        padding: $unit $unit $unit * 3 $unit;
 
         > div {
           h2 {
@@ -358,7 +367,7 @@
           ul {
             li {
               font-size: $type-medium;
-              padding: $unit*.75 $unit;
+              padding: $unit * 0.75 $unit;
             }
           }
         }
