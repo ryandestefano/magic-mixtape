@@ -1,21 +1,14 @@
 /* COLORS */
 /* FONTS */
 /* SPACING */
-/* MOBILE */
-@media (max-width: 480px) {
+/* RESPONSIVE */
+@media (max-width: 960px) {
   .app-intro {
     display: block;
     height: auto; }
 
   .App {
-    padding: 38px 0 0 0; }
-    .App header {
-      height: 38px;
-      padding: 10px; }
-      .App header h1 {
-        font-size: 18px; }
-        .App header h1 sup {
-          font-size: 8px; }
+    background-color: #0e2726; }
     .App .mobile-toggle {
       display: block;
       background-color: #12302f; }
@@ -24,9 +17,9 @@
         width: 50%;
         color: #46bbb6;
         font-family: "Work Sans", sans-serif;
-        font-size: 14px;
+        font-size: 18px;
         text-align: center;
-        line-height: 20px;
+        line-height: 25px;
         padding: 10px; }
         .App .mobile-toggle a.active {
           color: #c9ebea;
@@ -35,30 +28,30 @@
           display: inline-block; }
         .App .mobile-toggle a span {
           display: inline-block;
-          width: 20px;
-          height: 20px;
+          width: 25px;
+          height: 25px;
           color: #fff;
           background-color: #46bbb6;
-          font-size: 10px;
-          line-height: 20px;
+          font-size: 14px;
+          line-height: 25px;
           vertical-align: middle;
-          border-radius: 10px;
-          margin: 0 0 0 10px; }
+          border-radius: 12.5px;
+          margin: 0 0 0 12.5px; }
     .App .app-content {
-      display: table;
+      display: block;
       height: auto;
-      min-height: calc(100% - 38px); }
+      min-height: calc(100% - 80px); }
       .App .app-content .app-options {
         display: none;
         width: 100%;
         height: auto;
-        padding: 10px; }
+        background-color: #0e2726;
+        padding: 20px; }
         .App .app-content .app-options.active {
-          display: table-cell; }
+          display: block; }
         .App .app-content .app-options .Genres ul,
         .App .app-content .app-options .Items ul {
-          width: 85%;
-          padding: 2.5px; }
+          width: 85%; }
         .App .app-content .app-options .Genres button,
         .App .app-content .app-options .Items button {
           width: 15%; }
@@ -69,69 +62,60 @@
         .App .app-content .app-options .Items.maxed-out .message {
           padding: 10px; }
           .App .app-content .app-options .Genres.maxed-out .message h1,
+          .App .app-content .app-options .Items.maxed-out .message h1 {
+            font-size: 16px; }
           .App .app-content .app-options .Genres.maxed-out .message p,
-          .App .app-content .app-options .Items.maxed-out .message h1,
           .App .app-content .app-options .Items.maxed-out .message p {
-            font-size: 12px; }
+            font-size: 14px; }
         .App .app-content .app-options .Genres ul li {
-          font-size: 12px;
-          margin: 2.5px;
-          padding: 5px 10px; }
+          font-size: 18px; }
         .App .app-content .app-options .Items ul li {
-          width: 33.33%;
-          padding: 33.33% 0 0 0; }
-          .App .app-content .app-options .Items ul li:nth-child(4), .App .app-content .app-options .Items ul li:nth-child(5) {
+          width: 25%;
+          padding: 25% 0 0 0; }
+          .App .app-content .app-options .Items ul li:nth-child(5) {
             display: none; }
-          .App .app-content .app-options .Items ul li div {
-            padding: 2.5px; }
           .App .app-content .app-options .Items ul li p {
-            font-size: 8px; }
+            font-size: 14px; }
         .App .app-content .app-options .SearchBar {
           padding: 0 15% 0 0; }
           .App .app-content .app-options .SearchBar .input-container input {
-            font-size: 12px;
-            padding: 10px; }
+            font-size: 18px;
+            padding: 12.5px 15px; }
           .App .app-content .app-options .SearchBar a {
             width: 15%;
-            font-size: 8px;
+            font-size: 12px;
             padding: 0; }
-      .App .app-content .Track {
-        height: 60px; }
-        .App .app-content .Track .track-information {
-          padding: 0 10px; }
-          .App .app-content .Track .track-information h3 {
-            font-size: 14px;
-            margin: 0 0 2.5px 0; }
-          .App .app-content .Track .track-information p {
-            font-size: 12px; }
-        .App .app-content .Track a.track-preview-action,
-        .App .app-content .Track a.track-inclusion-action {
-          font-size: 14px;
-          width: 30px;
-          height: 30px;
-          border-radius: 15px;
-          margin: 0 5px 0 0; }
+      .App .app-content .Track .track-information {
+        width: calc(100% - (10px*9.5)); }
+      .App .app-content .Track a.track-preview-action,
+      .App .app-content .Track a.track-inclusion-action {
+        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin: 0 7.5px 0 0; }
       .App .app-content .app-selections {
         display: none;
         width: 100%;
         height: auto;
-        padding: 10px; }
+        padding: 20px; }
         .App .app-content .app-selections.active {
-          display: table-cell; }
+          display: block; }
         .App .app-content .app-selections > div h2 {
-          font-size: 14px; }
+          font-size: 16px; }
         .App .app-content .app-selections .SelectedGenres ul li {
-          font-size: 14px;
-          padding: 7.5px 15px; }
+          font-size: 18px; }
         .App .app-content .app-selections .SelectedItems ul li {
           width: 33.33%;
           padding: 33.33% 0 0 0; }
+      .App .app-content .App-playlist .empty-playlist {
+        padding: 20px; }
       .App .app-content .App-playlist .Playlist {
         display: block;
-        padding: 10px; }
+        padding: 20px; }
         .App .app-content .App-playlist .Playlist button.close-playlist {
-          top: 10px;
-          right: 10px; }
+          top: 15px;
+          right: 15px; }
           .App .app-content .App-playlist .Playlist button.close-playlist svg {
             width: 20px;
             height: 20px; }
@@ -143,11 +127,94 @@
         .App .app-content .App-playlist .Playlist .playlist-info {
           padding: 20px 0; }
           .App .app-content .App-playlist .Playlist .playlist-info h1 {
-            font-size: 16px;
-            margin: 0 0 10px 0; }
+            font-size: 18px; }
           .App .app-content .App-playlist .Playlist .playlist-info input {
-            font-size: 16px;
+            max-width: 600px;
+            font-size: 21px;
             border-radius: 5px;
             padding: 15px; } }
+@media (max-width: 480px) {
+  .App {
+    padding: 50px 0 0 0; }
+    .App header {
+      height: 50px;
+      padding: 10px; }
+      .App header h1 {
+        font-size: 30px; }
+        .App header h1 sup {
+          font-size: 8px; }
+    .App .mobile-toggle a {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px; }
+      .App .mobile-toggle a span {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+        line-height: 20px;
+        border-radius: 10px; }
+    .App .app-content {
+      min-height: calc(100% - 50px); }
+      .App .app-content .app-options {
+        padding: 10px; }
+        .App .app-content .app-options .Genres.maxed-out .message,
+        .App .app-content .app-options .Items.maxed-out .message {
+          padding: 10px; }
+          .App .app-content .app-options .Genres.maxed-out .message h1,
+          .App .app-content .app-options .Genres.maxed-out .message p,
+          .App .app-content .app-options .Items.maxed-out .message h1,
+          .App .app-content .app-options .Items.maxed-out .message p {
+            font-size: 12px; }
+        .App .app-content .app-options .Genres ul li {
+          font-size: 16px;
+          padding: 7.5px 10px; }
+        .App .app-content .app-options .Items ul li {
+          width: 33.33%;
+          padding: 33.33% 0 0 0; }
+          .App .app-content .app-options .Items ul li:nth-child(4) {
+            display: none; }
+          .App .app-content .app-options .Items ul li p {
+            font-size: 12px; }
+        .App .app-content .app-options .SearchBar .input-container input {
+          font-size: 16px;
+          padding: 10px; }
+        .App .app-content .app-options .SearchBar a {
+          font-size: 8px; }
+      .App .app-content .Track {
+        height: 60px; }
+        .App .app-content .Track .track-information {
+          width: calc(100% - (10px*7));
+          padding: 0 10px; }
+          .App .app-content .Track .track-information h3 {
+            font-size: 16px;
+            margin: 0 0 2.5px 0; }
+          .App .app-content .Track .track-information p {
+            font-size: 14px; }
+        .App .app-content .Track a.track-preview-action,
+        .App .app-content .Track a.track-inclusion-action {
+          font-size: 14px;
+          width: 30px;
+          height: 30px;
+          border-radius: 15px;
+          margin: 0 5px 0 0; }
+      .App .app-content .app-selections {
+        padding: 10px; }
+        .App .app-content .app-selections > div h2 {
+          font-size: 14px; }
+        .App .app-content .app-selections .SelectedGenres ul li {
+          font-size: 16px;
+          padding: 7.5px 10px; }
+      .App .app-content .App-playlist .empty-playlist {
+        padding: 10px; }
+      .App .app-content .App-playlist .Playlist {
+        padding: 10px; }
+        .App .app-content .App-playlist .Playlist button.close-playlist {
+          top: 10px;
+          right: 10px; }
+        .App .app-content .App-playlist .Playlist .playlist-info h1 {
+          font-size: 16px;
+          margin: 0 0 10px 0; }
+        .App .app-content .App-playlist .Playlist .playlist-info input {
+          font-size: 16px; } }
 
 /*# sourceMappingURL=mobile.css.map */

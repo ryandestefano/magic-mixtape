@@ -1,23 +1,13 @@
 @import 'variables';
 
-@media (max-width: $breakpoint-mobile) {
+@media (max-width: $breakpoint-tablet) {
   .app-intro {
     display: block;
     height: auto;
   }
 
   .App {
-    padding: $mobile-header-height 0 0 0;
-    header {
-      height: $mobile-header-height;
-      padding: $unit;
-      h1 {
-        font-size: $type-large;
-        sup {
-          font-size: 8px;
-        }
-      }
-    }
+    background-color: darken($app-color, 10%);
 
     .mobile-toggle {
       display: block;
@@ -27,9 +17,9 @@
         width: 50%;
         color: $light-app-color;
         font-family: $font, sans-serif;
-        font-size: $type-base;
+        font-size: $type-large;
         text-align: center;
-        line-height: $unit*2;
+        line-height: $unit*2.5;
         padding: $unit;
 
         &.active {
@@ -43,32 +33,33 @@
 
         span {
           display: inline-block;
-          width: $unit*2;
-          height: $unit*2;
+          width: $unit*2.5;
+          height: $unit*2.5;
           color: #fff;
           background-color: $light-app-color;
-          font-size: $unit;
-          line-height: $unit*2;
+          font-size: $type-base;
+          line-height: $unit*2.5;
           vertical-align: middle;
-          border-radius: $unit;
-          margin: 0 0 0 $unit;
+          border-radius: $unit*1.25;
+          margin: 0 0 0 $unit*1.25;
         }
       }
     }
 
     .app-content {
-      display: table;
+      display: block;
       height: auto;
-      min-height: calc(100% - #{$mobile-header-height});
+      min-height: calc(100% - #{$header-height});
 
       .app-options {
         display: none;
         width: 100%;
         height: auto;
-        padding: $unit;
+        background-color: darken($app-color, 10%);
+        padding: $unit*2;
 
         &.active {
-          display: table-cell;
+          display: block;
         }
 
         .Genres,
@@ -76,7 +67,6 @@
 
           ul {
             width: 85%;
-            padding: $unit/4;
           }
 
           button {
@@ -90,9 +80,11 @@
           &.maxed-out {
             .message {
               padding: $unit;
-              h1,
+              h1 {
+                font-size: $type-medium;
+              }
               p {
-                font-size: 12px;
+                font-size: $type-base;
               }
             }
           }
@@ -101,9 +93,7 @@
         .Genres {
           ul {
             li {
-              font-size: 12px;
-              margin: $unit/4;
-              padding: $unit/2 $unit;
+              font-size: $type-large;
             }
           }
         }
@@ -111,20 +101,15 @@
         .Items {
           ul {
             li {
-              width: 33.33%;
-              padding: 33.33% 0 0 0;
+              width: 25%;
+              padding: 25% 0 0 0;
 
-              &:nth-child(4),
               &:nth-child(5) {
                 display: none;
               }
 
-              div {
-                padding: $unit/4;
-              }
-
               p {
-                font-size: 8px;
+                font-size: $type-base;
               }
             }
           }
@@ -134,40 +119,31 @@
           padding: 0 15% 0 0;
           .input-container {
             input {
-              font-size: 12px;
-              padding: $unit;
+              font-size: $type-large;
+              padding: $unit*1.25 $unit*1.5;
             }
           }
 
           a {
             width: 15%;
-            font-size: 8px;
+            font-size: $type-small;
             padding: 0;
           }
         }
       }
 
       .Track {
-        height: $unit*6;
         .track-information {
-          padding: 0 $unit;
-          h3 {
-            font-size: $type-base;
-            margin: 0 0 $unit/4 0;
-          }
-          
-          p {
-            font-size: 12px;
-          }
+          width: calc(100% - (#{$unit}*9.5));
         }
 
         a.track-preview-action,
         a.track-inclusion-action {
-          font-size: $type-base;
-          width: $unit*3;
-          height: $unit*3;
-          border-radius: $unit*1.5;
-          margin: 0 $unit/2 0 0;
+          font-size: $type-large;
+          width: $unit*4;
+          height: $unit*4;
+          border-radius: $unit*2;
+          margin: 0 $unit*.75 0 0;
         }
       }
       
@@ -175,23 +151,22 @@
         display: none;
         width: 100%;
         height: auto;
-        padding: $unit;
+        padding: $unit*2;
 
         &.active {
-          display: table-cell;
+          display: block;
         }
 
         > div {
           h2 {
-            font-size: $type-base;
+            font-size: $type-medium;
           }
         }
 
         .SelectedGenres {
           ul {
             li {
-              font-size: $type-base;
-              padding: $unit*.75 $unit*1.5;
+              font-size: $type-large;
             }
           }
         }
@@ -207,13 +182,17 @@
       }
 
       .App-playlist {
+        .empty-playlist {
+          padding: $unit*2;
+        }
+
         .Playlist {
           display: block;
-          padding: $unit;
+          padding: $unit*2;
 
           button.close-playlist {
-            top: $unit;
-            right: $unit;
+            top: $unit*1.5;
+            right: $unit*1.5;
 
             svg {
               width: $unit*2;
@@ -232,14 +211,180 @@
             padding: $unit*2 0;
 
             h1 {
+              font-size: $type-large;
+            }
+
+            input {
+              max-width: $unit*60;
+              font-size: $type-xlarge;
+              border-radius: $unit/2;
+              padding: $unit*1.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .app-intro {
+  }
+
+  .App {
+    padding: $mobile-header-height 0 0 0;
+    header {
+      height: $mobile-header-height;
+      padding: $unit;
+      h1 {
+        font-size: 30px;
+        sup {
+          font-size: $type-tiny;
+        }
+      }
+    }
+
+    .mobile-toggle {
+      a {
+        font-size: $type-medium;
+        line-height: $unit*2;
+        padding: $unit;
+
+        span {
+          width: $unit*2;
+          height: $unit*2;
+          font-size: $unit;
+          line-height: $unit*2;
+          border-radius: $unit;
+        }
+      }
+    }
+
+    .app-content {
+      min-height: calc(100% - #{$mobile-header-height});
+
+      .app-options {
+        padding: $unit;
+
+        .Genres,
+        .Items {
+
+          &.maxed-out {
+            .message {
+              padding: $unit;
+              h1,
+              p {
+                font-size: $type-small;
+              }
+            }
+          }
+        }
+
+        .Genres {
+          ul {
+            li {
+              font-size: $type-medium;
+              padding: $unit*.75 $unit;
+            }
+          }
+        }
+
+        .Items {
+          ul {
+            li {
+              width: 33.33%;
+              padding: 33.33% 0 0 0;
+
+              &:nth-child(4) {
+                display: none;
+              }
+
+              p {
+                font-size: $type-small;
+              }
+            }
+          }
+        }
+
+        .SearchBar {
+          .input-container {
+            input {
+              font-size: $type-medium;
+              padding: $unit;
+            }
+          }
+
+          a {
+            font-size: $type-tiny;
+          }
+        }
+      }
+
+      .Track {
+        height: $unit*6;
+        .track-information {
+          width: calc(100% - (#{$unit}*7));
+          padding: 0 $unit;
+          h3 {
+            font-size: $type-medium;
+            margin: 0 0 $unit/4 0;
+          }
+          
+          p {
+            font-size: $type-base;
+          }
+        }
+
+        a.track-preview-action,
+        a.track-inclusion-action {
+          font-size: $type-base;
+          width: $unit*3;
+          height: $unit*3;
+          border-radius: $unit*1.5;
+          margin: 0 $unit/2 0 0;
+        }
+      }
+      
+      .app-selections {
+        padding: $unit;
+
+        > div {
+          h2 {
+            font-size: $type-base;
+          }
+        }
+
+        .SelectedGenres {
+          ul {
+            li {
+              font-size: $type-medium;
+              padding: $unit*.75 $unit;
+            }
+          }
+        }
+      }
+
+      .App-playlist {
+        .empty-playlist {
+          padding: $unit;
+        }
+
+        .Playlist {
+          padding: $unit;
+
+          button.close-playlist {
+            top: $unit;
+            right: $unit;
+          }
+
+          .playlist-info {
+            h1 {
               font-size: $type-medium;
               margin: 0 0 $unit 0;
             }
 
             input {
               font-size: $type-medium;
-              border-radius: $unit/2;
-              padding: $unit*1.5;
             }
           }
         }

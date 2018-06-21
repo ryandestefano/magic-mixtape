@@ -30,6 +30,8 @@ $colors: (
 
 $font: 'Work Sans';
 
+$type-tiny: 8px;
+$type-small: 12px;
 $type-base: 14px;
 $type-medium: 16px;
 $type-large: 18px;
@@ -39,7 +41,9 @@ $type-xlarge: 21px;
 
 $unit: 10px;
 
-/* MOBILE */
+/* RESPONSIVE */
 
+$breakpoint-tablet: 960px;
 $breakpoint-mobile: 480px;
-$mobile-header-height: 38px;
+$header-height: $unit*8;
+$mobile-header-height: $unit*5;

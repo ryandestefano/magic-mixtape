@@ -19,10 +19,10 @@ class MobileToggle extends React.Component {
     return (
       <div className="mobile-toggle">
         <a className={this.props.mobileDisplaySelections ? '' : 'active'} onClick={this.handleMobileShowOptions}>
-          <p>View options</p>
+          <p>Options</p>
         </a>
         <a className={this.props.mobileDisplaySelections ? 'active' : ''} onClick={this.handleMobileShowSelections}>
-          <p>View selections</p>
+          <p>Selections</p>
           <span>{this.props.numberOfSeeds}</span>
         </a>
       </div>
