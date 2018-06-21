@@ -14,8 +14,8 @@ const Spotify = {
     if (urlAccessToken && urlExpiresIn) {
       accessToken = urlAccessToken[1];
       expiresIn = urlExpiresIn[1];
-      //window.setTimeout(() => accessToken = '', expiresIn * 1000);
-      //window.history.pushState('Access Token', null, '/mixtape-generator');
+      window.setTimeout(() => accessToken = '', expiresIn * 1000);
+      window.history.pushState('Access Token', null, '/magic-mixtape');
       return accessToken;
     } else {
       window.location = spotifyUrl;
