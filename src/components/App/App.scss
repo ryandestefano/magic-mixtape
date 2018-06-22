@@ -181,8 +181,13 @@ header {
     @include app-logo;
   }
   a {
+    position: absolute;
+    top: 0;
+    right: $unit * 3;
     transition: 0.25s;
-    color: $app-color;
+    color: #fff;
+    text-decoration: none;
+    line-height: $header-height;
     cursor: pointer;
     &:hover {
       transition: 0.25s;
@@ -613,13 +618,15 @@ header {
           height: 100%;
         }
       }
-      &:hover {
-        transition: 0.25s;
-        padding: $unit $unit * 4 $unit $unit * 2;
-        span {
+      @media (min-width: $breakpoint-mobile) {
+        &:hover {
           transition: 0.25s;
-          right: $unit * 1.5;
-          opacity: 1;
+          padding: $unit $unit * 4 $unit $unit * 2;
+          span {
+            transition: 0.25s;
+            right: $unit * 1.5;
+            opacity: 1;
+          }
         }
       }
     }
@@ -690,15 +697,17 @@ header {
           }
         }
       }
-      &:hover {
-        div {
-          span {
-            img {
-              animation: bounce 1s ease-in-out infinite;
-            }
-            svg {
-              transition: 0.25s;
-              opacity: 1;
+      @media (min-width: $breakpoint-mobile) {
+        &:hover {
+          div {
+            span {
+              img {
+                animation: bounce 1s ease-in-out infinite;
+              }
+              svg {
+                transition: 0.25s;
+                opacity: 1;
+              }
             }
           }
         }

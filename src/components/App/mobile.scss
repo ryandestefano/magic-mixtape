@@ -4,6 +4,15 @@
   .App {
     background-color: darken($app-color, 10%);
 
+    header {
+      height: $tablet-header-height;
+      padding: $unit;
+      a {
+        font-size: $type-medium;
+        line-height: $tablet-header-height;
+      }
+    }
+
     .mobile-toggle {
       display: block;
       background-color: darken($app-color, 7.5%);
@@ -248,9 +257,14 @@
       padding: $unit;
       h1 {
         font-size: 30px;
+        text-align: left;
         sup {
           font-size: $type-tiny;
         }
+      }
+      a {
+        font-size: $type-base;
+        line-height: $mobile-header-height;
       }
     }
 

@@ -405,6 +405,7 @@ class App extends Component {
               <span>e</span>
               <sup>Beta</sup>
             </h1>
+            <a href="https://www.ryandestefano.com/magic-mixtape" target="_blank">About</a>
           </header>
           <MobileToggle
             mobileDisplaySelections={this.state.mobileDisplaySelections}

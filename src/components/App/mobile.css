@@ -5,6 +5,12 @@
 @media (max-width: 960px) {
   .App {
     background-color: #0e2726; }
+    .App header {
+      height: 65px;
+      padding: 10px; }
+      .App header a {
+        font-size: 16px;
+        line-height: 65px; }
     .App .mobile-toggle {
       display: block;
       background-color: #12302f; }
@@ -148,9 +154,13 @@
       height: 50px;
       padding: 10px; }
       .App header h1 {
-        font-size: 30px; }
+        font-size: 30px;
+        text-align: left; }
         .App header h1 sup {
           font-size: 8px; }
+      .App header a {
+        font-size: 14px;
+        line-height: 50px; }
     .App .mobile-toggle a {
       font-size: 16px;
       line-height: 20px;

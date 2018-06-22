@@ -1047,8 +1047,13 @@ header {
       text-transform: uppercase;
       vertical-align: super; }
   header a {
+    position: absolute;
+    top: 0;
+    right: 30px;
     transition: 0.25s;
-    color: #1c4c4a;
+    color: #fff;
+    text-decoration: none;
+    line-height: 80px;
     cursor: pointer; }
     header a:hover {
       transition: 0.25s;
@@ -1495,15 +1500,16 @@ header {
         .SelectedGenres ul li span svg.svg-inline--fa {
           width: 100%;
           height: 100%; }
-      .Genres ul li:hover,
-      .SelectedGenres ul li:hover {
-        transition: 0.25s;
-        padding: 10px 40px 10px 20px; }
-        .Genres ul li:hover span,
-        .SelectedGenres ul li:hover span {
+      @media (min-width: 480px) {
+        .Genres ul li:hover,
+        .SelectedGenres ul li:hover {
           transition: 0.25s;
-          right: 15px;
-          opacity: 1; }
+          padding: 10px 40px 10px 20px; }
+          .Genres ul li:hover span,
+          .SelectedGenres ul li:hover span {
+            transition: 0.25s;
+            right: 15px;
+            opacity: 1; } }
 
 .Items,
 .SelectedItems {
@@ -1571,13 +1577,14 @@ header {
             overflow: hidden;
             text-overflow: ellipsis;
             padding: 0 10px; }
-      .Items ul li.Item:hover div span img,
-      .SelectedItems ul li.Item:hover div span img {
-        animation: bounce 1s ease-in-out infinite; }
-      .Items ul li.Item:hover div span svg,
-      .SelectedItems ul li.Item:hover div span svg {
-        transition: 0.25s;
-        opacity: 1; }
+      @media (min-width: 480px) {
+        .Items ul li.Item:hover div span img,
+        .SelectedItems ul li.Item:hover div span img {
+          animation: bounce 1s ease-in-out infinite; }
+        .Items ul li.Item:hover div span svg,
+        .SelectedItems ul li.Item:hover div span svg {
+          transition: 0.25s;
+          opacity: 1; } }
 
 .SelectedGenres ul li.Item,
 .SelectedItems ul li.Item {
