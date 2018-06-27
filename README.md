@@ -1,17 +1,9 @@
-# Mixtape Generator
+# Magic Mixtape
 
-Mixtape Generator generates mixtapes
+Magic Mixtape is a React app that allow users to create fun mixtapes and explore new genres.  The app makes use of Spotify’s recommendations endpoint, which receives seed data in the form of genres, songs, and song attributes, and returns a mixtape.
 
-## Getting Started
+## Try it out
 
-How to get started
+https://ryandestefano.github.io/magic-mixtape
 
-### Prerequisites
-
-```
-npm
-```
-
-## Built With
-
-* Font Awesome
+Connection to a Spotify account is required to create and save mixtapes.
