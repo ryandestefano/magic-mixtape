@@ -1,5 +1,5 @@
-import React from 'react'
-import TrackList from '../TrackList/TrackList'
+import React from 'react';
+import TrackList from '../TrackList/TrackList';
 
 class SearchResults extends React.Component {
   render() {
@@ -13,8 +13,8 @@ class SearchResults extends React.Component {
           currentPreview={this.props.currentPreview}
         />
       </div>
-    )
+    );
   }
 }
 
-export default SearchResults
+export default SearchResults;

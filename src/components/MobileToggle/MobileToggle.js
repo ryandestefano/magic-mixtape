@@ -1,18 +1,20 @@
-import React from 'react'
+import React from 'react';
 
 class MobileToggle extends React.Component {
   constructor(props) {
-    super(props)
-    this.handleMobileShowOptions = this.handleMobileShowOptions.bind(this)
-    this.handleMobileShowSelections = this.handleMobileShowSelections.bind(this)
+    super(props);
+    this.handleMobileShowOptions = this.handleMobileShowOptions.bind(this);
+    this.handleMobileShowSelections = this.handleMobileShowSelections.bind(
+      this
+    );
   }
 
   handleMobileShowOptions() {
-    this.props.showOptions()
+    this.props.showOptions();
   }
 
   handleMobileShowSelections() {
-    this.props.showSelections()
+    this.props.showSelections();
   }
 
   render() {
@@ -32,8 +34,8 @@ class MobileToggle extends React.Component {
           <span>{this.props.numberOfSeeds}</span>
         </a>
       </div>
-    )
+    );
   }
 }
 
-export default MobileToggle
+export default MobileToggle;

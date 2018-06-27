@@ -1,38 +1,38 @@
-import React from 'react'
-import Item from '../Item/Item'
+import React from 'react';
+import Item from '../Item/Item';
 
 class Items extends React.Component {
   constructor(props) {
-    super(props)
-    this.updateItems = this.updateItems.bind(this)
-    this.renderMaxedOutMessage = this.renderMaxedOutMessage.bind(this)
+    super(props);
+    this.updateItems = this.updateItems.bind(this);
+    this.renderMaxedOutMessage = this.renderMaxedOutMessage.bind(this);
   }
 
   componentWillMount() {
     if (this.props.displayedItems.length === 0) {
-      this.updateItems()
+      this.updateItems();
     }
   }
 
   updateItems() {
-    const availableItems = this.props.availableItems
-    const numberOfAvailableItems = availableItems.length
-    const numberOfDisplayedItems = 5
-    const displayedItems = []
-    let itemStrings = []
+    const availableItems = this.props.availableItems;
+    const numberOfAvailableItems = availableItems.length;
+    const numberOfDisplayedItems = 5;
+    const displayedItems = [];
+    let itemStrings = [];
 
     while (displayedItems.length < numberOfDisplayedItems) {
-      let newItemIndex = Math.floor(Math.random() * numberOfAvailableItems)
+      let newItemIndex = Math.floor(Math.random() * numberOfAvailableItems);
       if (!displayedItems.find(itemIndex => itemIndex === newItemIndex)) {
-        displayedItems.push(newItemIndex)
+        displayedItems.push(newItemIndex);
       }
     }
 
     itemStrings = displayedItems.map(itemIndex => {
-      return this.props.availableItems[itemIndex]
-    })
+      return this.props.availableItems[itemIndex];
+    });
 
-    this.props.updateDisplayedItems(itemStrings)
+    this.props.updateDisplayedItems(itemStrings);
   }
 
   renderMaxedOutMessage() {
@@ -42,7 +42,7 @@ class Items extends React.Component {
           <h1>You have added the maximum number of magic items!</h1>
           <p>Try adding genres or songs, or creating your mixtape</p>
         </div>
-      )
+      );
     }
   }
 
@@ -56,7 +56,7 @@ class Items extends React.Component {
         <span>
           <ul>
             {this.props.displayedItems.map(item => {
-              return <Item item={item} addItem={this.props.addItem} />
+              return <Item item={item} addItem={this.props.addItem} />;
             })}
           </ul>
           <button onClick={this.updateItems}>
@@ -65,8 +65,8 @@ class Items extends React.Component {
         </span>
         {this.renderMaxedOutMessage()}
       </div>
-    )
+    );
   }
 }
 
-export default Items
+export default Items;

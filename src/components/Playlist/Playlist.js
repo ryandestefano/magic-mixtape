@@ -1,23 +1,23 @@
-import React from 'react'
-import TrackList from '../TrackList/TrackList'
+import React from 'react';
+import TrackList from '../TrackList/TrackList';
 
 class Playlist extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.handleTogglePlaylistDisplay = this.handleTogglePlaylistDisplay.bind(
       this
-    )
-    this.handleNameChange = this.handleNameChange.bind(this)
-    this.renderSelectedItems = this.renderSelectedItems.bind(this)
-    this.renderSelectedTracks = this.renderSelectedTracks.bind(this)
+    );
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.renderSelectedItems = this.renderSelectedItems.bind(this);
+    this.renderSelectedTracks = this.renderSelectedTracks.bind(this);
   }
 
   handleTogglePlaylistDisplay() {
-    this.props.togglePlaylistDisplay()
+    this.props.togglePlaylistDisplay();
   }
 
   handleNameChange(e) {
-    this.props.onNameChange(e.target.value)
+    this.props.onNameChange(e.target.value);
   }
 
   renderSelectedItems() {
@@ -29,7 +29,7 @@ class Playlist extends React.Component {
             length were influenced by the powers of:
           </p>
         </div>
-      )
+      );
     }
   }
 
@@ -39,7 +39,7 @@ class Playlist extends React.Component {
         <div>
           <p>Your mixtape was influenced by these songs:</p>
         </div>
-      )
+      );
     }
   }
 
@@ -92,7 +92,7 @@ class Playlist extends React.Component {
             currentPreview={this.props.currentPreview}
           />
         </div>
-      )
+      );
     } else if (!this.props.getRecommendationsWasSuccessful) {
       return (
         <div className="empty-playlist">
@@ -103,7 +103,7 @@ class Playlist extends React.Component {
           </p>
           <button onClick={this.handleTogglePlaylistDisplay}>Try again</button>
         </div>
-      )
+      );
     } else {
       return (
         <div className="loading-playlist">
@@ -125,9 +125,9 @@ class Playlist extends React.Component {
             </svg>
           </div>
         </div>
-      )
+      );
     }
   }
 }
 
-export default Playlist
+export default Playlist;

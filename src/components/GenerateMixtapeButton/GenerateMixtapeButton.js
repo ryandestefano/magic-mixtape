@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class GenerateMixtapeButton extends React.Component {
   render() {
@@ -6,8 +6,8 @@ class GenerateMixtapeButton extends React.Component {
       <a className="get-mixtape" onClick={this.props.getRecommendations}>
         Create Mixtape
       </a>
-    )
+    );
   }
 }
 
-export default GenerateMixtapeButton
+export default GenerateMixtapeButton;

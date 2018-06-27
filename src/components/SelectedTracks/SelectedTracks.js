@@ -1,5 +1,5 @@
-import React from 'react'
-import TrackList from '../TrackList/TrackList'
+import React from 'react';
+import TrackList from '../TrackList/TrackList';
 
 class SelectedTracks extends React.Component {
   render() {
@@ -19,11 +19,11 @@ class SelectedTracks extends React.Component {
             currentPreview={this.props.currentPreview}
           />
         </div>
-      )
+      );
     } else {
     }
-    return null
+    return null;
   }
 }
 
-export default SelectedTracks
+export default SelectedTracks;

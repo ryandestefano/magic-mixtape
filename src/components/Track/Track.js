@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 class Track extends React.Component {
   constructor(props) {
-    super(props)
-    this.addTrack = this.addTrack.bind(this)
-    this.removeTrack = this.removeTrack.bind(this)
-    this.handlePlayPreview = this.handlePlayPreview.bind(this)
-    this.handleStopPreview = this.handleStopPreview.bind(this)
+    super(props);
+    this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack.bind(this);
+    this.handlePlayPreview = this.handlePlayPreview.bind(this);
+    this.handleStopPreview = this.handleStopPreview.bind(this);
   }
 
   renderTrackAction() {
@@ -16,14 +16,14 @@ class Track extends React.Component {
           <i className="add fas fa-plus" />
           <i className="remove fas fa-minus" />
         </a>
-      )
+      );
     } else if (this.props.removeTrack) {
       return (
         <a className="remove track-inclusion-action" onClick={this.removeTrack}>
           <i className="add fas fa-plus" />
           <i className="remove fas fa-minus" />
         </a>
-      )
+      );
     }
   }
 
@@ -40,7 +40,7 @@ class Track extends React.Component {
           <i className="play fas fa-play" />
           <i className="stop fas fa-stop" />
         </a>
-      )
+      );
     } else if (this.props.preview) {
       return (
         <a
@@ -50,28 +50,28 @@ class Track extends React.Component {
           <i className="play fas fa-play" />
           <i className="stop fas fa-stop" />
         </a>
-      )
+      );
     }
   }
 
   addTrack() {
-    this.props.addTrack(this.props.track)
+    this.props.addTrack(this.props.track);
   }
 
   removeTrack() {
-    this.props.removeTrack(this.props.track)
+    this.props.removeTrack(this.props.track);
   }
 
   handlePlayPreview() {
-    this.props.playPreview(this.props.preview)
+    this.props.playPreview(this.props.preview);
   }
 
   handleStopPreview() {
-    this.props.stopPreview()
+    this.props.stopPreview();
   }
 
   render() {
-    const randomColor = (this.props.id.match(/\d/g).join('') % 20) + 1
+    const randomColor = (this.props.id.match(/\d/g).join('') % 20) + 1;
     return (
       <div className={`Track color-${randomColor}`}>
         <div className="track-information">
@@ -83,8 +83,8 @@ class Track extends React.Component {
         {this.renderPreviewAction()}
         {this.renderTrackAction()}
       </div>
-    )
+    );
   }
 }
 
-export default Track
+export default Track;

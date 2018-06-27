@@ -1,5 +1,5 @@
-import React from 'react'
-import Genre from '../Genre/Genre'
+import React from 'react';
+import Genre from '../Genre/Genre';
 
 class SelectedGenres extends React.Component {
   render() {
@@ -15,15 +15,15 @@ class SelectedGenres extends React.Component {
             {this.props.genreSeeds.map(genre => {
               return (
                 <Genre genre={genre} removeGenre={this.props.removeGenre} />
-              )
+              );
             })}
           </ul>
         </div>
-      )
+      );
     } else {
-      return null
+      return null;
     }
   }
 }
 
-export default SelectedGenres
+export default SelectedGenres;

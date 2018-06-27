@@ -1,9 +1,9 @@
-import React from 'react'
-import Track from '../Track/Track'
+import React from 'react';
+import Track from '../Track/Track';
 
 class TrackList extends React.Component {
   render() {
-    const trackList = this.props.trackList
+    const trackList = this.props.trackList;
     return (
       <div className="track-list">
         {trackList.map(track => {
@@ -23,11 +23,11 @@ class TrackList extends React.Component {
               stopPreview={this.props.stopPreview}
               currentPreview={this.props.currentPreview}
             />
-          )
+          );
         })}
       </div>
-    )
+    );
   }
 }
 
-export default TrackList
+export default TrackList;

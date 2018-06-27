@@ -405,6 +405,7 @@ header {
       height: 100%;
       text-align: center;
       margin: 0 auto;
+      padding: $unit * 2;
       h1 {
         color: $light-app-color;
         font-size: 24px;
@@ -490,6 +491,42 @@ header {
           }
         }
       }
+    }
+  }
+  .mixtape-success {
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: darken($app-color, 12.5%);
+    padding: $unit * 2;
+    &.active {
+      transition: 0.5s;
+      visibility: visible;
+      opacity: 1;
+    }
+    h1 {
+      color: $light-app-color;
+      font-size: $type-xlarge;
+      margin: 0 0 $unit * 2 0;
+    }
+    p {
+      font-size: $type-base;
+      font-weight: 300;
+      margin: 0 0 $unit * 2 0;
+    }
+    button {
+      @include app-button;
     }
   }
 }

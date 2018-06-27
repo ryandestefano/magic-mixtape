@@ -1266,7 +1266,8 @@ header {
       max-width: 600px;
       height: 100%;
       text-align: center;
-      margin: 0 auto; }
+      margin: 0 auto;
+      padding: 20px; }
       .app-content .App-playlist .empty-playlist h1 {
         color: #46bbb6;
         font-size: 24px;
@@ -1381,6 +1382,59 @@ header {
           cursor: pointer; }
           .app-content .App-playlist .Playlist .playlist-info a.close-playlist:hover {
             color: #46bbb6; }
+  .app-content .mixtape-success {
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #0b1d1d;
+    padding: 20px; }
+    .app-content .mixtape-success.active {
+      transition: 0.5s;
+      visibility: visible;
+      opacity: 1; }
+    .app-content .mixtape-success h1 {
+      color: #46bbb6;
+      font-size: 21px;
+      margin: 0 0 20px 0; }
+    .app-content .mixtape-success p {
+      font-size: 14px;
+      font-weight: 300;
+      margin: 0 0 20px 0; }
+    .app-content .mixtape-success button {
+      transition: 0.25s;
+      appearance: none;
+      display: block;
+      color: #fff;
+      background-color: #1c4c4a;
+      font-family: "Work Sans", sans-serif;
+      font-size: 21px;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 20px 60px;
+      border: none;
+      border-radius: 100px;
+      outline: none;
+      margin: 0 auto;
+      cursor: pointer; }
+      .app-content .mixtape-success button:hover {
+        transition: 0.25s;
+        background-color: #235f5c; }
+      @media (max-width: 480px) {
+        .app-content .mixtape-success button {
+          font-size: 14px;
+          width: 100%;
+          padding: 20px; } }
 
 /* GENRES */
 .Genres,

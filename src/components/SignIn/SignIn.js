@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 class SignIn extends React.Component {
   constructor(props) {
-    super(props)
-    this.handleGetAccessToken = this.handleGetAccessToken.bind(this)
+    super(props);
+    this.handleGetAccessToken = this.handleGetAccessToken.bind(this);
   }
 
   handleGetAccessToken() {
-    this.props.getAccessToken()
+    this.props.getAccessToken();
   }
 
   render() {
@@ -16,8 +16,8 @@ class SignIn extends React.Component {
         <p>Please grant access to Spotify to use this app!</p>
         <div onClick={this.handleGetAccessToken}>Click to get Access Token</div>
       </div>
-    )
+    );
   }
 }
 
-export default SignIn
+export default SignIn;
